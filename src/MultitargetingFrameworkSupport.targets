@@ -4,7 +4,7 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FrameworkShortName>net20</FrameworkShortName>
-    <FrameworkSymbols>net20;NET20_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);net20;NET20_OR_NEWER</FrameworkSymbols>
     <FrameworkPathOverride>$(MSBuildProgramFiles32)\Reference Assemblies\Microsoft\Framework\.NETFramework\v3.5\Profile\Client</FrameworkPathOverride>
   </PropertyGroup>
 
@@ -12,7 +12,8 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.0</TargetFrameworkVersion>
     <FrameworkShortName>net30</FrameworkShortName>
-    <FrameworkSymbols>net30;NET20_OR_NEWER;NET30_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);net20;NET20_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);net30;NET30_OR_NEWER</FrameworkSymbols>
     <FrameworkPathOverride>$(MSBuildProgramFiles32)\Reference Assemblies\Microsoft\Framework\.NETFramework\v3.5\Profile\Client</FrameworkPathOverride>
   </PropertyGroup>
   
@@ -20,7 +21,9 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FrameworkShortName>net35</FrameworkShortName>
-    <FrameworkSymbols>net35;NET20_OR_NEWER;NET30_OR_NEWER;NET35_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);net20;NET20_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);net30;NET30_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);net35;NET35_OR_NEWER</FrameworkSymbols>
     <FrameworkPathOverride>$(MSBuildProgramFiles32)\Reference Assemblies\Microsoft\Framework\.NETFramework\v3.5\Profile\Client</FrameworkPathOverride>
   </PropertyGroup>
 
@@ -28,55 +31,205 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FrameworkShortName>net40</FrameworkShortName>
-    <FrameworkSymbols>net35;net40;NET20_OR_NEWER;NET30_OR_NEWER;NET35_OR_NEWER;NET40_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);net20;NET20_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);net30;NET30_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);net35;NET35_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);net40;NET40_OR_NEWER</FrameworkSymbols>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)'=='net45'">
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FrameworkShortName>net45</FrameworkShortName>
-    <FrameworkSymbols>net35;net40;net45;NET20_OR_NEWER;NET30_OR_NEWER;NET35_OR_NEWER;NET40_OR_NEWER;NET45_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);net20;NET20_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);net30;NET30_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);net35;NET35_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);net40;NET40_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);net45;NET45_OR_NEWER</FrameworkSymbols>
+    <!-- Features -->
+    <FrameworkSymbols>$(FrameworkSymbols);FX_RESHAPED_REFLECTION</FrameworkSymbols>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)'=='net46'">
+    <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FrameworkShortName>net46</FrameworkShortName>
+    <FrameworkSymbols>$(FrameworkSymbols);net20;NET20_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);net30;NET30_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);net35;NET35_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);net40;NET40_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);net45;NET45_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);net46;NET46_OR_NEWER</FrameworkSymbols>
+    <!-- Features -->
+    <FrameworkSymbols>$(FrameworkSymbols);FX_RESHAPED_REFLECTION</FrameworkSymbols>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)'=='netstandard1.0'">
     <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
-    <FrameworkSymbols>netstandard;NETSTANDARD;NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
+    <FrameworkShortName>netstandard1.0</FrameworkShortName>
+    <FrameworkSymbols>netstandard;NETSTANDARD</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
+    <!-- Features -->
+    <FrameworkSymbols>$(FrameworkSymbols);FX_NO_APP_DOMAINS</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);FX_NO_BINARY_SERIALIZATION</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);FX_RESHAPED_REFLECTION</FrameworkSymbols>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)'=='netstandard1.1'">
     <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
-    <FrameworkSymbols>netstandard;NETSTANDARD;NETSTANDARD1_0_OR_NEWER;NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
+    <FrameworkShortName>netstandard1.1</FrameworkShortName>
+    <FrameworkSymbols>netstandard;NETSTANDARD</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
+    <!-- Features -->
+    <FrameworkSymbols>$(FrameworkSymbols);FX_NO_APP_DOMAINS</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);FX_NO_BINARY_SERIALIZATION</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);FX_RESHAPED_REFLECTION</FrameworkSymbols>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)'=='netstandard1.2'">
     <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
-    <FrameworkSymbols>netstandard;NETSTANDARD;NETSTANDARD1_0_OR_NEWER;NETSTANDARD1_1_OR_NEWER;NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
+    <FrameworkShortName>netstandard1.2</FrameworkShortName>
+    <FrameworkSymbols>netstandard;NETSTANDARD</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
+    <!-- Features -->
+    <FrameworkSymbols>$(FrameworkSymbols);FX_NO_APP_DOMAINS</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);FX_NO_BINARY_SERIALIZATION</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);FX_RESHAPED_REFLECTION</FrameworkSymbols>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)'=='netstandard1.3'">
     <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
-    <FrameworkSymbols>netstandard;NETSTANDARD;NETSTANDARD1_0_OR_NEWER;NETSTANDARD1_1_OR_NEWER;NETSTANDARD1_2_OR_NEWER;NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
+    <FrameworkShortName>netstandard1.3</FrameworkShortName>
+    <FrameworkSymbols>netstandard;NETSTANDARD</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
+    <!-- Features -->
+    <FrameworkSymbols>$(FrameworkSymbols);FX_NO_APP_DOMAINS</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);FX_NO_BINARY_SERIALIZATION</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);FX_RESHAPED_REFLECTION</FrameworkSymbols>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)'=='netstandard1.4'">
     <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
-    <FrameworkSymbols>netstandard;NETSTANDARD;NETSTANDARD1_0_OR_NEWER;NETSTANDARD1_1_OR_NEWER;NETSTANDARD1_2_OR_NEWER;NETSTANDARD1_3_OR_NEWER;NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
+    <FrameworkShortName>netstandard1.4</FrameworkShortName>
+    <FrameworkSymbols>netstandard;NETSTANDARD</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
+    <!-- Features -->
+    <FrameworkSymbols>$(FrameworkSymbols);FX_NO_APP_DOMAINS</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);FX_NO_BINARY_SERIALIZATION</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);FX_RESHAPED_REFLECTION</FrameworkSymbols>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)'=='netstandard1.5'">
     <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
-    <FrameworkSymbols>netstandard;NETSTANDARD;NETSTANDARD1_0_OR_NEWER;NETSTANDARD1_1_OR_NEWER;NETSTANDARD1_2_OR_NEWER;NETSTANDARD1_3_OR_NEWER;NETSTANDARD1_4_OR_NEWER;NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
+    <FrameworkShortName>netstandard1.5</FrameworkShortName>
+    <FrameworkSymbols>netstandard;NETSTANDARD</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
+    <!-- Features -->
+    <FrameworkSymbols>$(FrameworkSymbols);FX_NO_BINARY_SERIALIZATION</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);FX_RESHAPED_REFLECTION</FrameworkSymbols>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)'=='netstandard1.6'">
     <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
-    <FrameworkSymbols>netstandard;NETSTANDARD;NETSTANDARD1_0_OR_NEWER;NETSTANDARD1_1_OR_NEWER;NETSTANDARD1_2_OR_NEWER;NETSTANDARD1_3_OR_NEWER;NETSTANDARD1_4_OR_NEWER;NETSTANDARD1_5_OR_NEWER;NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
+    <FrameworkShortName>netstandard1.6</FrameworkShortName>
+    <FrameworkSymbols>netstandard;NETSTANDARD</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
+    <!-- Features -->
+    <FrameworkSymbols>$(FrameworkSymbols);FX_RESHAPED_REFLECTION</FrameworkSymbols>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
     <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
-    <FrameworkSymbols>netstandard;NETSTANDARD;NETSTANDARD1_0_OR_NEWER;NETSTANDARD1_1_OR_NEWER;NETSTANDARD1_2_OR_NEWER;NETSTANDARD1_3_OR_NEWER;NETSTANDARD1_4_OR_NEWER;NETSTANDARD1_5_OR_NEWER;NETSTANDARD1_6_OR_NEWER;NETSTANDARD2_0_OR_NEWER</FrameworkSymbols>
+    <FrameworkShortName>netstandard2.0</FrameworkShortName>
+    <FrameworkSymbols>netstandard;NETSTANDARD</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_0_OR_NEWER</FrameworkSymbols>
+    <!-- Features -->
+    <FrameworkSymbols>$(FrameworkSymbols);FX_RESHAPED_REFLECTION</FrameworkSymbols>
   </PropertyGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.1'">
+    <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
+    <FrameworkShortName>netstandard2.1</FrameworkShortName>
+    <FrameworkSymbols>netstandard;NETSTANDARD</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_0_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_1_OR_NEWER</FrameworkSymbols>
+    <!-- Features -->
+    <FrameworkSymbols>$(FrameworkSymbols);FX_RESHAPED_REFLECTION</FrameworkSymbols>
+  </PropertyGroup>
+
+  <!-- 
+  <DefineConstants>$(DefineConstants);NETSTANDARD1_6</DefineConstants>
+    <DefineConstants>$(DefineConstants);FX_NO_APP_DOMAINS</DefineConstants>
+    <DefineConstants>$(DefineConstants);FX_NO_ARRAY_LONG_LENGTH</DefineConstants>
+    <DefineConstants>$(DefineConstants);FX_NO_BEGINEND_READWRITE</DefineConstants>
+    <DefineConstants>$(DefineConstants);FX_NO_BINARY_SERIALIZATION</DefineConstants>
+    <DefineConstants>$(DefineConstants);FX_NO_CONVERTER</DefineConstants>
+    <DefineConstants>$(DefineConstants);FX_NO_DEFAULT_DEPENDENCY_TYPE</DefineConstants>
+    <DefineConstants>$(DefineConstants);FX_NO_CORHOST_SIGNER</DefineConstants>
+    <DefineConstants>$(DefineConstants);FX_NO_EVENTWAITHANDLE_IDISPOSABLE</DefineConstants>
+    <DefineConstants>$(DefineConstants);FX_NO_EXIT_CONTEXT_FLAGS</DefineConstants>
+    <DefineConstants>$(DefineConstants);FX_NO_HEAPTERMINATION</DefineConstants>
+    <DefineConstants>$(DefineConstants);FX_NO_LINKEDRESOURCES</DefineConstants>
+    <DefineConstants>$(DefineConstants);FX_NO_LOADER_OPTIMIZATION</DefineConstants>
+    <DefineConstants>$(DefineConstants);FX_NO_PARAMETERIZED_THREAD_START</DefineConstants>
+    <DefineConstants>$(DefineConstants);FX_NO_PDB_READER</DefineConstants>
+    <DefineConstants>$(DefineConstants);FX_NO_PDB_WRITER</DefineConstants>
+    <DefineConstants>$(DefineConstants);FX_NO_REFLECTION_MODULE_HANDLES</DefineConstants>
+    <DefineConstants>$(DefineConstants);FX_NO_REFLECTION_ONLY</DefineConstants>
+    <DefineConstants>$(DefineConstants);FX_NO_RUNTIMEENVIRONMENT</DefineConstants>
+    <DefineConstants>$(DefineConstants);FX_NO_SECURITY_PERMISSIONS</DefineConstants>
+    <DefineConstants>$(DefineConstants);FX_NO_SERVERCODEPAGES</DefineConstants>
+    <DefineConstants>$(DefineConstants);FX_NO_SYMBOLSTORE</DefineConstants>
+    <DefineConstants>$(DefineConstants);FX_NO_SYSTEM_CONFIGURATION</DefineConstants>
+    <DefineConstants>$(DefineConstants);FX_NO_THREAD</DefineConstants>
+    <DefineConstants>$(DefineConstants);FX_NO_THREADABORT</DefineConstants>
+    <DefineConstants>$(DefineConstants);FX_NO_WAITONE_MILLISECONDS</DefineConstants>
+    <DefineConstants>$(DefineConstants);FX_NO_WEB_CLIENT</DefineConstants>
+    <DefineConstants>$(DefineConstants);FX_NO_WIN_REGISTRY</DefineConstants>
+    <DefineConstants>$(DefineConstants);FX_NO_WINFORMS</DefineConstants>
+    <DefineConstants>$(DefineConstants);FX_NO_INDENTED_TEXT_WRITER</DefineConstants>
+    <DefineConstants>$(DefineConstants);FX_REDUCED_EXCEPTIONS</DefineConstants>
+    <DefineConstants>$(DefineConstants);FX_REDUCED_CONSOLE</DefineConstants>
+    <DefineConstants>$(DefineConstants);FX_RESHAPED_REFEMIT</DefineConstants>
+    <DefineConstants>$(DefineConstants);FX_RESHAPED_GLOBALIZATION</DefineConstants>
+    <DefineConstants>$(DefineConstants);FX_RESHAPED_REFLECTION</DefineConstants>
+    <DefineConstants>$(DefineConstants);FX_RESHAPED_MSBUILD</DefineConstants>
+   -->
 
   <PropertyGroup>
     <AppDesignerFolder>Properties</AppDesignerFolder>
