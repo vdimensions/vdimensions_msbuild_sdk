@@ -51,6 +51,30 @@
     <FrameworkSymbols>$(FrameworkSymbols);net35;NET35_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);net40;NET40_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);net45;NET45_OR_NEWER</FrameworkSymbols>
+    <!-- .NET Standard compliance -->
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
+    <!-- Features -->
+    <FeatureSymbols>$(FeatureSymbols);FX_RESHAPED_REFLECTION</FeatureSymbols>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)'=='net452'">
+    <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FrameworkShortName>net452</FrameworkShortName>
+    <!-- Framework detection -->
+    <FrameworkSymbols>$(FrameworkSymbols);net20;NET20_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);net30;NET30_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);net35;NET35_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);net40;NET40_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);net45;NET45_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);net452;NET452_OR_NEWER</FrameworkSymbols>
+    <!-- .NET Standard compliance -->
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
     <!-- Features -->
     <FeatureSymbols>$(FeatureSymbols);FX_RESHAPED_REFLECTION</FeatureSymbols>
   </PropertyGroup>
@@ -65,7 +89,69 @@
     <FrameworkSymbols>$(FrameworkSymbols);net35;NET35_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);net40;NET40_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);net45;NET45_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);net452;NET452_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);net46;NET46_OR_NEWER</FrameworkSymbols>
+    <!-- .NET Standard compliance -->
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
+    <!-- Features -->
+    <FeatureSymbols>$(FeatureSymbols);FX_RESHAPED_REFLECTION</FeatureSymbols>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)'=='net461'">
+    <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FrameworkShortName>net461</FrameworkShortName>
+    <!-- Framework detection -->
+    <FrameworkSymbols>$(FrameworkSymbols);net20;NET20_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);net30;NET30_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);net35;NET35_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);net40;NET40_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);net45;NET45_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);net452;NET452_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);net46;NET46_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);net461;NET461_OR_NEWER</FrameworkSymbols>
+    <!-- .NET Standard compliance -->
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_0_OR_NEWER</FrameworkSymbols>
+    <!-- Features -->
+    <FeatureSymbols>$(FeatureSymbols);FX_RESHAPED_REFLECTION</FeatureSymbols>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)'=='net462'">
+    <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FrameworkShortName>net462</FrameworkShortName>
+    <!-- Framework detection -->
+    <FrameworkSymbols>$(FrameworkSymbols);net20;NET20_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);net30;NET30_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);net35;NET35_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);net40;NET40_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);net45;NET45_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);net452;NET452_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);net46;NET46_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);net461;NET461_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);net462;NET462_OR_NEWER</FrameworkSymbols>
+    <!-- .NET Standard compliance -->
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_0_OR_NEWER</FrameworkSymbols>
     <!-- Features -->
     <FeatureSymbols>$(FeatureSymbols);FX_RESHAPED_REFLECTION</FeatureSymbols>
   </PropertyGroup>
@@ -190,11 +276,13 @@
     <FeatureSymbols>$(FeatureSymbols);FX_RESHAPED_REFLECTION</FeatureSymbols>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.1'">
-    <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
-    <FrameworkShortName>netstandard2.1</FrameworkShortName>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netcoreapp1.0'">
+    <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
+    <FrameworkShortName>netcoreapp1.0</FrameworkShortName>
     <!-- Framework detection -->
-    <FrameworkSymbols>netstandard;NETSTANDARD</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP1_0_OR_NEWER</FrameworkSymbols>
+    <!-- .NET Standard compliance -->
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
@@ -202,17 +290,6 @@
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
-    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_0_OR_NEWER</FrameworkSymbols>
-    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_1_OR_NEWER</FrameworkSymbols>
-    <!-- Features -->
-    <FeatureSymbols>$(FeatureSymbols);FX_RESHAPED_REFLECTION</FeatureSymbols>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(TargetFramework)'=='netcoreapp1.0'">
-    <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
-    <FrameworkShortName>netcoreapp1.0</FrameworkShortName>
-    <!-- Framework detection -->
-    <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP1_0_OR_NEWER</FrameworkSymbols>
     <!-- Features -->
     <FeatureSymbols>$(FeatureSymbols);FX_RESHAPED_REFLECTION</FeatureSymbols>
   </PropertyGroup>
@@ -223,6 +300,15 @@
     <!-- Framework detection -->
     <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP1_0_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP1_1_OR_NEWER</FrameworkSymbols>
+    <!-- .NET Standard compliance -->
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
     <!-- Features -->
     <FeatureSymbols>$(FeatureSymbols);FX_RESHAPED_REFLECTION</FeatureSymbols>
   </PropertyGroup>
@@ -234,6 +320,16 @@
     <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP1_0_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP1_1_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP2_0_OR_NEWER</FrameworkSymbols>
+    <!-- .NET Standard compliance -->
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_0_OR_NEWER</FrameworkSymbols>
     <!-- Features -->
     <FeatureSymbols>$(FeatureSymbols);FX_RESHAPED_REFLECTION</FeatureSymbols>
   </PropertyGroup>
@@ -246,6 +342,16 @@
     <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP1_1_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP2_0_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP2_1_OR_NEWER</FrameworkSymbols>
+    <!-- .NET Standard compliance -->
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_0_OR_NEWER</FrameworkSymbols>
     <!-- Features -->
     <FeatureSymbols>$(FeatureSymbols);FX_RESHAPED_REFLECTION</FeatureSymbols>
   </PropertyGroup>
