@@ -510,12 +510,6 @@
   <FeatureSymbols>$(FeatureSymbols);FX_RESHAPED_MSBUILD</FeatureSymbols>
   -->
 
-  <PropertyGroup>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>$(AssemblyName)</RootNamespace>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <DocumentationFile>$(OutputPath)\$(AssemblyName).xml</DocumentationFile>
-  </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
