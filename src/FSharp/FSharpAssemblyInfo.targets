@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Based on https://github.com/Microsoft/visualfsharp/blob/master/build/targets/GenerateAssemblyAttributes.targets -->
+<Project>
+  <PropertyGroup>
+    <AssemblyInfoDirectory>$(MSBuildProjectDirectory)\$(AppDesignerFolder)</AssemblyInfoDirectory>
+    <GeneratedFSharpAssemblyVersionFile>$(AssemblyInfoDirectory)\AssemblyInfo.$(TargetFramework).fs</GeneratedFSharpAssemblyVersionFile>
+    <!-- <GeneratedFSharpAssemblyVersionFile>$(IntermediateOutputPath)$(MSBuildProjectName).AssemblyInfo.fs</GeneratedFSharpAssemblyVersionFile> -->
+  </PropertyGroup>
+
+  <Target Name="CleanGeneratedAssemblyFileVersion" 
+          BeforeTargets="CoreClean">
+    <Delete Files="$(GeneratedFSharpAssemblyVersionFile)" Condition="Exists('$(GeneratedFSharpAssemblyVersionFile)')" />
+  </Target>
+
+  <Target Name="GenerateAssemblyLevelAttributes"
+          BeforeTargets="CoreCompile">
+    <PropertyGroup>
+      <GeneratedFSharpAssemblyLevelAttributesFile>$(IntermediateOutputPath)$(MSBuildProjectName).AssemblyLevelAttributes$(DefaultLanguageSourceExtension)</GeneratedFSharpAssemblyLevelAttributesFile>
+    </PropertyGroup>
+
+    <WriteCodeFragment AssemblyAttributes="@(AssemblyLevelAttribute)"
+                       Language="$(Language)"
+                       OutputFile="$(GeneratedFSharpAssemblyLevelAttributesFile)"
+                       Condition="'@(AssemblyLevelAttribute)' != ''">
+      <Output TaskParameter="OutputFile" ItemName="Compile" Condition="'$(Language)' != 'F#'" />
+      <Output TaskParameter="OutputFile" ItemName="CompileBefore" Condition="'$(Language)' == 'F#'" />
+      <Output TaskParameter="OutputFile" ItemName="FileWrites" />
+    </WriteCodeFragment>
+</Target>
+
+  <Target Name="GenerateAssemblyFileVersion"
+          BeforeTargets="CoreCompile"
+          Condition=" '$(GenerateAssemblyInfo)' == 'true' And !Exists('$(GeneratedFSharpAssemblyVersionFile)') ">
+    <PropertyGroup>
+      <!-- xbuild and older versions of msbuild don't have F# support for WriteCodeFragment -->
+      <_UseWriteCodeFragmentHack Condition="'$(OS)' == 'Unix' and '$(Language)' == 'F#'">true</_UseWriteCodeFragmentHack>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <_AssemblyInfoAttributes Include="AssemblyTitle">
+        <_Parameter1>$(AssemblyTitle)</_Parameter1>
+      </_AssemblyInfoAttributes>
+      <_AssemblyInfoAttributes Include="AssemblyProduct">
+        <_Parameter1>$(AssemblyProduct)</_Parameter1>
+      </_AssemblyInfoAttributes>
+      <_AssemblyInfoAttributes Include="AssemblyDescription">
+        <_Parameter1>$(AssemblyDescription)</_Parameter1>
+      </_AssemblyInfoAttributes>
+    </ItemGroup>
+
+    <ItemGroup>
+      <_AssemblyVendorAttributes Include="AssemblyCompany">
+        <_Parameter1>$(AssemblyCompany)</_Parameter1>
+      </_AssemblyVendorAttributes>
+      <_AssemblyVendorAttributes Include="AssemblyCopyright">
+        <_Parameter1>$(AssemblyCopyright)</_Parameter1>
+      </_AssemblyVendorAttributes>
+      <_AssemblyVendorAttributes Include="AssemblyTrademark">
+        <_Parameter1>$(AssemblyTrademark)</_Parameter1>
+      </_AssemblyVendorAttributes>
+    </ItemGroup>
+
+    <ItemGroup>
+      <_AssemblyConfigAttributes Include="AssemblyConfiguration">
+        <_Parameter1>$(Configuration)</_Parameter1>
+      </_AssemblyConfigAttributes>
+      <_AssemblyConfigAttributes Include="AssemblyCulture">
+        <_Parameter1></_Parameter1>
+      </_AssemblyConfigAttributes>
+      <_AssemblyConfigAttributes Include="System.Runtime.InteropServices.GuidAttribute" Condition=" '$(TargetFrameworkIdentifier)' == '.NETFramework' Or ('$(TargetFrameworkIdentifier)' == '.NETStandard' And '$(TargetFrameworkVersion)' != '1.0' ) " >
+        <_Parameter1>$(ProjectGuid)</_Parameter1>
+      </_AssemblyConfigAttributes>
+    </ItemGroup>
+
+    <ItemGroup>
+      <_AssemblyVersionAttributes Include="AssemblyVersion">
+        <_Parameter1>$(AssemblyVersion)</_Parameter1>
+      </_AssemblyVersionAttributes>
+      <_AssemblyVersionAttributes Include="AssemblyFileVersion">
+        <_Parameter1>$(AssemblyFileVersion)</_Parameter1>
+      </_AssemblyVersionAttributes>
+      <_AssemblyVersionAttributes Include="AssemblyInformationalVersion">
+        <_Parameter1>$(AssemblyInformationalVersion)</_Parameter1>
+      </_AssemblyVersionAttributes>
+    </ItemGroup>
+
+    <ItemGroup Condition=" '$(_UseWriteCodeFragmentHack)' == 'true' ">
+      <_LinesToWrite Include="// &lt;auto-generated&gt;" />
+      <_LinesToWrite Include="module AssemblyInfo" />
+      <_LinesToWrite Include="//" />
+      <_LinesToWrite Include="open System.Reflection" />
+      <_LinesToWrite Include="// assembly product information" />
+      <_LinesToWrite Include="[&lt;assembly: %(_AssemblyInfoAttributes.Identity)(&quot;%(_AssemblyInfoAttributes._Parameter1)&quot;)&gt;]" />
+      <_LinesToWrite Include="// assembly vendor information" />
+      <_LinesToWrite Include="[&lt;assembly: %(_AssemblyVendorAttributes.Identity)(&quot;%(_AssemblyVendorAttributes._Parameter1)&quot;)&gt;]" />
+      <_LinesToWrite Include="// assembly configuration information" />
+      <_LinesToWrite Include="[&lt;assembly: %(_AssemblyConfigAttributes.Identity)(&quot;%(_AssemblyConfigAttributes._Parameter1)&quot;)&gt;]" />
+      <_LinesToWrite Include="// assembly version information" />
+      <_LinesToWrite Include="[&lt;assembly: %(_AssemblyVersionAttributes.Identity)(&quot;%(_AssemblyVersionAttributes._Parameter1)&quot;)&gt;]" />
+      <_LinesToWrite Include="//" />
+      <_LinesToWrite Include="do ()" />
+
+      <Compile Include="$(GeneratedFSharpAssemblyVersionFile)" Condition="'$(Language)' != 'F#' or '$(AssemblyName)' == 'FSharp.Core'" />
+      <CompileBefore Include="$(GeneratedFSharpAssemblyVersionFile)" Condition="'$(Language)' == 'F#' and '$(AssemblyName)' != 'FSharp.Core'" />
+      <FileWrites Include="$(GeneratedFSharpAssemblyVersionFile)" />
+    </ItemGroup>
+
+    
+    <WriteCodeFragment AssemblyAttributes="@(_AssemblyInfoAttributes);@(_AssemblyVendorAttributes);@(_AssemblyConfigAttributes);@(_AssemblyVersionAttributes)"
+                       Language="$(Language)"
+                       OutputFile="$(GeneratedFSharpAssemblyVersionFile)"
+                       Condition="'$(_UseWriteCodeFragmentHack)' != 'true'">
+      <!-- For FSharp.Core, assembly version must be inserted after all Core files, as it defines F# basic types (strings) -->
+      <Output TaskParameter="OutputFile" ItemName="Compile" Condition="'$(Language)' != 'F#' or '$(AssemblyName)' == 'FSharp.Core'" />
+      <!-- For other assemblies, this must be inserted before all source files, to keep exe's EntryPoints (if any) as the last source file -->
+      <Output TaskParameter="OutputFile" ItemName="CompileBefore" Condition="'$(Language)' == 'F#' and '$(AssemblyName)' != 'FSharp.Core'" />
+      <Output TaskParameter="OutputFile" ItemName="FileWrites" />
+    </WriteCodeFragment>
+
+    <WriteLinesToFile File="$(GeneratedFSharpAssemblyVersionFile)"
+                      Lines="@(_LinesToWrite)"
+                      Overwrite="false"
+                      Encoding="UTF-8"
+                      Condition="'$(_UseWriteCodeFragmentHack)' == 'true' And !Exists('$(GeneratedFSharpAssemblyVersionFile)')" />
+    <!-- 
+    <ItemGroup>
+      <_AssemblyInfo Include="$(GeneratedFSharpAssemblyVersionFile)" />
+    </ItemGroup>
+
+    <Copy SourceFiles="@(_AssemblyInfo)"
+          DestinationFolder="$(AssemblyInfoDirectory)"
+          /> 
+     -->
+  </Target>
+
+  <ItemGroup>
+    <Compile Include="$(GeneratedFSharpAssemblyVersionFile)" Condition="Exists('$(GeneratedFSharpAssemblyVersionFile)')" />
+  </ItemGroup>
+</Project>
