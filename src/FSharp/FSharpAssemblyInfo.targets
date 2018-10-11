@@ -67,7 +67,7 @@
       <_AssemblyConfigAttributes Include="AssemblyCulture">
         <_Parameter1></_Parameter1>
       </_AssemblyConfigAttributes>
-      <_AssemblyConfigAttributes Include="System.Runtime.InteropServices.GuidAttribute" Condition=" '$(TargetFrameworkIdentifier)' == '.NETFramework' Or ('$(TargetFrameworkIdentifier)' == '.NETStandard' And '$(TargetFrameworkVersion)' != '1.0' ) " >
+      <_AssemblyConfigAttributes Include="System.Runtime.InteropServices.GuidAttribute" Condition=" '$(ProjectGuid)' != '' And ('$(TargetFrameworkIdentifier)' != '.NETStandard' Or '$(TargetFrameworkVersion)' != '1.0' ) " >
         <_Parameter1>$(ProjectGuid)</_Parameter1>
       </_AssemblyConfigAttributes>
     </ItemGroup>
