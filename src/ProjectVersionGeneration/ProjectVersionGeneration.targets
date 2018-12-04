@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <PropertyGroup>
+    <VersionGenerationStrategy Condition=" '$(VersionGenerationStrategy)' == ''">Default</VersionGenerationStrategy>
+    <VersionBuildFile>$(BaseIntermediateOutputPath)\Build.txt</VersionBuildFile>
+    <VersionRevisionFile>$(BaseIntermediateOutputPath)\Revision.txt</VersionRevisionFile>
+
+    <VersionBuildPath>$([System.IO.Path]::Combine($(MSBuildProjectDirectory), $(VersionBuildFile)))</VersionBuildPath>
+    <VersionRevisionPath>$([System.IO.Path]::Combine($(MSBuildProjectDirectory), $(VersionRevisionFile)))</VersionRevisionPath>
+
+    <VersionBuild Condition="Exists('$(VersionBuildPath)')">$([System.IO.File]::ReadAllText($(VersionBuildPath)).Trim())</VersionBuild>
+    <VersionRevision Condition="Exists('$(VersionRevisionPath)')">$([System.IO.File]::ReadAllText($(VersionRevisionPath)).Trim())</VersionRevision>
+
+    <VersionBuild Condition="!Exists('$(VersionBuildPath)')">0</VersionBuild>
+    <VersionRevision Condition="!Exists('$(VersionRevisionPath)')">0</VersionRevision>
+  </PropertyGroup>
+
+  <Import Project="ProjectVersionGeneration.$(VersionGenerationStrategy).targets"  Condition=" '$(VersionGenerationStrategy)' != '' " />
+
+  <Target Name="CleanProjectVersionFiles" BeforeTargets="CoreClean">
+    <Delete Files="$(VersionBuildFile)" Condition="Exists('$(VersionBuildFile)')" />
+    <Delete Files="$(VersionRevisionFile)" Condition="Exists('$(VersionRevisionFile)')" />
+  </Target>
+
+  <Target Name="GenerateProjectVersionProperties" AfterTargets="CleanProjectVersionFiles">
+    <ItemGroup Condition=" !Exists('$(VersionBuildFile)') ">
+      <_VersionBuildLineWrite Include="$(_GeneratedVersionBuild)" />
+    </ItemGroup>
+    <WriteLinesToFile File="$(VersionBuildFile)"
+                      Lines="@(_VersionBuildLineWrite)"
+                      Overwrite="false"
+                      Encoding="UTF-8"
+                      Condition="!Exists('$(VersionBuildFile)')" />
+
+    <ItemGroup Condition=" !Exists('$(VersionRevisionFile)') ">
+      <_VersionRevisionLineWrite Include="$(_GeneratedVersionRevision)" />
+    </ItemGroup>
+    <WriteLinesToFile File="$(VersionRevisionFile)"
+                      Lines="@(_VersionRevisionLineWrite)"
+                      Overwrite="false"
+                      Encoding="UTF-8"
+                      Condition="!Exists('$(VersionRevisionFile)')" />
+
+    <ReadLinesFromFile File="$(VersionBuildFile)">
+      <Output TaskParameter="Lines" ItemName="VersionBuild" />
+    </ReadLinesFromFile>
+
+    <ReadLinesFromFile File="$(VersionRevisionFile)">
+      <Output TaskParameter="Lines" ItemName="VersionRevision" />
+    </ReadLinesFromFile>
+
+    <CreateProperty Value="@(VersionBuild)">
+      <Output TaskParameter="Value" PropertyName="VersionBuild" />
+    </CreateProperty>
+
+    <CreateProperty Value="@(VersionRevision)">
+      <Output TaskParameter="Value" PropertyName="VersionRevision" />
+    </CreateProperty>  
+
+    <!-- <CallTarget Targets="UpdateAssemblyLevelProperties" /> -->
+  </Target>
+
+  <!-- <Target Name="UpdateAssemblyLevelProperties">
+    <PropertyGroup>
+      <Version>$(VersionMajor).$(VersionMinor).$(VersionBuild).$(VersionRevision)</Version>
+      <AssemblyVersion>$(Version)</AssemblyVersion>
+      <AssemblyFileVersion>$(Version)</AssemblyFileVersion>
+      <AssemblyInformationalVersion>$(Version)</AssemblyInformationalVersion>
+      <PackageVersion>$(Version)</PackageVersion>
+      
+      <Message Text="VersionBuild = $(VersionBuild)" Importance="high" />
+      <Message Text="VersionRevision = $(VersionRevision)" Importance="high" />
+      <Message Text="Version = $(Version)" Importance="high" /> 
+    </PropertyGroup>
+  </Target> -->
+</Project>
