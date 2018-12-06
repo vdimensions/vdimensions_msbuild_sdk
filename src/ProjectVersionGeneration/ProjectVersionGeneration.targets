@@ -17,7 +17,7 @@
 
   <Import Project="ProjectVersionGeneration.$(VersionGenerationStrategy).targets"  Condition=" '$(VersionGenerationStrategy)' != '' " />
 
-  <Target Name="CleanProjectVersionFiles" BeforeTargets="CoreClean">
+  <Target Name="CleanProjectVersionFiles" AfterTargets="CoreClean;CorePack">
     <Delete Files="$(VersionBuildFile)" Condition="Exists('$(VersionBuildFile)')" />
     <Delete Files="$(VersionRevisionFile)" Condition="Exists('$(VersionRevisionFile)')" />
   </Target>
