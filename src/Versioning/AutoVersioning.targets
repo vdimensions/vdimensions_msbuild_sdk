@@ -15,7 +15,7 @@
     <VersionRevision Condition="!Exists('$(VersionRevisionPath)')">0</VersionRevision>
   </PropertyGroup>
 
-  <Import Project="ProjectVersionGeneration.$(VersionGenerationStrategy).targets"  Condition=" '$(VersionGenerationStrategy)' != '' " />
+  <Import Project="AutoVersioning.$(VersionGenerationStrategy).targets"  Condition=" '$(VersionGenerationStrategy)' != '' " />
 
   <Target Name="CleanProjectVersionFiles" AfterTargets="CoreClean">
     <Delete Files="$(VersionBuildFile)" Condition="Exists('$(VersionBuildFile)')" />

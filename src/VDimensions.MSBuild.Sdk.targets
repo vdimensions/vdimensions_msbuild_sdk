@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <PropertyGroup>
+    <EnableAutoVersioning Condition=" '$(EnableAutoVersioning)' == '' ">true</EnableAutoVersioning>
+    <EnableMultitargeting Condition=" '$(EnableMultitargeting)' == '' ">true</EnableMultitargeting>
+  </PropertyGroup>
+  
+  <Import Project="Versioning/AutoVersioning.targets" Condition=" '$(EnableAutoVersioning)' == 'true' " />
+  <Import Project="Multitargeting/MultitargetingFrameworkSupport.targets" Condition=" '$(EnableMultitargeting)' == 'true' " />
+
+  <Import Project="FSharp/FSharpAssemblyInfo.targets"  Condition="'$(Language)' == 'F#'" />
+</Project>
