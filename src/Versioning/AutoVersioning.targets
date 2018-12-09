@@ -23,11 +23,6 @@
   <Import Project="AutoVersioning.$(VersionGenerationStrategy).targets"  Condition=" '$(VersionGenerationStrategy)' != '' " />
 
   <Target Name="CleanProjectVersionFiles" AfterTargets="CoreClean">
-    <Message Text="CopyrightYearSince = '$(CopyrightYearSince)'" Importance="high" /> 
-    <Message Text="_GeneratedVersionBuild = '$(_GeneratedVersionBuild)'" Importance="high" />
-    <Delete Files="$(VersionBuildFile)\$(CopyrightYearSince)" Condition="Exists('$(VersionBuildFile)')" />
-    <Delete Files="$(VersionBuildFile)\$(_GeneratedVersionBuild)" Condition="Exists('$(VersionBuildFile)')" />
-
     <Delete Files="$(VersionBuildFile)" Condition="Exists('$(VersionBuildFile)')" />
     <Delete Files="$(VersionRevisionFile)" Condition="Exists('$(VersionRevisionFile)')" />
 
