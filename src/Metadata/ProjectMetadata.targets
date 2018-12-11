@@ -19,6 +19,7 @@
   
   <!-- Common props -->
   <PropertyGroup>
+    <RootNamespace Condition=" '$(RootNamespace)' == '' ">$(AssemblyName)</RootNamespace>
     <OutputPath Condition=" '$(OutputPath)' == '' ">bin\$(Configuration)</OutputPath>
     <DocumentationFile Condition=" '$(DocumentationFile)' == '' ">$(OutputPath)\$(AssemblyName).xml</DocumentationFile>
   </PropertyGroup>
