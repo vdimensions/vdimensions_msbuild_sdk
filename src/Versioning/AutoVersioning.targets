@@ -2,16 +2,15 @@
 <Project>
   <PropertyGroup>
     <VersionGenerationStrategy Condition=" '$(VersionGenerationStrategy)' == ''">Default</VersionGenerationStrategy>
+
     <VersionBuildFile>$(BaseIntermediateOutputPath)\$(AssemblyName).Version.Build.txt</VersionBuildFile>
-    <VersionRevisionFile>$(BaseIntermediateOutputPath)\$(AssemblyName).Version.Revision.txt</VersionRevisionFile>
-
     <VersionBuildPath>$([System.IO.Path]::Combine($(MSBuildProjectDirectory), $(VersionBuildFile)))</VersionBuildPath>
-    <VersionRevisionPath>$([System.IO.Path]::Combine($(MSBuildProjectDirectory), $(VersionRevisionFile)))</VersionRevisionPath>
-
     <VersionBuild Condition="Exists('$(VersionBuildPath)')">$([System.IO.File]::ReadAllText($(VersionBuildPath)).Trim())</VersionBuild>
-    <VersionRevision Condition="Exists('$(VersionRevisionPath)')">$([System.IO.File]::ReadAllText($(VersionRevisionPath)).Trim())</VersionRevision>
-
     <VersionBuild Condition="!Exists('$(VersionBuildPath)')">0</VersionBuild>
+
+    <VersionRevisionFile>$(BaseIntermediateOutputPath)\$(AssemblyName).Version.Revision.txt</VersionRevisionFile>
+    <VersionRevisionPath>$([System.IO.Path]::Combine($(MSBuildProjectDirectory), $(VersionRevisionFile)))</VersionRevisionPath>
+    <VersionRevision Condition="Exists('$(VersionRevisionPath)')">$([System.IO.File]::ReadAllText($(VersionRevisionPath)).Trim())</VersionRevision>
     <VersionRevision Condition="!Exists('$(VersionRevisionPath)')">0</VersionRevision>
   </PropertyGroup>
 
@@ -22,47 +21,30 @@
 
   <Import Project="AutoVersioning.$(VersionGenerationStrategy).targets"  Condition=" '$(VersionGenerationStrategy)' != '' " />
 
-  <Target Name="CleanProjectVersionFiles" AfterTargets="CoreClean">
-    <Delete Files="$(VersionBuildFile)" Condition="Exists('$(VersionBuildFile)')" />
-    <Delete Files="$(VersionRevisionFile)" Condition="Exists('$(VersionRevisionFile)')" />
+  <Target Name="ResetVersion">
+    <ItemGroup>
+      <FileToDelete Include="$(VersionBuildFile)" />
+      <FileToDelete Include="$(VersionRevisionFile)" />
+    </ItemGroup>
 
-    <CallTarget Targets="GenerateProjectVersionProperties" />
+    <!-- <Attrib Files="@(FileToDelete)" ReadOnly="false" /> -->
+    <Delete Files="@(FileToDelete)" Condition="Exists('@(FileToDelete)')" />
   </Target>
 
-  <Target Name="GenerateProjectVersionProperties" AfterTargets="CoreClean;CoreCompile;CorePack">
-
-    <ItemGroup Condition=" !Exists('$(VersionBuildFile)') ">
-      <_VersionBuildLineWrite Include="$(_GeneratedVersionBuild)" />
-    </ItemGroup>
+  <Target Name="CreateProjectVersionFiles" 
+          BeforeTargets="CoreClean;CoreCompile;CorePack"
+          Inputs="$(VersionBuildFile);$(VersionRevisionFile)" 
+          Outputs="$(VersionBuildFile);$(VersionRevisionFile)" 
+          >
     <WriteLinesToFile File="$(VersionBuildFile)"
-                      Lines="@(_VersionBuildLineWrite)"
-                      Overwrite="false"
+                      Lines="$(_GeneratedVersionBuild)"
+                      Overwrite="true"
                       Encoding="UTF-8"
                       Condition="!Exists('$(VersionBuildFile)')" />
-
-    <ItemGroup Condition=" !Exists('$(VersionRevisionFile)') ">
-      <_VersionRevisionLineWrite Include="$(_GeneratedVersionRevision)" />
-    </ItemGroup>
     <WriteLinesToFile File="$(VersionRevisionFile)"
-                      Lines="@(_VersionRevisionLineWrite)"
-                      Overwrite="false"
+                      Lines="$(_GeneratedVersionRevision)"
+                      Overwrite="true"
                       Encoding="UTF-8"
                       Condition="!Exists('$(VersionRevisionFile)')" />
-
-    <ReadLinesFromFile File="$(VersionBuildFile)">
-      <Output TaskParameter="Lines" ItemName="VersionBuild" />
-    </ReadLinesFromFile>
-
-    <ReadLinesFromFile File="$(VersionRevisionFile)">
-      <Output TaskParameter="Lines" ItemName="VersionRevision" />
-    </ReadLinesFromFile>
-
-    <CreateProperty Value="@(VersionBuild)">
-      <Output TaskParameter="Value" PropertyName="VersionBuild" />
-    </CreateProperty>
-
-    <CreateProperty Value="@(VersionRevision)">
-      <Output TaskParameter="Value" PropertyName="VersionRevision" />
-    </CreateProperty>  
   </Target>
 </Project>

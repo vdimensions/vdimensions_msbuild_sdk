@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project>
   <!-- Build settings -->
-  <PropertyGroup>
-    <PlatformTarget Condition=" '$(PlatformTarget)' == '' ">AnyCPU</PlatformTarget>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+  <PropertyGroup Condition=" '$(Configuration)' == '' ">
+    <Configuration>Debug</Configuration>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(PlatformTarget)' == '' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -17,11 +20,15 @@
     <Optimize Condition=" '$(Optimize)' == '' ">true</Optimize>
   </PropertyGroup>
   
-  <!-- Common props -->
+  <!-- Common props -->  
   <PropertyGroup>
     <RootNamespace Condition=" '$(RootNamespace)' == '' ">$(AssemblyName)</RootNamespace>
-    <OutputPath Condition=" '$(OutputPath)' == '' ">bin\$(Configuration)</OutputPath>
-    <DocumentationFile Condition=" '$(DocumentationFile)' == '' ">$(OutputPath)\$(AssemblyName).xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup  Condition=" '$(OutputPath)' == '' ">
+    <OutputPath>bin\$(Configuration)</OutputPath>
+    <DocumentationFile Condition=" '$(TargetFramework)' == '' ">$(OutputPath)\$(AssemblyName).xml</DocumentationFile>
+    <DocumentationFile Condition=" '$(TargetFramework)' != '' ">$(OutputPath)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
   </PropertyGroup>
 
   <!-- Version derivates -->
