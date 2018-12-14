@@ -19,7 +19,7 @@
     <CopyrightYearCurrent Condition=" '$(CopyrightYearCurrent)' == '' ">$([System.DateTime]::get_UtcNow().get_Year())</CopyrightYearCurrent>
   </PropertyGroup>
 
-  <Import Project="AutoVersioning.$(VersionGenerationStrategy).targets"  Condition=" '$(VersionGenerationStrategy)' != '' " />
+  <Import Project="AutoVersioning.$(VersionGenerationStrategy).targets" Condition=" '$(VersionGenerationStrategy)' != '' " />
 
   <Target Name="ResetVersion">
     <ItemGroup>
@@ -28,7 +28,7 @@
     </ItemGroup>
 
     <!-- <Attrib Files="@(FileToDelete)" ReadOnly="false" /> -->
-    <Delete Files="@(FileToDelete)" Condition="Exists('@(FileToDelete)')" />
+    <Delete Files="%(FileToDelete.Identity)" Condition="Exists('%(FileToDelete.Identity)')" />
   </Target>
 
   <Target Name="CreateProjectVersionFiles" 
