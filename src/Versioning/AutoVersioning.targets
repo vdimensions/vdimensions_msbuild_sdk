@@ -15,6 +15,8 @@
   </PropertyGroup>
 
   <PropertyGroup>
+    <CopyrightDaySince Condition=" '$(CopyrightDaySince)' == '' ">1</CopyrightDaySince>
+    <CopyrightMonthSince Condition=" '$(CopyrightMonthSince)' == '' ">1</CopyrightMonthSince>
     <CopyrightYearSince Condition=" '$(CopyrightYearSince)' == '' ">2000</CopyrightYearSince>
     <CopyrightYearCurrent Condition=" '$(CopyrightYearCurrent)' == '' ">$([System.DateTime]::get_UtcNow().get_Year())</CopyrightYearCurrent>
   </PropertyGroup>
