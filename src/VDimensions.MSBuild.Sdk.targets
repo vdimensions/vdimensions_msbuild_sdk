@@ -4,6 +4,7 @@
     <EnableProjectMetadata Condition=" '$(EnableProjectMetadata)' == '' ">true</EnableProjectMetadata>
     <EnableAutoVersioning Condition=" '$(EnableAutoVersioning)' == '' ">true</EnableAutoVersioning>
     <EnableMultitargeting Condition=" '$(EnableMultitargeting)' == '' ">true</EnableMultitargeting>
+    <EnablePackagingProperties Condition=" '$(EnablePackagingProperties)' == '' ">true</EnablePackagingProperties>
   </PropertyGroup>
   
   <Import Project="Multitargeting/MultitargetingFrameworkSupport.targets" Condition=" '$(EnableMultitargeting)' == 'true' " />
@@ -12,4 +13,6 @@
   <Import Project="Metadata/ProjectMetadata.FSharp.targets" Condition="('$(EnableProjectMetadata)' == 'true') And ('$(MSBuildProjectExtension)' == '.fsproj') " />
 
   <Import Project="FSharp/FSharpAssemblyInfo.targets" Condition=" '$(MSBuildProjectExtension)' == '.fsproj' " />
+
+  <Import Project="Packaging/Packaging.targets" Condition=" '$(EnablePackagingProperties)' == 'true' " />
 </Project>

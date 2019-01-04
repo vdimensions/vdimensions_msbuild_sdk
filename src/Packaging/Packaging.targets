@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <Target Name="PrepareExternalNuspecSupport" BeforeTargets="GenerateTargetFrameworkMonikerAttribute;CorePack;Pack">
+    <PropertyGroup Condition=" '$(Version)' != '' ">
+      <PackageVersion Condition=" '$(PackageVersion)' == '' ">$(Version)</PackageVersion>
+    </PropertyGroup>
+    
+    <PropertyGroup Condition=" '$(License)' != '' ">
+      <PackageLicense Condition=" '$(PackageLicense)' == '' ">$(License)</PackageLicense>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Authors)' != '' ">
+      <Owners Condition=" '$(Owners)' == '' ">$(Authors)</Owners>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="Exists('$(MSBuildProjectDirectory)\$(AssemblyName).nuspec')">
+      <NuspecFile>$(AssemblyName).nuspec</NuspecFile>
+      <NuspecBasePath>$(MSBuildProjectDirectory)</NuspecBasePath>
+      <NuspecProperties>id=$(AssemblyName)</NuspecProperties>
+      <NuspecProperties Condition=" '$(Configuration)' != '' ">$(NuspecProperties);config=$(Configuration)</NuspecProperties>
+      <NuspecProperties Condition=" '$(PackageVersion)' != '' ">$(NuspecProperties);version=$(PackageVersion)</NuspecProperties>
+      <NuspecProperties Condition=" '$(Description)' != '' ">$(NuspecProperties);description=$(Description)</NuspecProperties>
+      <NuspecProperties Condition=" '$(Authors)' != '' ">$(NuspecProperties);authors=$(Authors)</NuspecProperties>
+      <NuspecProperties Condition=" '$(Owners)' != '' ">$(NuspecProperties);authors=$(Owners)</NuspecProperties>
+      <NuspecProperties Condition=" '$(Company)' != '' ">$(NuspecProperties);copyright=$(Company)</NuspecProperties>
+      <NuspecProperties Condition=" '$(Copyright)' != '' ">$(NuspecProperties);copyright=$(Copyright)</NuspecProperties>
+      <NuspecProperties Condition=" '$(PackageLicense)' != '' ">$(NuspecProperties);license=$(PackageLicense)</NuspecProperties>
+      <NuspecProperties Condition=" '$(PackageTags)' != '' ">$(NuspecProperties);tags=$(PackageTags)</NuspecProperties>
+      <NuspecProperties Condition=" '$(PackageIconUri)' != '' ">$(NuspecProperties);icon=$(PackageIconUri)</NuspecProperties>
+    </PropertyGroup>
+  </Target>
+</Project>
