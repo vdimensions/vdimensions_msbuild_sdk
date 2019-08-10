@@ -2,7 +2,7 @@
 <Project>
   <PropertyGroup>
     <VersionGenerationStrategy Condition=" '$(VersionGenerationStrategy)' == ''">Default</VersionGenerationStrategy>
-
+<!-- 
     <VersionBuildFile>$(BaseIntermediateOutputPath)\$(AssemblyName).Version.Build.txt</VersionBuildFile>
     <VersionBuildPath>$([System.IO.Path]::Combine($(MSBuildProjectDirectory), $(VersionBuildFile)))</VersionBuildPath>
     <VersionBuild Condition="Exists('$(VersionBuildPath)')">$([System.IO.File]::ReadAllText($(VersionBuildPath)).Trim())</VersionBuild>
@@ -12,6 +12,7 @@
     <VersionRevisionPath>$([System.IO.Path]::Combine($(MSBuildProjectDirectory), $(VersionRevisionFile)))</VersionRevisionPath>
     <VersionRevision Condition="Exists('$(VersionRevisionPath)')">$([System.IO.File]::ReadAllText($(VersionRevisionPath)).Trim())</VersionRevision>
     <VersionRevision Condition="!Exists('$(VersionRevisionPath)')">0</VersionRevision>
+ -->
   </PropertyGroup>
 
   <PropertyGroup>
@@ -23,17 +24,23 @@
 
   <Import Project="AutoVersioning.$(VersionGenerationStrategy).targets" Condition=" '$(VersionGenerationStrategy)' != '' " />
 
+  <PropertyGroup>
+    <VersionBuild Condition=" '$(VersionBuild)' == '' ">$(_GeneratedVersionBuild)</VersionBuild>
+    <VersionRevision Condition=" '$(VersionRevision)' == '' ">$(_GeneratedVersionRevision)</VersionRevision>
+  </PropertyGroup>
+    <!-- 
   <Target Name="ResetVersion">
     <ItemGroup>
       <FileToDelete Include="$(VersionBuildFile)" />
       <FileToDelete Include="$(VersionRevisionFile)" />
     </ItemGroup>
-
+    -->
     <!-- <Attrib Files="@(FileToDelete)" ReadOnly="false" /> -->
-    <Delete Files="%(FileToDelete.Identity)" Condition="Exists('%(FileToDelete.Identity)')" />
+    <!-- <Delete Files="%(FileToDelete.Identity)" Condition="Exists('%(FileToDelete.Identity)')" /> 
   </Target>
+    -->
 
-  <Target Name="CreateProjectVersionFiles" 
+  <!-- <Target Name="CreateProjectVersionFiles" 
           BeforeTargets="_GenerateProjectRestoreGraph;CoreClean;CoreCompile;CorePack"
           Inputs="$(VersionBuildFile);$(VersionRevisionFile)" 
           Outputs="$(VersionBuildFile);$(VersionRevisionFile)" 
@@ -52,5 +59,5 @@
       <VersionBuild Condition="Exists('$(VersionRevisionPath)')">$([System.IO.File]::ReadAllText($(VersionBuildPath)).Trim())</VersionBuild>
       <VersionRevision Condition="Exists('$(VersionRevisionPath)')">$([System.IO.File]::ReadAllText($(VersionRevisionPath)).Trim())</VersionRevision>
     </PropertyGroup>
-  </Target>
+  </Target> -->
 </Project>
