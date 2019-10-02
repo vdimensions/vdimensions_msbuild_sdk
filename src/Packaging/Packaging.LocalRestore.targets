@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <PropertyGroup Condition=" '$(PackageOutputPath)' != '' ">
+    <PackageRestorePath>$(PackageOutputPath)\restore</PackageRestorePath>
+    <RestoreSources>$(PackageRestorePath);$(RestoreSources)</RestoreSources>
+  </PropertyGroup>
+
+  <Target Name="RegisterLocalNugetPackage" AfterTargets="Pack">
+    <MakeDir 
+      Condition="'$(PackageRestorePath)' != '' " 
+      Directories="$(PackageRestorePath)" 
+      />
+    <Exec 
+      Condition=" '$(PackageRestorePath)' != '' AND Exists('$(PackageOutputPath)\$(AssemblyName).$(PackageVersion).nupkg')" 
+      Command="nuget add &quot;$(PackageOutputPath)\$(AssemblyName).$(PackageVersion).nupkg&quot; -Source &quot;$(PackageRestorePath)&quot;"
+      />
+  </Target>
+</Project>
