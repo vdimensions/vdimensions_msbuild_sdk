@@ -406,6 +406,24 @@
     <FeatureSymbols>$(FeatureSymbols);FX_RESHAPED_REFLECTION</FeatureSymbols>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.1'">
+    <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
+    <FrameworkShortName>netstandard2.1</FrameworkShortName>
+    <!-- Framework detection -->
+    <FrameworkSymbols>netstandard;NETSTANDARD</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_0_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_1_OR_NEWER</FrameworkSymbols>
+    <!-- Features -->
+    <FeatureSymbols>$(FeatureSymbols);FX_RESHAPED_REFLECTION</FeatureSymbols>
+  </PropertyGroup>
+
   <PropertyGroup Condition="'$(TargetFramework)'=='netcoreapp1.0'">
     <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
     <FrameworkShortName>netcoreapp1.0</FrameworkShortName>
@@ -482,6 +500,30 @@
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_0_OR_NEWER</FrameworkSymbols>
+    <!-- Features -->
+    <FeatureSymbols>$(FeatureSymbols);FX_RESHAPED_REFLECTION</FeatureSymbols>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)'=='netcoreapp3.0'">
+    <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
+    <FrameworkShortName>netcoreapp3.0</FrameworkShortName>
+    <!-- Framework detection -->
+    <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP1_0_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP1_1_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP2_0_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP2_1_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP3_0_OR_NEWER</FrameworkSymbols>
+    <!-- .NET Standard compliance -->
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_0_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_1_OR_NEWER</FrameworkSymbols>
     <!-- Features -->
     <FeatureSymbols>$(FeatureSymbols);FX_RESHAPED_REFLECTION</FeatureSymbols>
   </PropertyGroup>
