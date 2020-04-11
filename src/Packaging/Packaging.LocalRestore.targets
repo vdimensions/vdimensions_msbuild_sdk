@@ -8,15 +8,21 @@
   
   <PropertyGroup Condition=" '$(PackageOutputPath)' != '' ">
     <PackageRestorePath>$(PackageOutputPath)\restore</PackageRestorePath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(PackageRestorePath)' != '' AND Exists('$(PackageRestorePath)') ">
     <RestoreSources>$(PackageRestorePath);$(RestoreSources)</RestoreSources>
   </PropertyGroup>
 
-  <Target Name="EnsureLocalNugetFeed" BeforeTargets="Clean;Restore">
+  <!-- <Target Name="EnsureLocalNugetFeed" BeforeTargets="Clean;Restore">
+    <MakeDir Condition="'$(PackageRestorePath)' != '' " Directories="$(PackageRestorePath)" />
+  </Target> -->
+
+  <Target Name="RegisterLocalNugetPackage" BeforeTargets="Pack">
     <MakeDir Condition="'$(PackageRestorePath)' != '' " Directories="$(PackageRestorePath)" />
   </Target>
 
   <Target Name="RegisterLocalNugetPackage" AfterTargets="Pack">
-    <MakeDir Condition="'$(PackageRestorePath)' != '' " Directories="$(PackageRestorePath)" />
     <Exec 
       Condition=" '$(PackageRestorePath)' != '' AND Exists('$(PackageOutputPath)\$(AssemblyName).$(PackageVersion).nupkg')" 
       Command="nuget add &quot;$(PackageOutputPath)\$(AssemblyName).$(PackageVersion).nupkg&quot; -Source &quot;$(PackageRestorePath)&quot;"
