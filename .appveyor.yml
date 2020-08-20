@@ -1,0 +1,25 @@
+version: 0.1.{build}
+pull_requests:
+  do_not_increment_build_number: true
+branches:
+  only:
+  - master
+skip_tags: true
+skip_branch_with_pr: true
+image: Visual Studio 2019
+platform: Any CPU
+cache:
+- '%USERPROFILE%\.nuget\packages'
+- '%LocalAppData%\NuGet\Cache'
+- '%LocalAppData%\NuGet\v3-cache'
+build_script:
+- ps: "cd src\Multitargeting \ndotnet pack"
+artifacts:
+- path: dist/*.nupkg
+  name: NuGet Package
+# deploy:
+# - provider: NuGet
+#   api_key:
+#     secure: mP3lhFouNNiaq+0zxcgkaD//qVCnzKdMq4bxQFhGW5FHB0MaWlQOtJgsYfuEUz50
+#   on:
+#     branch: master

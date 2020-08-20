@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VDimensions.MSBuild.Sdk.Multitargeting</RootNamespace>
+    <AssemblyName>VDimensions.MSBuild.Sdk.Multitargeting</AssemblyName>
+    <TargetFramework>netstandard1.0</TargetFramework>
+
+    <NuspecFile>VDimensions.MSBuild.Sdk.Multitargeting.nuspec</NuspecFile>
+    <PackageOutputPath>../../dist</PackageOutputPath>
+  </PropertyGroup>
+</Project>
