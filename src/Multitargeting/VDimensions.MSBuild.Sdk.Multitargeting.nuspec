@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>VDimensions.MSBuild.Sdk.Multitargeting</id>
-    <version>0.1.0</version>
+    <version>0.1.3</version>
     <description>Adds compilation symbols enabling more effective multi-targeting support for different .NET build platforms.</description>
     
     <authors>Virtual Dimensions</authors>
@@ -12,6 +12,6 @@
     <developmentDependency>true</developmentDependency>
   </metadata>
   <files>
-    <file src="MultitargetingFrameworkSupport.targets" target="build" />
+    <file src="MultitargetingFrameworkSupport.targets" target="build\VDimensions.MSBuild.Sdk.Multitargeting.targets" />
   </files>
 </package>
