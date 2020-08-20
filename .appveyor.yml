@@ -17,9 +17,9 @@ build_script:
 artifacts:
 - path: dist/*.nupkg
   name: NuGet Package
-# deploy:
-# - provider: NuGet
-#   api_key:
-#     secure: mP3lhFouNNiaq+0zxcgkaD//qVCnzKdMq4bxQFhGW5FHB0MaWlQOtJgsYfuEUz50
-#   on:
-#     branch: master
+deploy:
+- provider: NuGet
+  api_key:
+    secure: 9tjKpcQ5ppjbneqBIpe4WbyA8RxTtTk/NXjip+RlGvYqepAak1TvmaHtrspbeDon
+  on:
+    branch: master
