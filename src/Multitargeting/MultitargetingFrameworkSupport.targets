@@ -69,8 +69,6 @@
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
-    <!-- Features -->
-    <FeatureSymbols>$(FeatureSymbols);FX_RESHAPED_REFLECTION</FeatureSymbols>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)'=='net451'">
@@ -88,8 +86,6 @@
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
-    <!-- Features -->
-    <FeatureSymbols>$(FeatureSymbols);FX_RESHAPED_REFLECTION</FeatureSymbols>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)'=='net452'">
@@ -109,8 +105,6 @@
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
-    <!-- Features -->
-    <FeatureSymbols>$(FeatureSymbols);FX_RESHAPED_REFLECTION</FeatureSymbols>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)'=='net46'">
@@ -132,8 +126,6 @@
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
-    <!-- Features -->
-    <FeatureSymbols>$(FeatureSymbols);FX_RESHAPED_REFLECTION</FeatureSymbols>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)'=='net461'">
@@ -160,8 +152,6 @@
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_0_OR_NEWER</FrameworkSymbols>
-    <!-- Features -->
-    <FeatureSymbols>$(FeatureSymbols);FX_RESHAPED_REFLECTION</FeatureSymbols>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)'=='net462'">
@@ -189,8 +179,6 @@
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_0_OR_NEWER</FrameworkSymbols>
-    <!-- Features -->
-    <FeatureSymbols>$(FeatureSymbols);FX_RESHAPED_REFLECTION</FeatureSymbols>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)'=='net47'">
@@ -219,8 +207,6 @@
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_0_OR_NEWER</FrameworkSymbols>
-    <!-- Features -->
-    <FeatureSymbols>$(FeatureSymbols);FX_RESHAPED_REFLECTION</FeatureSymbols>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)'=='net471'">
@@ -250,8 +236,6 @@
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_0_OR_NEWER</FrameworkSymbols>
-    <!-- Features -->
-    <FeatureSymbols>$(FeatureSymbols);FX_RESHAPED_REFLECTION</FeatureSymbols>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)'=='net472'">
@@ -282,8 +266,6 @@
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_0_OR_NEWER</FrameworkSymbols>
-    <!-- Features -->
-    <FeatureSymbols>$(FeatureSymbols);FX_RESHAPED_REFLECTION</FeatureSymbols>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)'=='netstandard1.0'">
@@ -292,10 +274,6 @@
     <!-- Framework detection -->
     <FrameworkSymbols>netstandard;NETSTANDARD</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
-    <!-- Features -->
-    <FeatureSymbols>$(FeatureSymbols);FX_NO_APP_DOMAINS</FeatureSymbols>
-    <FeatureSymbols>$(FeatureSymbols);FX_NO_BINARY_SERIALIZATION</FeatureSymbols>
-    <FeatureSymbols>$(FeatureSymbols);FX_RESHAPED_REFLECTION</FeatureSymbols>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)'=='netstandard1.1'">
@@ -305,10 +283,6 @@
     <FrameworkSymbols>netstandard;NETSTANDARD</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
-    <!-- Features -->
-    <FeatureSymbols>$(FeatureSymbols);FX_NO_APP_DOMAINS</FeatureSymbols>
-    <FeatureSymbols>$(FeatureSymbols);FX_NO_BINARY_SERIALIZATION</FeatureSymbols>
-    <FeatureSymbols>$(FeatureSymbols);FX_RESHAPED_REFLECTION</FeatureSymbols>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)'=='netstandard1.2'">
@@ -319,10 +293,6 @@
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
-    <!-- Features -->
-    <FeatureSymbols>$(FeatureSymbols);FX_NO_APP_DOMAINS</FeatureSymbols>
-    <FeatureSymbols>$(FeatureSymbols);FX_NO_BINARY_SERIALIZATION</FeatureSymbols>
-    <FeatureSymbols>$(FeatureSymbols);FX_RESHAPED_REFLECTION</FeatureSymbols>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)'=='netstandard1.3'">
@@ -334,10 +304,6 @@
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
-    <!-- Features -->
-    <FeatureSymbols>$(FeatureSymbols);FX_NO_APP_DOMAINS</FeatureSymbols>
-    <FeatureSymbols>$(FeatureSymbols);FX_NO_BINARY_SERIALIZATION</FeatureSymbols>
-    <FeatureSymbols>$(FeatureSymbols);FX_RESHAPED_REFLECTION</FeatureSymbols>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)'=='netstandard1.4'">
@@ -350,10 +316,6 @@
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
-    <!-- Features -->
-    <FeatureSymbols>$(FeatureSymbols);FX_NO_APP_DOMAINS</FeatureSymbols>
-    <FeatureSymbols>$(FeatureSymbols);FX_NO_BINARY_SERIALIZATION</FeatureSymbols>
-    <FeatureSymbols>$(FeatureSymbols);FX_RESHAPED_REFLECTION</FeatureSymbols>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)'=='netstandard1.5'">
@@ -367,9 +329,6 @@
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
-    <!-- Features -->
-    <FeatureSymbols>$(FeatureSymbols);FX_NO_BINARY_SERIALIZATION</FeatureSymbols>
-    <FeatureSymbols>$(FeatureSymbols);FX_RESHAPED_REFLECTION</FeatureSymbols>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)'=='netstandard1.6'">
@@ -384,9 +343,6 @@
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
-    <!-- Features -->
-    <FeatureSymbols>$(FeatureSymbols);FX_NO_BINARY_SERIALIZATION</FeatureSymbols>
-    <FeatureSymbols>$(FeatureSymbols);FX_RESHAPED_REFLECTION</FeatureSymbols>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
@@ -402,8 +358,6 @@
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_0_OR_NEWER</FrameworkSymbols>
-    <!-- Features -->
-    <FeatureSymbols>$(FeatureSymbols);FX_RESHAPED_REFLECTION</FeatureSymbols>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.1'">
@@ -420,8 +374,6 @@
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_0_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_1_OR_NEWER</FrameworkSymbols>
-    <!-- Features -->
-    <FeatureSymbols>$(FeatureSymbols);FX_RESHAPED_REFLECTION</FeatureSymbols>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)'=='netcoreapp1.0'">
@@ -438,8 +390,6 @@
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
-    <!-- Features -->
-    <FeatureSymbols>$(FeatureSymbols);FX_RESHAPED_REFLECTION</FeatureSymbols>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)'=='netcoreapp1.1'">
@@ -457,8 +407,6 @@
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
-    <!-- Features -->
-    <FeatureSymbols>$(FeatureSymbols);FX_RESHAPED_REFLECTION</FeatureSymbols>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)'=='netcoreapp2.0'">
@@ -478,8 +426,6 @@
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_0_OR_NEWER</FrameworkSymbols>
-    <!-- Features -->
-    <FeatureSymbols>$(FeatureSymbols);FX_RESHAPED_REFLECTION</FeatureSymbols>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)'=='netcoreapp2.1'">
@@ -500,8 +446,6 @@
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_0_OR_NEWER</FrameworkSymbols>
-    <!-- Features -->
-    <FeatureSymbols>$(FeatureSymbols);FX_RESHAPED_REFLECTION</FeatureSymbols>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)'=='netcoreapp3.0'">
@@ -524,8 +468,29 @@
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_0_OR_NEWER</FrameworkSymbols>
     <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_1_OR_NEWER</FrameworkSymbols>
-    <!-- Features -->
-    <FeatureSymbols>$(FeatureSymbols);FX_RESHAPED_REFLECTION</FeatureSymbols>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)'=='netcoreapp3.1'">
+    <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
+    <FrameworkShortName>netcoreapp3.1</FrameworkShortName>
+    <!-- Framework detection -->
+    <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP1_0_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP1_1_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP2_0_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP2_1_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP3_0_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP3_1_OR_NEWER</FrameworkSymbols>
+    <!-- .NET Standard compliance -->
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_0_OR_NEWER</FrameworkSymbols>
+    <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_1_OR_NEWER</FrameworkSymbols>
   </PropertyGroup>
 
   <PropertyGroup Condition="$(TargetFramework.StartsWith('net4')) and '$(OS)' == 'Unix'">
