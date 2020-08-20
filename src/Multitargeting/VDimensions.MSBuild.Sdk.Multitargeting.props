@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <PropertyGroup>
+    <!-- make MSBuild track this file for incremental builds. -->
+    <!-- ref https://blogs.msdn.microsoft.com/msbuild/2005/09/26/how-to-ensure-changes-to-a-custom-target-file-prompt-a-rebuild/ -->
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+  </PropertyGroup>
+
+  <Choose>
+    <When Condition="'$(TargetFramework)' == 'net20'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+        <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+        <FrameworkShortName>net20</FrameworkShortName>
+        <FrameworkPathOverride>$(MSBuildProgramFiles32)\Reference Assemblies\Microsoft\Framework\.NETFramework\v3.5\Profile\Client</FrameworkPathOverride>
+        <!-- Framework detection -->
+        <FrameworkSymbols>$(FrameworkSymbols);NET20_OR_NEWER</FrameworkSymbols>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)' == 'net30'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+        <TargetFrameworkVersion>v3.0</TargetFrameworkVersion>
+        <FrameworkPathOverride>$(MSBuildProgramFiles32)\Reference Assemblies\Microsoft\Framework\.NETFramework\v3.5\Profile\Client</FrameworkPathOverride>
+        <FrameworkShortName>net30</FrameworkShortName>
+        <!-- Framework detection -->
+        <FrameworkSymbols>$(FrameworkSymbols);NET20_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET30_OR_NEWER</FrameworkSymbols>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)' == 'net35'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+        <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+        <FrameworkShortName>net35</FrameworkShortName>
+        <FrameworkPathOverride>$(MSBuildProgramFiles32)\Reference Assemblies\Microsoft\Framework\.NETFramework\v3.5\Profile\Client</FrameworkPathOverride>
+        <!-- Framework detection -->
+        <FrameworkSymbols>$(FrameworkSymbols);NET20_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET30_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET35_OR_NEWER</FrameworkSymbols>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='net40'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+        <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+        <FrameworkShortName>net40</FrameworkShortName>
+        <!-- Framework detection -->
+        <FrameworkSymbols>$(FrameworkSymbols);NET20_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET30_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET35_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET40_OR_NEWER</FrameworkSymbols>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='net45'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+        <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+        <FrameworkShortName>net45</FrameworkShortName>
+        <!-- Framework detection -->
+        <FrameworkSymbols>$(FrameworkSymbols);NET20_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET30_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET35_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET40_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET45_OR_NEWER</FrameworkSymbols>
+        <!-- .NET Standard compliance -->
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='net451'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+        <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+        <FrameworkShortName>net451</FrameworkShortName>
+        <!-- Framework detection -->
+        <FrameworkSymbols>$(FrameworkSymbols);NET20_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET30_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET35_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET40_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET45_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET451_OR_NEWER</FrameworkSymbols>
+        <!-- .NET Standard compliance -->
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='net452'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+        <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+        <FrameworkShortName>net452</FrameworkShortName>
+        <!-- Framework detection -->
+        <FrameworkSymbols>$(FrameworkSymbols);NET20_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET30_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET35_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET40_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET45_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET451_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET452_OR_NEWER</FrameworkSymbols>
+        <!-- .NET Standard compliance -->
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='net46'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+        <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+        <FrameworkShortName>net46</FrameworkShortName>
+        <!-- Framework detection -->
+        <FrameworkSymbols>$(FrameworkSymbols);NET20_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET30_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET35_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET40_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET45_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET451_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET452_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET46_OR_NEWER</FrameworkSymbols>
+        <!-- .NET Standard compliance -->
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='net461'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+        <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+        <FrameworkShortName>net461</FrameworkShortName>
+        <!-- Framework detection -->
+        <FrameworkSymbols>$(FrameworkSymbols);NET20_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET30_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET35_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET40_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET45_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET451_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET452_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET46_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET461_OR_NEWER</FrameworkSymbols>
+        <!-- .NET Standard compliance -->
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_0_OR_NEWER</FrameworkSymbols>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='net462'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+        <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+        <FrameworkShortName>net462</FrameworkShortName>
+        <!-- Framework detection -->
+        <FrameworkSymbols>$(FrameworkSymbols);NET20_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET30_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET35_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET40_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET45_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET451_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET452_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET46_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET461_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET462_OR_NEWER</FrameworkSymbols>
+        <!-- .NET Standard compliance -->
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_0_OR_NEWER</FrameworkSymbols>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='net47'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+        <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+        <FrameworkShortName>net47</FrameworkShortName>
+        <!-- Framework detection -->
+        <FrameworkSymbols>$(FrameworkSymbols);NET20_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET30_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET35_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET40_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET45_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET451_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET452_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET46_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET461_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET462_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET47_OR_NEWER</FrameworkSymbols>
+        <!-- .NET Standard compliance -->
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_0_OR_NEWER</FrameworkSymbols>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='net471'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+        <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+        <FrameworkShortName>net471</FrameworkShortName>
+        <!-- Framework detection -->
+        <FrameworkSymbols>$(FrameworkSymbols);NET20_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET30_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET35_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET40_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET45_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET451_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET452_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET46_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET461_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET462_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET47_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET471_OR_NEWER</FrameworkSymbols>
+        <!-- .NET Standard compliance -->
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_0_OR_NEWER</FrameworkSymbols>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='net472'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+        <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+        <FrameworkShortName>net472</FrameworkShortName>
+        <!-- Framework detection -->
+        <FrameworkSymbols>$(FrameworkSymbols);NET20_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET30_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET35_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET40_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET45_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET451_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET452_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET46_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET461_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET462_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET47_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET471_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET472_OR_NEWER</FrameworkSymbols>
+        <!-- .NET Standard compliance -->
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_0_OR_NEWER</FrameworkSymbols>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='netstandard1.0'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
+        <FrameworkShortName>netstandard1.0</FrameworkShortName>
+        <!-- Framework detection -->
+        <FrameworkSymbols>NETSTANDARD</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='netstandard1.1'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
+        <FrameworkShortName>netstandard1.1</FrameworkShortName>
+        <!-- Framework detection -->
+        <FrameworkSymbols>NETSTANDARD</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='netstandard1.2'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
+        <FrameworkShortName>netstandard1.2</FrameworkShortName>
+        <!-- Framework detection -->
+        <FrameworkSymbols>NETSTANDARD</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='netstandard1.3'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
+        <FrameworkShortName>netstandard1.3</FrameworkShortName>
+        <!-- Framework detection -->
+        <FrameworkSymbols>NETSTANDARD</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='netstandard1.4'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
+        <FrameworkShortName>netstandard1.4</FrameworkShortName>
+        <!-- Framework detection -->
+        <FrameworkSymbols>NETSTANDARD</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='netstandard1.5'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
+        <FrameworkShortName>netstandard1.5</FrameworkShortName>
+        <!-- Framework detection -->
+        <FrameworkSymbols>NETSTANDARD</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='netstandard1.6'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
+        <FrameworkShortName>netstandard1.6</FrameworkShortName>
+        <!-- Framework detection -->
+        <FrameworkSymbols>NETSTANDARD</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='netstandard2.0'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
+        <FrameworkShortName>netstandard2.0</FrameworkShortName>
+        <!-- Framework detection -->
+        <FrameworkSymbols>NETSTANDARD</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_0_OR_NEWER</FrameworkSymbols>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='netstandard2.1'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
+        <FrameworkShortName>netstandard2.1</FrameworkShortName>
+        <!-- Framework detection -->
+        <FrameworkSymbols>NETSTANDARD</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_0_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_1_OR_NEWER</FrameworkSymbols>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='netcoreapp1.1'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
+        <FrameworkShortName>netcoreapp1.0</FrameworkShortName>
+        <!-- Framework detection -->
+        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP1_0_OR_NEWER</FrameworkSymbols>
+        <!-- .NET Standard compliance -->
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='netcoreapp1.1'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
+        <FrameworkShortName>netcoreapp1.1</FrameworkShortName>
+        <!-- Framework detection -->
+        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP1_0_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP1_1_OR_NEWER</FrameworkSymbols>
+        <!-- .NET Standard compliance -->
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='netcoreapp2.0'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
+        <FrameworkShortName>netcoreapp2.0</FrameworkShortName>
+        <!-- Framework detection -->
+        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP1_0_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP1_1_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP2_0_OR_NEWER</FrameworkSymbols>
+        <!-- .NET Standard compliance -->
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_0_OR_NEWER</FrameworkSymbols>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='netcoreapp2.1'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
+        <FrameworkShortName>netcoreapp2.1</FrameworkShortName>
+        <!-- Framework detection -->
+        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP1_0_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP1_1_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP2_0_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP2_1_OR_NEWER</FrameworkSymbols>
+        <!-- .NET Standard compliance -->
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_0_OR_NEWER</FrameworkSymbols>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='netcoreapp3.0'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
+        <FrameworkShortName>netcoreapp3.0</FrameworkShortName>
+        <!-- Framework detection -->
+        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP1_0_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP1_1_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP2_0_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP2_1_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP3_0_OR_NEWER</FrameworkSymbols>
+        <!-- .NET Standard compliance -->
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_0_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_1_OR_NEWER</FrameworkSymbols>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='netcoreapp3.1'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
+        <FrameworkShortName>netcoreapp3.1</FrameworkShortName>
+        <!-- Framework detection -->
+        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP1_0_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP1_1_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP2_0_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP2_1_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP3_0_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP3_1_OR_NEWER</FrameworkSymbols>
+        <!-- .NET Standard compliance -->
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_0_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_1_OR_NEWER</FrameworkSymbols>
+      </PropertyGroup>
+    </When>
+  </Choose>
+
+  <PropertyGroup>
+    <DefineConstants>$(DefineConstants);$(FrameworkSymbols)</DefineConstants>
+  </PropertyGroup>
+</Project>
