@@ -12,7 +12,7 @@
                       PrivateAssets="All" 
                       />
   </ItemGroup> -->
-  <Import Project="MultitargetingFrameworkSupport.MonoOverrides.targets" />
+  <!-- <Import Project="MultitargetingFrameworkSupport.MonoOverrides.targets" /> -->
 
   <PropertyGroup Condition="'$(TargetFramework)'=='net20'">
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
