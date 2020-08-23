@@ -6,11 +6,12 @@
     <description>$description$</description>
     <authors>$authors$</authors>
     <copyright>$copyright$</copyright>
-    <license type="expression">Apache-2.0</license>
+    <license type="expression">$license$</license>
     
     <developmentDependency>true</developmentDependency>
   </metadata>
   <files>
     <file src="$id$.props" target="build\$id$.props" />
+    <file src="$id$.targets" target="build\$id$.targets" />
   </files>
 </package>

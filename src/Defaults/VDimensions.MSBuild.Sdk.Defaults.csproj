@@ -19,6 +19,7 @@
     <NuspecProperties Condition=" '$(Authors)' != '' ">$(NuspecProperties);authors=$(Authors)</NuspecProperties>
     <NuspecProperties Condition=" '$(Copyright)' != '' ">$(NuspecProperties);copyright=$(Copyright)</NuspecProperties>
     <NuspecProperties Condition=" '$(Description)' != '' ">$(NuspecProperties);description=$(Description)</NuspecProperties>
+    <NuspecProperties Condition=" '$(License)' != '' ">$(NuspecProperties);license=$(License)</NuspecProperties>
 
     <PackageOutputPath>../../dist</PackageOutputPath>
   </PropertyGroup>
