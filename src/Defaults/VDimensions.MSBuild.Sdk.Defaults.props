@@ -47,11 +47,4 @@
     <DocumentationFile Condition=" '$(GenerateDocumentationFile)' == 'true' AND '$(DocumentationFile)' == '' AND '$(TargetFramework)' == '' ">$(OutputPath)\$(AssemblyName).xml</DocumentationFile>
     <DocumentationFile Condition=" '$(GenerateDocumentationFile)' == 'true' AND '$(DocumentationFile)' == '' AND '$(TargetFramework)' != '' ">$(OutputPath)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
   </PropertyGroup>
-
-  <!-- Version fields -->
-  <PropertyGroup Condition=" '$(Version)' != '' ">
-    <AssemblyVersion Condition=" '$(AssemblyVersion)' == '' ">$(Version)</AssemblyVersion>
-    <AssemblyFileVersion Condition=" '$(AssemblyFileVersion)' == '' ">$(Version)</AssemblyFileVersion>
-    <AssemblyInformationalVersion Condition=" '$(AssemblyInformationalVersion)' == '' ">$(Version)</AssemblyInformationalVersion>
-  </PropertyGroup>
 </Project>
