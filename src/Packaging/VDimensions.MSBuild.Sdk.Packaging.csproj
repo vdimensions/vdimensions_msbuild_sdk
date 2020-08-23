@@ -4,14 +4,17 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <OutputType>Library</OutputType>
-    <RootNamespace>VDimensions.MSBuild.Sdk.Multitargeting</RootNamespace>
-    <AssemblyName>VDimensions.MSBuild.Sdk.Multitargeting</AssemblyName>
+    <RootNamespace>VDimensions.MSBuild.Sdk.Packaging</RootNamespace>
+    <AssemblyName>VDimensions.MSBuild.Sdk.Packaging</AssemblyName>
     <TargetFramework>netstandard1.0</TargetFramework>
+    <License>Apache-2.0</License>
 
-    <NuspecFile>VDimensions.MSBuild.Sdk.Multitargeting.nuspec</NuspecFile>
+    <NuspecFile>VDimensions.MSBuild.Sdk.Packaging.nuspec</NuspecFile>
     <NuspecProperties Condition=" '$(AssemblyName)' != '' ">$(NuspecProperties);id=$(AssemblyName)</NuspecProperties>
     <NuspecProperties Condition=" '$(PackageVersion)' != '' ">$(NuspecProperties);version=$(PackageVersion)</NuspecProperties>
 
+
     <PackageOutputPath>../../dist</PackageOutputPath>
+    
   </PropertyGroup>
 </Project>

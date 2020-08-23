@@ -26,7 +26,7 @@
       <Output TaskParameter="OutputFile" ItemName="CompileBefore" Condition="'$(Language)' == 'F#'" />
       <Output TaskParameter="OutputFile" ItemName="FileWrites" />
     </WriteCodeFragment>
-</Target>
+  </Target>
 
   <Target Name="GenerateAssemblyFileVersion"
           BeforeTargets="CoreCompile"
