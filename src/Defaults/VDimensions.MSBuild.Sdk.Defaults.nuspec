@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <description>$description$</description>
+    <authors>$authors$</authors>
+    <copyright>$copyright$</copyright>
+    <license type="expression">Apache-2.0</license>
+    
+    <developmentDependency>true</developmentDependency>
+  </metadata>
+  <files>
+    <file src="$id$.props" target="build\$id$.props" />
+  </files>
+</package>

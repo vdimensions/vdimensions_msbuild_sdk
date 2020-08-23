@@ -14,7 +14,7 @@ cache:
 - '%LocalAppData%\NuGet\v3-cache'
 build_script:
 - ps: "cd src\\Multitargeting \ndotnet pack -p:PackageVersion=$env:APPVEYOR_BUILD_VERSION \ncd ..\\..\\"
-- ps: "cd src\\Packaging \ndotnet pack -p:PackageVersion=$env:APPVEYOR_BUILD_VERSION \ncd ..\\..\\"
+- ps: "cd src\\Metadata \ndotnet pack -p:PackageVersion=$env:APPVEYOR_BUILD_VERSION \ncd ..\\..\\"
 artifacts:
 - path: dist/*.nupkg
   name: NuGet Package

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <PropertyGroup>
+    <!-- make MSBuild track this file for incremental builds. -->
+    <!-- ref https://blogs.msdn.microsoft.com/msbuild/2005/09/26/how-to-ensure-changes-to-a-custom-target-file-prompt-a-rebuild/ -->
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+  </PropertyGroup>
+
+  <!-- Configuration defaults for this package -->
+  <PropertyGroup>
+    <GenerateDocumentationFile Condition=" '$(GenerateDocumentationFile)' == '' ">true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <!-- Build settings -->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <PlatformTarget Condition=" '$(PlatformTarget)' == '' ">AnyCPU</PlatformTarget>
+  </PropertyGroup>
+
+  <Choose>
+    <When Condition=" '$(Configuration)' == 'Debug' ">
+      <PropertyGroup>
+        <DebugSymbols Condition=" '$(DebugSymbols)' == '' ">true</DebugSymbols>
+        <DebugType Condition=" '$(DebugType)' == '' ">full</DebugType>
+        <Optimize Condition=" '$(Optimize)' == '' ">false</Optimize>
+        <DefineConstants>$(DefineConstants);DEBUG</DefineConstants>
+      </PropertyGroup>
+    </When>
+    <When Condition=" '$(Configuration)' == 'Release' ">
+      <PropertyGroup>
+        <DebugSymbols Condition=" '$(DebugSymbols)' != '' "></DebugSymbols>
+        <DebugType Condition=" '$(DebugType)' == '' ">pdbonly</DebugType>
+        <Optimize Condition=" '$(Optimize)' == '' ">true</Optimize>
+      </PropertyGroup>
+    </When>
+  </Choose>
+
+  <PropertyGroup Condition=" '$(AllowUnsafeBlocks)' == 'true' ">
+    <DefineConstants>$(DefineConstants);UNSAFE</DefineConstants>
+  </PropertyGroup>
+
+  <!-- Output path -->
+  <PropertyGroup Condition=" '$(OutputPath)' == '' ">
+    <OutputPath>bin\$(Configuration)</OutputPath>
+  </PropertyGroup>
+  
+  <!-- Common props -->  
+  <PropertyGroup Condition=" '$(AssemblyName)' != '' ">
+    <RootNamespace Condition=" '$(RootNamespace)' == '' ">$(AssemblyName)</RootNamespace>
+    <DocumentationFile Condition=" '$(GenerateDocumentationFile)' == 'true' AND '$(DocumentationFile)' == '' AND '$(TargetFramework)' == '' ">$(OutputPath)\$(AssemblyName).xml</DocumentationFile>
+    <DocumentationFile Condition=" '$(GenerateDocumentationFile)' == 'true' AND '$(DocumentationFile)' == '' AND '$(TargetFramework)' != '' ">$(OutputPath)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
+  </PropertyGroup>
+
+  <!-- Version fields -->
+  <PropertyGroup Condition=" '$(Version)' != '' ">
+    <AssemblyVersion Condition=" '$(AssemblyVersion)' == '' ">$(Version)</AssemblyVersion>
+    <AssemblyFileVersion Condition=" '$(AssemblyFileVersion)' == '' ">$(Version)</AssemblyFileVersion>
+    <AssemblyInformationalVersion Condition=" '$(AssemblyInformationalVersion)' == '' ">$(Version)</AssemblyInformationalVersion>
+  </PropertyGroup>
+</Project>
