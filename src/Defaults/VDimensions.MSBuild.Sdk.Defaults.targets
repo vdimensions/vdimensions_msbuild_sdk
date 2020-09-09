@@ -21,5 +21,6 @@
     <AssemblyVersion Condition=" '$(AssemblyVersion)' == '' ">$(Version)</AssemblyVersion>
     <AssemblyFileVersion Condition=" '$(AssemblyFileVersion)' == '' ">$(Version)</AssemblyFileVersion>
     <AssemblyInformationalVersion Condition=" '$(AssemblyInformationalVersion)' == '' ">$(Version)</AssemblyInformationalVersion>
+    <PackageVersion Condition=" '$(PackageVersion)' == '' ">$(Version)</PackageVersion>
   </PropertyGroup>
 </Project>
