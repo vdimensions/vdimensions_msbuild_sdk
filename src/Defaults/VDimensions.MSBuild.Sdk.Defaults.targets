@@ -8,11 +8,11 @@
 
   <!-- 
    | The below properties are being evaluated in a .targets file, because the MSBuild project that imports 
-   | this file could have specified its own overrides for the respective properties.
+   | this file could have specified its own overrides for them, and we need to use that value here.
    -->
 
   <!-- Defines an 'UNSAFE' preprocessor directive, based on whether the `AllowUnsafeBlocks` setting is enabled. -->
-   <PropertyGroup>
+  <PropertyGroup>
     <DefineConstants Condition=" '$(AllowUnsafeBlocks)' == 'true' ">$(DefineConstants);UNSAFE</DefineConstants>
   </PropertyGroup>
 

@@ -7,10 +7,12 @@
     <RootNamespace>VDimensions.MSBuild.Sdk.Multitargeting</RootNamespace>
     <AssemblyName>VDimensions.MSBuild.Sdk.Multitargeting</AssemblyName>
     <TargetFramework>netstandard1.0</TargetFramework>
+    <Description>Adds compilation symbols enabling more effective multi-targeting support for different .NET build platforms.</Description>
 
     <NuspecFile>VDimensions.MSBuild.Sdk.Multitargeting.nuspec</NuspecFile>
     <NuspecProperties Condition=" '$(AssemblyName)' != '' ">$(NuspecProperties);id=$(AssemblyName)</NuspecProperties>
     <NuspecProperties Condition=" '$(PackageVersion)' != '' ">$(NuspecProperties);version=$(PackageVersion)</NuspecProperties>
+    <NuspecProperties Condition=" '$(Description)' != '' ">$(NuspecProperties);description=$(Description)</NuspecProperties>
 
     <PackageOutputPath>../../dist</PackageOutputPath>
   </PropertyGroup>

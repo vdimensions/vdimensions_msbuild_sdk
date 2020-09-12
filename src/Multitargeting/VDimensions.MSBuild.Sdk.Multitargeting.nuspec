@@ -3,7 +3,7 @@
   <metadata>
     <id>$id$</id>
     <version>$version$</version>
-    <description>Adds compilation symbols enabling more effective multi-targeting support for different .NET build platforms.</description>
+    <description>$description$</description>
     
     <authors>Virtual Dimensions</authors>
     <copyright>Copyright © Virtual Dimensions 2020</copyright>
