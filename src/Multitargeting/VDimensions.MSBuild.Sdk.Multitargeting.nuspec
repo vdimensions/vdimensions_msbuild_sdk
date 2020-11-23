@@ -13,7 +13,7 @@
 
     <dependencies>
       <group targetFramework="net35">
-        <dependency id="jnm2.ReferenceAssemblies.net35" version="1.*" />
+        <dependency id="jnm2.ReferenceAssemblies.net35" version="[1.0.1,)" />
       </group>
     </dependencies>
   </metadata>
