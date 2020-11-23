@@ -35,7 +35,7 @@
         <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
         <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
         <FrameworkShortName>net35</FrameworkShortName>
-        <!-- <FrameworkPathOverride>$(MSBuildProgramFiles32)\Reference Assemblies\Microsoft\Framework\.NETFramework\v3.5\Profile\Client</FrameworkPathOverride> -->
+        <FrameworkPathOverride>$(MSBuildProgramFiles32)\Reference Assemblies\Microsoft\Framework\.NETFramework\v3.5\Profile\Client</FrameworkPathOverride>
         <!-- Framework detection -->
         <FrameworkSymbols>$(FrameworkSymbols);NET20_OR_NEWER</FrameworkSymbols>
         <FrameworkSymbols>$(FrameworkSymbols);NET30_OR_NEWER</FrameworkSymbols>
