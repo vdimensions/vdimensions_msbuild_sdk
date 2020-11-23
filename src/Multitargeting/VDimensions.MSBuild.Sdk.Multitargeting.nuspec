@@ -10,6 +10,10 @@
     <license type="expression">Apache-2.0</license>
     
     <developmentDependency>true</developmentDependency>
+
+    <group targetFramework="net35">
+      <dependency id="jnm2.ReferenceAssemblies.net35" version="1.*" />
+    </group>
   </metadata>
   <files>
     <file src="VDimensions.MSBuild.Sdk.Multitargeting.props" target="build\VDimensions.MSBuild.Sdk.Multitargeting.props" />
