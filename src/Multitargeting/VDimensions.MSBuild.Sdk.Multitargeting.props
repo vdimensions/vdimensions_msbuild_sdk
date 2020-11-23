@@ -6,40 +6,28 @@
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
 
-  <PropertyGroup>
-    <Jnm2ReferenceAssembliesNet35Version>1.0.1</Jnm2ReferenceAssembliesNet35Version>
-  </PropertyGroup>
-
   <Choose>
     <When Condition="'$(TargetFramework)' == 'net20'">
       <PropertyGroup>
         <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
         <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
         <FrameworkShortName>net20</FrameworkShortName>
-        <!-- <FrameworkPathOverride>$(MSBuildProgramFiles32)\Reference Assemblies\Microsoft\Framework\.NETFramework\v3.5\Profile\Client</FrameworkPathOverride> -->
+        <FrameworkPathOverride>$(MSBuildProgramFiles32)\Reference Assemblies\Microsoft\Framework\.NETFramework\v3.5\Profile\Client</FrameworkPathOverride>
         <!-- Framework detection -->
         <FrameworkSymbols>$(FrameworkSymbols);NET20_OR_NEWER</FrameworkSymbols>
       </PropertyGroup>
-      
-      <ItemGroup>
-        <PackageReference Include="jnm2.ReferenceAssemblies.net35" Version="$(Jnm2ReferenceAssembliesNet35Version)" />
-      </ItemGroup>
     </When>
 
     <When Condition="'$(TargetFramework)' == 'net30'">
       <PropertyGroup>
         <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
         <TargetFrameworkVersion>v3.0</TargetFrameworkVersion>
-        <!-- <FrameworkPathOverride>$(MSBuildProgramFiles32)\Reference Assemblies\Microsoft\Framework\.NETFramework\v3.5\Profile\Client</FrameworkPathOverride> -->
+        <FrameworkPathOverride>$(MSBuildProgramFiles32)\Reference Assemblies\Microsoft\Framework\.NETFramework\v3.5\Profile\Client</FrameworkPathOverride>
         <FrameworkShortName>net30</FrameworkShortName>
         <!-- Framework detection -->
         <FrameworkSymbols>$(FrameworkSymbols);NET20_OR_NEWER</FrameworkSymbols>
         <FrameworkSymbols>$(FrameworkSymbols);NET30_OR_NEWER</FrameworkSymbols>
       </PropertyGroup>
-      
-      <ItemGroup>
-        <PackageReference Include="jnm2.ReferenceAssemblies.net35" Version="$(Jnm2ReferenceAssembliesNet35Version)" />
-      </ItemGroup>
     </When>
 
     <When Condition="'$(TargetFramework)' == 'net35'">
@@ -53,10 +41,6 @@
         <FrameworkSymbols>$(FrameworkSymbols);NET30_OR_NEWER</FrameworkSymbols>
         <FrameworkSymbols>$(FrameworkSymbols);NET35_OR_NEWER</FrameworkSymbols>
       </PropertyGroup>
-      
-      <ItemGroup>
-        <PackageReference Include="jnm2.ReferenceAssemblies.net35" Version="$(Jnm2ReferenceAssembliesNet35Version)" />
-      </ItemGroup>
     </When>
 
     <When Condition="'$(TargetFramework)'=='net40'">

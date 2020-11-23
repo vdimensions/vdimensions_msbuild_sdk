@@ -6,6 +6,18 @@
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <Jnm2ReferenceAssembliesNet35Version>1.0.1</Jnm2ReferenceAssembliesNet35Version>
+  </PropertyGroup>
+
+  <Choose>
+    <When Condition="'$(TargetFramework)' == 'net35'">
+      <ItemGroup>
+        <PackageReference Include="jnm2.ReferenceAssemblies.net35" Version="$(Jnm2ReferenceAssembliesNet35Version)" />
+      </ItemGroup>
+    </When>
+  </Choose>
+
   <ItemGroup Condition="'$(TargetFrameworkIdentifier)' == '.NETStandard'">
     <Compile Remove="Resources\Native\**" />
     <EmbeddedResource Remove="Resources\Native\**" />
