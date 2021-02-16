@@ -564,6 +564,31 @@
         <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_1_OR_NEWER</FrameworkSymbols>
       </PropertyGroup>
     </When>
+
+    <When Condition="$(TargetFramework.StartsWith('net5.0'))">
+      <PropertyGroup>
+        <FrameworkShortName>net5.0</FrameworkShortName>
+        <!-- Framework detection -->
+        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP1_0_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP1_1_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP2_0_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP2_1_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP3_0_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP3_1_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NET5_0_OR_NEWER</FrameworkSymbols>
+        <!-- .NET Standard compliance -->
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_0_OR_NEWER</FrameworkSymbols>
+        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_1_OR_NEWER</FrameworkSymbols>
+      </PropertyGroup>
+    </When>
   </Choose>
 
   <PropertyGroup>
