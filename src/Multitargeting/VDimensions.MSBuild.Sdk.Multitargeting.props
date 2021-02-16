@@ -293,8 +293,6 @@
         <FrameworkShortName>netstandard1.0</FrameworkShortName>
         <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
       </PropertyGroup>
-
-      <Import Project="imports/$(FrameworkShortName)/FrameworkSymbols.props" />
     </When>
 
     <When Condition="'$(TargetFramework)'=='netstandard1.1'">
@@ -303,8 +301,6 @@
         <FrameworkShortName>netstandard1.1</FrameworkShortName>
         <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
       </PropertyGroup>
-
-      <Import Project="imports/$(FrameworkShortName)/FrameworkSymbols.props" />
     </When>
 
     <When Condition="'$(TargetFramework)'=='netstandard1.2'">
@@ -313,8 +309,6 @@
         <FrameworkShortName>netstandard1.2</FrameworkShortName>
         <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
       </PropertyGroup>
-
-      <Import Project="imports/$(FrameworkShortName)/FrameworkSymbols.props" />
     </When>
 
     <When Condition="'$(TargetFramework)'=='netstandard1.3'">
@@ -323,8 +317,6 @@
         <FrameworkShortName>netstandard1.3</FrameworkShortName>
         <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
       </PropertyGroup>
-
-      <Import Project="imports/$(FrameworkShortName)/FrameworkSymbols.props" />
     </When>
 
     <When Condition="'$(TargetFramework)'=='netstandard1.4'">
@@ -333,8 +325,6 @@
         <FrameworkShortName>netstandard1.4</FrameworkShortName>
         <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
       </PropertyGroup>
-
-      <Import Project="imports/$(FrameworkShortName)/FrameworkSymbols.props" />
     </When>
 
     <When Condition="'$(TargetFramework)'=='netstandard1.5'">
@@ -343,8 +333,6 @@
         <FrameworkShortName>netstandard1.5</FrameworkShortName>
         <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
       </PropertyGroup>
-
-      <Import Project="imports/$(FrameworkShortName)/FrameworkSymbols.props" />
     </When>
 
     <When Condition="'$(TargetFramework)'=='netstandard1.6'">
@@ -353,8 +341,6 @@
         <FrameworkShortName>netstandard1.6</FrameworkShortName>
         <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
       </PropertyGroup>
-
-      <Import Project="imports/$(FrameworkShortName)/FrameworkSymbols.props" />
     </When>
 
     <When Condition="'$(TargetFramework)'=='netstandard2.0'">
@@ -363,8 +349,6 @@
         <FrameworkShortName>netstandard2.0</FrameworkShortName>
         <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
       </PropertyGroup>
-
-      <Import Project="imports/$(FrameworkShortName)/FrameworkSymbols.props" />
     </When>
 
     <When Condition="'$(TargetFramework)'=='netstandard2.1'">
@@ -373,8 +357,6 @@
         <FrameworkShortName>netstandard2.1</FrameworkShortName>
         <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
       </PropertyGroup>
-
-      <Import Project="imports/$(FrameworkShortName)/FrameworkSymbols.props" />
     </When>
 
     <When Condition="'$(TargetFramework)'=='netcoreapp1.0'">
@@ -383,8 +365,6 @@
         <FrameworkShortName>netcoreapp1.0</FrameworkShortName>
         <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
       </PropertyGroup>
-
-      <Import Project="imports/$(FrameworkShortName)/FrameworkSymbols.props" />
     </When>
 
     <When Condition="'$(TargetFramework)'=='netcoreapp1.1'">
@@ -393,8 +373,6 @@
         <FrameworkShortName>netcoreapp1.1</FrameworkShortName>
         <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
       </PropertyGroup>
-
-      <Import Project="imports/$(FrameworkShortName)/FrameworkSymbols.props" />
     </When>
 
     <When Condition="'$(TargetFramework)'=='netcoreapp2.0'">
@@ -403,8 +381,6 @@
         <FrameworkShortName>netcoreapp2.0</FrameworkShortName>
         <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
       </PropertyGroup>
-
-      <Import Project="imports/$(FrameworkShortName)/FrameworkSymbols.props" />
     </When>
 
     <When Condition="'$(TargetFramework)'=='netcoreapp2.1'">
@@ -413,8 +389,6 @@
         <FrameworkShortName>netcoreapp2.1</FrameworkShortName>
         <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
       </PropertyGroup>
-
-      <Import Project="imports/$(FrameworkShortName)/FrameworkSymbols.props" />
     </When>
 
     <When Condition="'$(TargetFramework)'=='netcoreapp2.2'">
@@ -423,8 +397,6 @@
         <FrameworkShortName>netcoreapp2.2</FrameworkShortName>
         <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
       </PropertyGroup>
-
-      <Import Project="imports/$(FrameworkShortName)/FrameworkSymbols.props" />
     </When>
 
     <When Condition="'$(TargetFramework)'=='netcoreapp3.0'">
@@ -433,8 +405,6 @@
         <FrameworkShortName>netcoreapp3.0</FrameworkShortName>
         <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
       </PropertyGroup>
-
-      <Import Project="imports/$(FrameworkShortName)/FrameworkSymbols.props" />
     </When>
 
     <When Condition="'$(TargetFramework)'=='netcoreapp3.1'">
@@ -443,8 +413,6 @@
         <FrameworkShortName>netcoreapp3.1</FrameworkShortName>
         <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
       </PropertyGroup>
-
-      <Import Project="imports/$(FrameworkShortName)/FrameworkSymbols.props" />
     </When>
 
     <When Condition="'$(TargetFramework)'=='net5.0' OR '$(TargetFramework)'=='net5.0-android' OR '$(TargetFramework)'=='net5.0-ios' OR '$(TargetFramework)'=='net5.0-macos' OR '$(TargetFramework)'=='net5.0-tvos' OR '$(TargetFramework)'=='net5.0-watchos' OR '$(TargetFramework)'=='net5.0-windows'">
@@ -452,10 +420,12 @@
         <FrameworkShortName>net5.0</FrameworkShortName>
         <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
       </PropertyGroup>
-
-      <Import Project="imports/$(FrameworkShortName)/FrameworkSymbols.props" />
     </When>
   </Choose>
+
+  <Import Condition="Exists('$(MSBuildThisFileDirectory)\imports\$(FrameworkShortName)\FrameworkSymbols.props')" 
+          Project="imports/$(FrameworkShortName)/FrameworkSymbols.props" 
+          />
 
   <PropertyGroup>
     <DefineConstants>$(DefineConstants);$(FrameworkSymbols)</DefineConstants>
