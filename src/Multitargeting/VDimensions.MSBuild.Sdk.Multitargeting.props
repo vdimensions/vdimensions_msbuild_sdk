@@ -291,9 +291,7 @@
       <PropertyGroup>
         <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
         <FrameworkShortName>netstandard1.0</FrameworkShortName>
-        <!-- Framework detection -->
         <FrameworkSymbols>NETSTANDARD</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
       </PropertyGroup>
     </When>
 
@@ -301,10 +299,7 @@
       <PropertyGroup>
         <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
         <FrameworkShortName>netstandard1.1</FrameworkShortName>
-        <!-- Framework detection -->
         <FrameworkSymbols>NETSTANDARD</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
       </PropertyGroup>
     </When>
 
@@ -312,11 +307,7 @@
       <PropertyGroup>
         <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
         <FrameworkShortName>netstandard1.2</FrameworkShortName>
-        <!-- Framework detection -->
         <FrameworkSymbols>NETSTANDARD</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
       </PropertyGroup>
     </When>
 
@@ -324,12 +315,7 @@
       <PropertyGroup>
         <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
         <FrameworkShortName>netstandard1.3</FrameworkShortName>
-        <!-- Framework detection -->
         <FrameworkSymbols>NETSTANDARD</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
       </PropertyGroup>
     </When>
 
@@ -337,13 +323,7 @@
       <PropertyGroup>
         <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
         <FrameworkShortName>netstandard1.4</FrameworkShortName>
-        <!-- Framework detection -->
         <FrameworkSymbols>NETSTANDARD</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
       </PropertyGroup>
     </When>
 
@@ -351,14 +331,7 @@
       <PropertyGroup>
         <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
         <FrameworkShortName>netstandard1.5</FrameworkShortName>
-        <!-- Framework detection -->
         <FrameworkSymbols>NETSTANDARD</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
       </PropertyGroup>
     </When>
 
@@ -366,15 +339,7 @@
       <PropertyGroup>
         <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
         <FrameworkShortName>netstandard1.6</FrameworkShortName>
-        <!-- Framework detection -->
         <FrameworkSymbols>NETSTANDARD</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
       </PropertyGroup>
     </When>
 
@@ -382,16 +347,7 @@
       <PropertyGroup>
         <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
         <FrameworkShortName>netstandard2.0</FrameworkShortName>
-        <!-- Framework detection -->
         <FrameworkSymbols>NETSTANDARD</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_0_OR_NEWER</FrameworkSymbols>
       </PropertyGroup>
     </When>
 
@@ -399,17 +355,7 @@
       <PropertyGroup>
         <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
         <FrameworkShortName>netstandard2.1</FrameworkShortName>
-        <!-- Framework detection -->
         <FrameworkSymbols>NETSTANDARD</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_0_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_1_OR_NEWER</FrameworkSymbols>
       </PropertyGroup>
     </When>
 
@@ -417,17 +363,7 @@
       <PropertyGroup>
         <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
         <FrameworkShortName>netcoreapp1.0</FrameworkShortName>
-        <!-- Framework detection -->
-        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP1_0_OR_NEWER</FrameworkSymbols>
-        <!-- .NET Standard compliance -->
         <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
       </PropertyGroup>
     </When>
 
@@ -435,18 +371,7 @@
       <PropertyGroup>
         <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
         <FrameworkShortName>netcoreapp1.1</FrameworkShortName>
-        <!-- Framework detection -->
-        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP1_0_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP1_1_OR_NEWER</FrameworkSymbols>
-        <!-- .NET Standard compliance -->
         <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
       </PropertyGroup>
     </When>
 
@@ -454,20 +379,7 @@
       <PropertyGroup>
         <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
         <FrameworkShortName>netcoreapp2.0</FrameworkShortName>
-        <!-- Framework detection -->
-        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP1_0_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP1_1_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP2_0_OR_NEWER</FrameworkSymbols>
-        <!-- .NET Standard compliance -->
         <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_0_OR_NEWER</FrameworkSymbols>
       </PropertyGroup>
     </When>
 
@@ -475,21 +387,7 @@
       <PropertyGroup>
         <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
         <FrameworkShortName>netcoreapp2.1</FrameworkShortName>
-        <!-- Framework detection -->
-        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP1_0_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP1_1_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP2_0_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP2_1_OR_NEWER</FrameworkSymbols>
-        <!-- .NET Standard compliance -->
         <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_0_OR_NEWER</FrameworkSymbols>
       </PropertyGroup>
     </When>
 
@@ -497,22 +395,7 @@
       <PropertyGroup>
         <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
         <FrameworkShortName>netcoreapp2.2</FrameworkShortName>
-        <!-- Framework detection -->
-        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP1_0_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP1_1_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP2_0_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP2_1_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP2_2_OR_NEWER</FrameworkSymbols>
-        <!-- .NET Standard compliance -->
         <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_0_OR_NEWER</FrameworkSymbols>
       </PropertyGroup>
     </When>
 
@@ -520,23 +403,7 @@
       <PropertyGroup>
         <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
         <FrameworkShortName>netcoreapp3.0</FrameworkShortName>
-        <!-- Framework detection -->
-        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP1_0_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP1_1_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP2_0_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP2_1_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP3_0_OR_NEWER</FrameworkSymbols>
-        <!-- .NET Standard compliance -->
         <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_0_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_1_OR_NEWER</FrameworkSymbols>
       </PropertyGroup>
     </When>
 
@@ -544,52 +411,21 @@
       <PropertyGroup>
         <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
         <FrameworkShortName>netcoreapp3.1</FrameworkShortName>
-        <!-- Framework detection -->
-        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP1_0_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP1_1_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP2_0_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP2_1_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP3_0_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP3_1_OR_NEWER</FrameworkSymbols>
-        <!-- .NET Standard compliance -->
         <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_0_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_1_OR_NEWER</FrameworkSymbols>
       </PropertyGroup>
     </When>
 
-    <When Condition="$(TargetFramework.StartsWith('net5.0'))">
+    <When Condition="'$(TargetFramework)'=='net5.0' OR '$(TargetFramework)'=='net5.0-android' OR '$(TargetFramework)'=='net5.0-ios' OR '$(TargetFramework)'=='net5.0-macos' OR '$(TargetFramework)'=='net5.0-tvos' OR '$(TargetFramework)'=='net5.0-watchos' OR '$(TargetFramework)'=='net5.0-windows'">
       <PropertyGroup>
         <FrameworkShortName>net5.0</FrameworkShortName>
-        <!-- Framework detection -->
-        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP1_0_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP1_1_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP2_0_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP2_1_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP3_0_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETCOREAPP3_1_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET5_0_OR_NEWER</FrameworkSymbols>
-        <!-- .NET Standard compliance -->
         <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_0_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_1_OR_NEWER</FrameworkSymbols>
       </PropertyGroup>
     </When>
   </Choose>
+
+  <Import Condition="Exists('$(MSBuildThisFileDirectory)\$(FrameworkShortName)\FrameworkSymbols.props')" 
+          Project="$(FrameworkShortName)/FrameworkSymbols.props" 
+          />
 
   <PropertyGroup>
     <DefineConstants>$(DefineConstants);$(FrameworkSymbols)</DefineConstants>

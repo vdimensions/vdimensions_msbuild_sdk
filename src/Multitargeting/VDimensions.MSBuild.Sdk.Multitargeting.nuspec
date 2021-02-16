@@ -20,5 +20,22 @@
   <files>
     <file src="VDimensions.MSBuild.Sdk.Multitargeting.props" target="build\VDimensions.MSBuild.Sdk.Multitargeting.props" />
     <file src="VDimensions.MSBuild.Sdk.Multitargeting.targets" target="build\VDimensions.MSBuild.Sdk.Multitargeting.targets" />
+    <file src="netstandard1.0\*.props" target="build\netstandard1.0\" />
+    <file src="netstandard1.1\*.props" target="build\netstandard1.1\" />
+    <file src="netstandard1.2\*.props" target="build\netstandard1.2\" />
+    <file src="netstandard1.3\*.props" target="build\netstandard1.3\" />
+    <file src="netstandard1.4\*.props" target="build\netstandard1.4\" />
+    <file src="netstandard1.5\*.props" target="build\netstandard1.5\" />
+    <file src="netstandard1.6\*.props" target="build\netstandard1.6\" />
+    <file src="netstandard2.0\*.props" target="build\netstandard2.0\" />
+    <file src="netstandard2.1\*.props" target="build\netstandard2.1\" />
+    <file src="netcoreapp1.0\*.props" target="build\netcoreapp1.0\" />
+    <file src="netcoreapp1.1\*.props" target="build\netcoreapp1.1\" />
+    <file src="netcoreapp2.0\*.props" target="build\netcoreapp2.0\" />
+    <file src="netcoreapp2.1\*.props" target="build\netcoreapp2.1\" />
+    <file src="netcoreapp2.2\*.props" target="build\netcoreapp2.2\" />
+    <file src="netcoreapp3.0\*.props" target="build\netcoreapp3.0\" />
+    <file src="netcoreapp3.1\*.props" target="build\netcoreapp3.1\" />
+    <file src="net5.0\*.props" target="build\net5.0\" />
   </files>
 </package>
