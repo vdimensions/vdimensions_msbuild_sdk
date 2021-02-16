@@ -424,7 +424,7 @@
   </Choose>
 
   <Import Condition="Exists('$(MSBuildThisFileDirectory)\$(FrameworkShortName)\FrameworkSymbols.props')" 
-          Project="$(FrameworkShortName)/FrameworkSymbols.props" 
+          Project="$(MSBuildThisFileDirectory)\$(FrameworkShortName)\FrameworkSymbols.props" 
           />
 
   <PropertyGroup>
