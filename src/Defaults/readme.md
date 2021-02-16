@@ -15,7 +15,9 @@ The defaults are described in the table below:
 |`AssemblyInformationalVersion`|`$(Version)`|is not set and `$(Version) !== ''`|
 |`PackageVersion`|`$(Version)`|is not set and `$(Version) !== ''`|
 
-I addition, the current package defines the `UNSAFE` preprocessor directive automatically in case the `AllowUnsafeBlocks` setting is enabled for the importing project, which MSBuild does not do by default.  
+## Improved support of `UNSAFE` blocks trough MSBuild
+
+I addition, the current package defines the `UNSAFE` preprocessor directive automatically in case the `AllowUnsafeBlocks` setting is enabled for the importing project, which MSBuild does not currently do by default.  
 This allows a developer to wrap `unsafe` code in `#if UNSAFE`/`#endif` preprocessor directives and play only with the `AllowUnsafeBlocks` flag in different build scenarios.  
 
 For example, if we want to disable unsafe code for `.NETStandard1.0`, we could add the following code to our project file:
