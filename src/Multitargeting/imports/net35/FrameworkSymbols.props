@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <Import Project="../net30/FrameworkSymbols.props" />
+  
+  <PropertyGroup>
+    <FrameworkSymbols>$(FrameworkSymbols);NET35_OR_NEWER</FrameworkSymbols>
+  </PropertyGroup>
+</Project>

@@ -13,8 +13,6 @@
         <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
         <FrameworkShortName>net20</FrameworkShortName>
         <FrameworkPathOverride>$(MSBuildProgramFiles32)\Reference Assemblies\Microsoft\Framework\.NETFramework\v3.5\Profile\Client</FrameworkPathOverride>
-        <!-- Framework detection -->
-        <FrameworkSymbols>$(FrameworkSymbols);NET20_OR_NEWER</FrameworkSymbols>
       </PropertyGroup>
     </When>
 
@@ -24,9 +22,6 @@
         <TargetFrameworkVersion>v3.0</TargetFrameworkVersion>
         <FrameworkPathOverride>$(MSBuildProgramFiles32)\Reference Assemblies\Microsoft\Framework\.NETFramework\v3.5\Profile\Client</FrameworkPathOverride>
         <FrameworkShortName>net30</FrameworkShortName>
-        <!-- Framework detection -->
-        <FrameworkSymbols>$(FrameworkSymbols);NET20_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET30_OR_NEWER</FrameworkSymbols>
       </PropertyGroup>
     </When>
 
@@ -36,10 +31,6 @@
         <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
         <FrameworkShortName>net35</FrameworkShortName>
         <FrameworkPathOverride>$(MSBuildProgramFiles32)\Reference Assemblies\Microsoft\Framework\.NETFramework\v3.5\Profile\Client</FrameworkPathOverride>
-        <!-- Framework detection -->
-        <FrameworkSymbols>$(FrameworkSymbols);NET20_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET30_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET35_OR_NEWER</FrameworkSymbols>
       </PropertyGroup>
     </When>
 
@@ -48,11 +39,6 @@
         <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
         <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
         <FrameworkShortName>net40</FrameworkShortName>
-        <!-- Framework detection -->
-        <FrameworkSymbols>$(FrameworkSymbols);NET20_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET30_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET35_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET40_OR_NEWER</FrameworkSymbols>
       </PropertyGroup>
     </When>
 
@@ -61,16 +47,6 @@
         <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
         <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
         <FrameworkShortName>net45</FrameworkShortName>
-        <!-- Framework detection -->
-        <FrameworkSymbols>$(FrameworkSymbols);NET20_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET30_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET35_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET40_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET45_OR_NEWER</FrameworkSymbols>
-        <!-- .NET Standard compliance -->
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
       </PropertyGroup>
     </When>
 
@@ -79,17 +55,6 @@
         <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
         <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
         <FrameworkShortName>net451</FrameworkShortName>
-        <!-- Framework detection -->
-        <FrameworkSymbols>$(FrameworkSymbols);NET20_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET30_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET35_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET40_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET45_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET451_OR_NEWER</FrameworkSymbols>
-        <!-- .NET Standard compliance -->
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
       </PropertyGroup>
     </When>
 
@@ -98,19 +63,6 @@
         <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
         <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
         <FrameworkShortName>net452</FrameworkShortName>
-        <!-- Framework detection -->
-        <FrameworkSymbols>$(FrameworkSymbols);NET20_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET30_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET35_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET40_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET45_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET451_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET452_OR_NEWER</FrameworkSymbols>
-        <!-- .NET Standard compliance -->
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
       </PropertyGroup>
     </When>
 
@@ -119,21 +71,6 @@
         <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
         <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
         <FrameworkShortName>net46</FrameworkShortName>
-        <!-- Framework detection -->
-        <FrameworkSymbols>$(FrameworkSymbols);NET20_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET30_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET35_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET40_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET45_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET451_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET452_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET46_OR_NEWER</FrameworkSymbols>
-        <!-- .NET Standard compliance -->
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
       </PropertyGroup>
     </When>
 
@@ -142,26 +79,6 @@
         <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
         <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
         <FrameworkShortName>net461</FrameworkShortName>
-        <!-- Framework detection -->
-        <FrameworkSymbols>$(FrameworkSymbols);NET20_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET30_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET35_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET40_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET45_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET451_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET452_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET46_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET461_OR_NEWER</FrameworkSymbols>
-        <!-- .NET Standard compliance -->
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_0_OR_NEWER</FrameworkSymbols>
       </PropertyGroup>
     </When>
 
@@ -170,27 +87,6 @@
         <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
         <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
         <FrameworkShortName>net462</FrameworkShortName>
-        <!-- Framework detection -->
-        <FrameworkSymbols>$(FrameworkSymbols);NET20_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET30_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET35_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET40_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET45_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET451_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET452_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET46_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET461_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET462_OR_NEWER</FrameworkSymbols>
-        <!-- .NET Standard compliance -->
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_0_OR_NEWER</FrameworkSymbols>
       </PropertyGroup>
     </When>
 
@@ -199,28 +95,6 @@
         <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
         <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
         <FrameworkShortName>net47</FrameworkShortName>
-        <!-- Framework detection -->
-        <FrameworkSymbols>$(FrameworkSymbols);NET20_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET30_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET35_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET40_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET45_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET451_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET452_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET46_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET461_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET462_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET47_OR_NEWER</FrameworkSymbols>
-        <!-- .NET Standard compliance -->
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_0_OR_NEWER</FrameworkSymbols>
       </PropertyGroup>
     </When>
 
@@ -229,29 +103,6 @@
         <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
         <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
         <FrameworkShortName>net471</FrameworkShortName>
-        <!-- Framework detection -->
-        <FrameworkSymbols>$(FrameworkSymbols);NET20_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET30_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET35_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET40_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET45_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET451_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET452_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET46_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET461_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET462_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET47_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET471_OR_NEWER</FrameworkSymbols>
-        <!-- .NET Standard compliance -->
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_0_OR_NEWER</FrameworkSymbols>
       </PropertyGroup>
     </When>
 
@@ -260,30 +111,6 @@
         <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
         <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
         <FrameworkShortName>net472</FrameworkShortName>
-        <!-- Framework detection -->
-        <FrameworkSymbols>$(FrameworkSymbols);NET20_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET30_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET35_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET40_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET45_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET451_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET452_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET46_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET461_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET462_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET47_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET471_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NET472_OR_NEWER</FrameworkSymbols>
-        <!-- .NET Standard compliance -->
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_0_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_1_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_2_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_3_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_4_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_5_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD1_6_OR_NEWER</FrameworkSymbols>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD2_0_OR_NEWER</FrameworkSymbols>
       </PropertyGroup>
     </When>
 
@@ -291,7 +118,6 @@
       <PropertyGroup>
         <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
         <FrameworkShortName>netstandard1.0</FrameworkShortName>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
       </PropertyGroup>
     </When>
 
@@ -299,7 +125,6 @@
       <PropertyGroup>
         <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
         <FrameworkShortName>netstandard1.1</FrameworkShortName>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
       </PropertyGroup>
     </When>
 
@@ -307,7 +132,6 @@
       <PropertyGroup>
         <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
         <FrameworkShortName>netstandard1.2</FrameworkShortName>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
       </PropertyGroup>
     </When>
 
@@ -315,7 +139,6 @@
       <PropertyGroup>
         <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
         <FrameworkShortName>netstandard1.3</FrameworkShortName>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
       </PropertyGroup>
     </When>
 
@@ -323,7 +146,6 @@
       <PropertyGroup>
         <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
         <FrameworkShortName>netstandard1.4</FrameworkShortName>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
       </PropertyGroup>
     </When>
 
@@ -331,7 +153,6 @@
       <PropertyGroup>
         <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
         <FrameworkShortName>netstandard1.5</FrameworkShortName>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
       </PropertyGroup>
     </When>
 
@@ -339,7 +160,6 @@
       <PropertyGroup>
         <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
         <FrameworkShortName>netstandard1.6</FrameworkShortName>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
       </PropertyGroup>
     </When>
 
@@ -347,7 +167,6 @@
       <PropertyGroup>
         <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
         <FrameworkShortName>netstandard2.0</FrameworkShortName>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
       </PropertyGroup>
     </When>
 
@@ -355,7 +174,6 @@
       <PropertyGroup>
         <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
         <FrameworkShortName>netstandard2.1</FrameworkShortName>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
       </PropertyGroup>
     </When>
 
@@ -363,7 +181,6 @@
       <PropertyGroup>
         <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
         <FrameworkShortName>netcoreapp1.0</FrameworkShortName>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
       </PropertyGroup>
     </When>
 
@@ -371,7 +188,6 @@
       <PropertyGroup>
         <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
         <FrameworkShortName>netcoreapp1.1</FrameworkShortName>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
       </PropertyGroup>
     </When>
 
@@ -379,7 +195,6 @@
       <PropertyGroup>
         <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
         <FrameworkShortName>netcoreapp2.0</FrameworkShortName>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
       </PropertyGroup>
     </When>
 
@@ -387,7 +202,6 @@
       <PropertyGroup>
         <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
         <FrameworkShortName>netcoreapp2.1</FrameworkShortName>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
       </PropertyGroup>
     </When>
 
@@ -395,7 +209,6 @@
       <PropertyGroup>
         <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
         <FrameworkShortName>netcoreapp2.2</FrameworkShortName>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
       </PropertyGroup>
     </When>
 
@@ -403,7 +216,6 @@
       <PropertyGroup>
         <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
         <FrameworkShortName>netcoreapp3.0</FrameworkShortName>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
       </PropertyGroup>
     </When>
 
@@ -411,14 +223,48 @@
       <PropertyGroup>
         <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
         <FrameworkShortName>netcoreapp3.1</FrameworkShortName>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
       </PropertyGroup>
     </When>
 
-    <When Condition="'$(TargetFramework)'=='net5.0' OR '$(TargetFramework)'=='net5.0-android' OR '$(TargetFramework)'=='net5.0-ios' OR '$(TargetFramework)'=='net5.0-macos' OR '$(TargetFramework)'=='net5.0-tvos' OR '$(TargetFramework)'=='net5.0-watchos' OR '$(TargetFramework)'=='net5.0-windows'">
+    <When Condition="'$(TargetFramework)'=='net5.0'">
       <PropertyGroup>
         <FrameworkShortName>net5.0</FrameworkShortName>
-        <FrameworkSymbols>$(FrameworkSymbols);NETSTANDARD</FrameworkSymbols>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='net5.0-android'">
+      <PropertyGroup>
+        <FrameworkShortName>net5.0</FrameworkShortName>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='net5.0-ios'">
+      <PropertyGroup>
+        <FrameworkShortName>net5.0</FrameworkShortName>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='net5.0-macos'">
+      <PropertyGroup>
+        <FrameworkShortName>net5.0</FrameworkShortName>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='net5.0-tvos'">
+      <PropertyGroup>
+        <FrameworkShortName>net5.0</FrameworkShortName>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='net5.0-watchos'">
+      <PropertyGroup>
+        <FrameworkShortName>net5.0</FrameworkShortName>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='net5.0-windows'">
+      <PropertyGroup>
+        <FrameworkShortName>net5.0</FrameworkShortName>
       </PropertyGroup>
     </When>
   </Choose>
