@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project>
   <Import Project="../net451/FrameworkSymbols.props" />
-  <Import Project="../netstandard1.2/FrameworkSymbols.props" />
 
   <PropertyGroup>
     <FrameworkSymbols>$(FrameworkSymbols);NET452_OR_NEWER</FrameworkSymbols>

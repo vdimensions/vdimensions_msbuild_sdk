@@ -21,17 +21,23 @@
   <Choose>
     <When Condition=" '$(Configuration)' == 'Debug' ">
       <PropertyGroup>
-        <DebugSymbols Condition=" '$(DebugSymbols)' == '' ">true</DebugSymbols>
         <DebugType Condition=" '$(DebugType)' == '' ">full</DebugType>
-        <Optimize Condition=" '$(Optimize)' == '' ">false</Optimize>
+
+        <!-- The below values are provided by the Microsoft.NET SDK -->
+
+        <!-- <DebugSymbols Condition=" '$(DebugSymbols)' == '' ">true</DebugSymbols> -->
+        <!-- <Optimize Condition=" '$(Optimize)' == '' ">false</Optimize> -->
         <DefineConstants>$(DefineConstants);DEBUG</DefineConstants>
       </PropertyGroup>
     </When>
     <When Condition=" '$(Configuration)' == 'Release' ">
       <PropertyGroup>
-        <DebugSymbols Condition=" '$(DebugSymbols)' != '' "></DebugSymbols>
         <DebugType Condition=" '$(DebugType)' == '' ">pdbonly</DebugType>
-        <Optimize Condition=" '$(Optimize)' == '' ">true</Optimize>
+        <DebugSymbols Condition=" '$(DebugSymbols)' != '' "></DebugSymbols>
+        
+        <!-- The below values are provided by the Microsoft.NET SDK -->
+
+        <!-- <Optimize Condition=" '$(Optimize)' == '' ">true</Optimize> -->
       </PropertyGroup>
     </When>
   </Choose>

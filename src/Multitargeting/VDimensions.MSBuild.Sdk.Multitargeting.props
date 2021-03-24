@@ -114,6 +114,14 @@
       </PropertyGroup>
     </When>
 
+    <When Condition="'$(TargetFramework)'=='net48'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+        <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+        <FrameworkShortName>net48</FrameworkShortName>
+      </PropertyGroup>
+    </When>
+
     <When Condition="'$(TargetFramework)'=='netstandard1.0'">
       <PropertyGroup>
         <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
@@ -269,8 +277,8 @@
     </When>
   </Choose>
 
-  <Import Condition="Exists('$(MSBuildThisFileDirectory)\imports\$(FrameworkShortName)\FrameworkSymbols.props')" 
-          Project="imports/$(FrameworkShortName)/FrameworkSymbols.props" 
+  <Import Condition="Exists('$(MSBuildThisFileDirectory)\imports\$(FrameworkShortName)\FrameworkSymbols.Expanded.props')" 
+          Project="imports/$(FrameworkShortName)/FrameworkSymbols.Expanded.props" 
           />
 
   <PropertyGroup>
