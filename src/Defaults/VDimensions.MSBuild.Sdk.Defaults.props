@@ -53,4 +53,12 @@
     <DocumentationFile Condition=" '$(GenerateDocumentationFile)' == 'true' AND '$(DocumentationFile)' == '' AND '$(TargetFramework)' == '' ">$(OutputPath)\$(AssemblyName).xml</DocumentationFile>
     <DocumentationFile Condition=" '$(GenerateDocumentationFile)' == 'true' AND '$(DocumentationFile)' == '' AND '$(TargetFramework)' != '' ">$(OutputPath)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
   </PropertyGroup>
+
+  <!-- Assembly props -->
+  <PropertyGroup Condition=" '$(AssemblyName)' != '' ">
+    <AssemblyTitle Condition=" '$(AssemblyTitle)' == '' ">$(AssemblyName)</AssemblyTitle>
+    <AssemblyProduct Condition=" '$(AssemblyProduct)' == '' ">$(AssemblyTitle)</AssemblyProduct>
+    <AssemblyDescription Condition=" '$(AssemblyProduct)' == '' AND '$(Description)' != '' ">$(Description)</AssemblyDescription>
+    <AssemblyTrademark Condition=" '$(AssemblyTrademark)' == '' AND '$(Trademark)' != '' ">$(Trademark)</AssemblyTrademark>
+  </PropertyGroup>
 </Project>

@@ -17,7 +17,7 @@
     <Authors Condition=" '$(Authors)' == '' OR '$(Authors)' == '$(AssemblyName)' ">$(Company)</Authors>
   </PropertyGroup>
 
-  <PropertyGroup Condition=" '$(Authors)' != '' ">
-    <Owners Condition=" '$(Owners)' == '' ">$(Authors)</Owners>
+  <PropertyGroup Condition=" '$(Company)' != '' ">
+    <Owners Condition=" '$(Owners)' == '' ">$(Company)</Owners>
   </PropertyGroup>
 </Project>

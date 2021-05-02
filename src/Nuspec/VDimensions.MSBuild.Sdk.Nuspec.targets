@@ -9,6 +9,7 @@
   <PropertyGroup Condition=" '$(AssemblyName)' != '' AND Exists('$(MSBuildProjectDirectory)\$(AssemblyName).nuspec')">
     <NuspecFile>$(AssemblyName).nuspec</NuspecFile>
   </PropertyGroup>
+  
   <PropertyGroup>
     <NuspecProperties Condition=" '$(NuspecProperties)' == '' ">id=$(AssemblyName)</NuspecProperties>
     <NuspecProperties Condition=" '$(PackageVersion)' != '' ">$(NuspecProperties);version=$(PackageVersion)</NuspecProperties>
