@@ -9,6 +9,10 @@
     <CopyrightYearCurrent Condition=" '$(CopyrightYearCurrent)' == '' ">$([System.DateTime]::get_UtcNow().get_Year())</CopyrightYearCurrent>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <Company Condition=" '$(Company)' == '' ">$(Authors)</Company>
+  </PropertyGroup>
+
   <PropertyGroup Condition=" '$(Company)' != '' AND '$(CopyrightYearSince)' == ''">
     <Copyright Condition=" '$(Copyright)' == '' ">Copyright © $(Company) $(CopyrightYearCurrent)</Copyright>
   </PropertyGroup>
