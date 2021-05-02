@@ -6,22 +6,19 @@
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
 
-  <Target Name="PrepareNuspecFields" BeforeTargets="GenerateNuspec;CorePack;Pack" AfterTargets="PrepareCopyrightFields;PrepareVersioningFields">
-    <PropertyGroup Condition=" '$(AssemblyName)' != '' ">
-      <NuspecFile Condition=" '$(NuspecFile)' == '' ">$(AssemblyName).nuspec</NuspecFile>
-      
-      <NuspecProperties>$(NuspecProperties);id=$(AssemblyName)</NuspecProperties>
-    </PropertyGroup>
-
-    <PropertyGroup>
-      <NuspecProperties Condition=" '$(PackageVersion)' != '' ">$(NuspecProperties);version=$(PackageVersion)</NuspecProperties>
-      <NuspecProperties Condition=" '$(Description)' != '' ">$(NuspecProperties);description=$(Description)</NuspecProperties>
-      <NuspecProperties Condition=" '$(License)' != '' ">$(NuspecProperties);license=$(License)</NuspecProperties>
-      <NuspecProperties Condition=" '$(Authors)' != '' ">$(NuspecProperties);authors=$(Authors)</NuspecProperties>
-      <NuspecProperties Condition=" '$(Copyright)' != '' ">$(NuspecProperties);copyright=$(Copyright)</NuspecProperties>
-      <NuspecProperties Condition=" '$(Configuration)' != '' ">$(NuspecProperties);config=$(Configuration)</NuspecProperties>
-      <NuspecProperties Condition=" '$(PackageTags)' != '' ">$(NuspecProperties);tags=$(PackageTags)</NuspecProperties>
-      <NuspecProperties Condition=" '$(PackageIconUri)' != '' ">$(NuspecProperties);icon=$(PackageIconUri)</NuspecProperties>
-    </PropertyGroup>
-  </Target>
+  <PropertyGroup Condition=" '$(AssemblyName)' != '' AND Exists('$(MSBuildProjectDirectory)\$(AssemblyName).nuspec')">
+    <NuspecFile>$(AssemblyName).nuspec</NuspecFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NuspecProperties Condition=" '$(NuspecProperties)' == '' ">id=$(AssemblyName)</NuspecProperties>
+    <NuspecProperties Condition=" '$(PackageVersion)' != '' ">$(NuspecProperties);version=$(PackageVersion)</NuspecProperties>
+    <NuspecProperties Condition=" '$(Copyright)' != '' ">$(NuspecProperties);copyright=$(Copyright)</NuspecProperties>
+    <NuspecProperties Condition=" '$(Authors)' != '' ">$(NuspecProperties);authors=$(Authors)</NuspecProperties>
+    <NuspecProperties Condition=" '$(Owners)' != '' ">$(NuspecProperties);authors=$(Owners)</NuspecProperties>
+    <NuspecProperties Condition=" '$(License)' != '' ">$(NuspecProperties);license=$(License)</NuspecProperties>
+    <NuspecProperties Condition=" '$(Configuration)' != '' ">$(NuspecProperties);config=$(Configuration)</NuspecProperties>
+    <NuspecProperties Condition=" '$(Description)' != '' ">$(NuspecProperties);description=$(Description)</NuspecProperties>
+    <NuspecProperties Condition=" '$(PackageTags)' != '' ">$(NuspecProperties);tags=$(PackageTags)</NuspecProperties>
+    <NuspecProperties Condition=" '$(PackageIconUri)' != '' ">$(NuspecProperties);icon=$(PackageIconUri)</NuspecProperties>
+  </PropertyGroup>
 </Project>

@@ -9,4 +9,11 @@
   <PropertyGroup>
     <CopyrightYearCurrent Condition=" '$(CopyrightYearCurrent)' == '' ">$([System.DateTime]::get_UtcNow().get_Year())</CopyrightYearCurrent>
   </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Company)' != '' AND '$(CopyrightYearSince)' == ''">
+    <Copyright Condition=" '$(Copyright)' == '' ">Copyright © $(Company) $(CopyrightYearCurrent)</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Company)' != '' AND '$(CopyrightYearSince)' != ''">
+    <Copyright Condition=" '$(Copyright)' == '' ">Copyright © $(Company) $(CopyrightYearSince)-$(CopyrightYearCurrent)</Copyright>
+  </PropertyGroup>
 </Project>
