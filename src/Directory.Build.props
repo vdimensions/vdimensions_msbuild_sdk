@@ -8,7 +8,7 @@
     
   <PropertyGroup>
     <License>Apache-2.0</License>
-    <Company>Virtual Dimensions</Company>
+    <Authors>Virtual Dimensions</Authors>
     <CopyrightYearSince>2017</CopyrightYearSince>
   </PropertyGroup>
   
