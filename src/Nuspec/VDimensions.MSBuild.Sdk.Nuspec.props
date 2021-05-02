@@ -6,7 +6,6 @@
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
 
-  <Import Project="Copyright/VDimensions.MSBuild.Sdk.Copyright.targets"/>
-  <Import Project="Versioning/VDimensions.MSBuild.Sdk.Versioning.targets"/>
-  <Import Project="Nuspec/VDimensions.MSBuild.Sdk.Nuspec.targets"/>
+  <PropertyGroup>
+  </PropertyGroup>
 </Project>

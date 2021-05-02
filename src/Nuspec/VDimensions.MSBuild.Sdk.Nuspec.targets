@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <PropertyGroup>
+    <!-- make MSBuild track this file for incremental builds. -->
+    <!-- ref https://blogs.msdn.microsoft.com/msbuild/2005/09/26/how-to-ensure-changes-to-a-custom-target-file-prompt-a-rebuild/ -->
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(AssemblyName)' != '' ">
+    <NuspecFile Condition=" '$(NuspecFile)' == '' ">$(AssemblyName).nuspec</NuspecFile>
+
+    <NuspecProperties>$(NuspecProperties);id=$(AssemblyName)</NuspecProperties>
+    <NuspecProperties Condition=" '$(PackageVersion)' != '' ">$(NuspecProperties);version=$(PackageVersion)</NuspecProperties>
+    <NuspecProperties Condition=" '$(Description)' != '' ">$(NuspecProperties);description=$(Description)</NuspecProperties>
+    <NuspecProperties Condition=" '$(License)' != '' ">$(NuspecProperties);license=$(License)</NuspecProperties>
+    <NuspecProperties Condition=" '$(Authors)' != '' ">$(NuspecProperties);authors=$(Authors)</NuspecProperties>
+    <NuspecProperties Condition=" '$(Copyright)' != '' ">$(NuspecProperties);copyright=$(Copyright)</NuspecProperties>
+  </PropertyGroup>
+</Project>

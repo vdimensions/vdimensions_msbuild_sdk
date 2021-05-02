@@ -15,12 +15,4 @@
   <PropertyGroup>
     <DefineConstants Condition=" '$(AllowUnsafeBlocks)' == 'true' ">$(DefineConstants);UNSAFE</DefineConstants>
   </PropertyGroup>
-
-  <!-- Version-related fields -->
-  <!-- <PropertyGroup Condition=" '$(Version)' != '' ">
-    <AssemblyVersion Condition=" '$(AssemblyVersion)' == '' ">$(VersionPrefix)</AssemblyVersion>
-    <AssemblyFileVersion Condition=" '$(AssemblyFileVersion)' == '' ">$(Version)</AssemblyFileVersion>
-    <AssemblyInformationalVersion Condition=" '$(AssemblyInformationalVersion)' == '' ">$(Version)</AssemblyInformationalVersion>
-    <PackageVersion Condition=" '$(PackageVersion)' == '' ">$(Version)</PackageVersion>
-  </PropertyGroup> -->
 </Project>

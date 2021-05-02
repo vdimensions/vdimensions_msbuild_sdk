@@ -7,9 +7,20 @@
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Company)' != '' AND '$(CopyrightYearSince)' == ''">
-    <Copyright>Copyright © $(Company) $(CopyrightYearCurrent)</Copyright>
+    <Copyright Condition=" '$(Copyright)' == '' ">Copyright © $(Company) $(CopyrightYearCurrent)</Copyright>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Company)' != '' AND '$(CopyrightYearSince)' != ''">
-    <Copyright>Copyright © $(Company) $(CopyrightYearSince)-$(CopyrightYearCurrent)</Copyright>
+    <Copyright Condition=" '$(Copyright)' == '' ">Copyright © $(Company) $(CopyrightYearSince)-$(CopyrightYearCurrent)</Copyright>
+  </PropertyGroup>
+
+  <!-- Assembly Properties -->
+  <PropertyGroup>
+    <AssemblyCompany Condition=" '$(AssemblyCompany)' != '' ">$(Company)</AssemblyCompany>
+    <AssemblyCopyright Condition=" '$(AssemblyCopyright)' != '' ">$(Copyright)</AssemblyCopyright>  
+  </PropertyGroup>
+
+  <!-- Package Properties -->
+  <PropertyGroup Condition=" '$(Company)' != '' AND ('$(Authors)' == '' OR '$(Authors)' == '$(AssemblyName)') ">
+    <Authors>$(Company)</Authors>
   </PropertyGroup>
 </Project>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <AssemblyName>VDimensions.MSBuild.Sdk.Nuspec</AssemblyName>
+    <TargetFramework>netstandard1.0</TargetFramework>
+    <Description>
+      Applies sensible defaults to nuspec-related msbuild properties.
+    </Description>
+
+    <PackageOutputPath>../../dist</PackageOutputPath>
+  </PropertyGroup>
+</Project>

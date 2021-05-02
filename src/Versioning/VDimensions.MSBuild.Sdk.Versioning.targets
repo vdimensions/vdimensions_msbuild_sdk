@@ -6,6 +6,7 @@
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
 
+  <!-- Assembly properties -->
   <PropertyGroup Condition=" '$(VersionPrefix)' != '' ">
     <AssemblyVersion Condition=" '$(AssemblyVersion)' == '' ">$(VersionPrefix)</AssemblyVersion>
   </PropertyGroup>
@@ -13,6 +14,10 @@
   <PropertyGroup Condition=" '$(Version)' != '' ">
     <AssemblyFileVersion Condition=" '$(AssemblyFileVersion)' == '' ">$(Version)</AssemblyFileVersion>
     <AssemblyInformationalVersion Condition=" '$(AssemblyInformationalVersion)' == '' ">$(Version)</AssemblyInformationalVersion>
+  </PropertyGroup>
+
+  <!-- Package properties -->
+  <PropertyGroup Condition=" '$(Version)' != '' ">
     <PackageVersion Condition=" '$(PackageVersion)' == '' ">$(Version)</PackageVersion>
   </PropertyGroup>
 </Project>
