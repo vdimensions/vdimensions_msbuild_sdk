@@ -6,7 +6,7 @@
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
   
-  <Target Name="PrepareVersionFields" BeforeTargets="GenerateTargetFrameworkMonikerAttribute;GenerateNuspec;CorePack;Pack">
+  <Target Name="PrepareVersioningFields" BeforeTargets="GenerateTargetFrameworkMonikerAttribute;GenerateNuspec;CorePack;Pack">
     <!-- Assembly properties -->
     <PropertyGroup Condition=" '$(VersionPrefix)' != '' ">
       <AssemblyVersion Condition=" '$(AssemblyVersion)' == '' ">$(VersionPrefix)</AssemblyVersion>

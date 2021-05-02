@@ -6,7 +6,7 @@
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
 
-  <Target Name="PrepareNuspecFields" BeforeTargets="GenerateTargetFrameworkMonikerAttribute;GenerateNuspec;CorePack;Pack">
+  <Target Name="PrepareNuspecFields" BeforeTargets="GenerateNuspec;CorePack;Pack" AfterTargets="PrepareCopyrightFields;PrepareVersioningFields">
     <PropertyGroup Condition=" '$(AssemblyName)' != '' ">
       <NuspecFile Condition=" '$(NuspecFile)' == '' ">$(AssemblyName).nuspec</NuspecFile>
       
