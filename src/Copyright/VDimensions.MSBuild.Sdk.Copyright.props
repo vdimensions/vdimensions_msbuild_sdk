@@ -21,10 +21,4 @@
     <AssemblyCompany Condition=" '$(AssemblyCompany)' == '' AND '$(Company)' != '' ">$(Company)</AssemblyCompany>
     <AssemblyCopyright Condition=" '$(AssemblyCopyright)' == '' AND '$(Copyright)' != '' ">$(Copyright)</AssemblyCopyright>
   </PropertyGroup>
-
-  <!-- Package Properties -->
-  <PropertyGroup>
-    <Authors Condition="( '$(Authors)' == '' OR '$(Authors)' == '$(AssemblyName)' ) AND '$(Company)' != '' ">$(Company)</Authors>
-    <Owners Condition=" '$(Owners)' == '' AND '$(Company)' != '' ">$(Company)</Owners>
-  </PropertyGroup>
 </Project>
