@@ -5,7 +5,6 @@
     <!-- ref https://blogs.msdn.microsoft.com/msbuild/2005/09/26/how-to-ensure-changes-to-a-custom-target-file-prompt-a-rebuild/ -->
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
-
   <PropertyGroup>
     <CopyrightYearCurrent Condition=" '$(CopyrightYearCurrent)' == '' ">$([System.DateTime]::get_UtcNow().get_Year())</CopyrightYearCurrent>
   </PropertyGroup>
@@ -15,5 +14,17 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Company)' != '' AND '$(CopyrightYearSince)' != ''">
     <Copyright Condition=" '$(Copyright)' == '' ">Copyright © $(Company) $(CopyrightYearSince)-$(CopyrightYearCurrent)</Copyright>
+  </PropertyGroup>
+  
+  <!-- Assembly Properties -->
+  <PropertyGroup>
+    <AssemblyCompany Condition=" '$(AssemblyCompany)' == '' AND '$(Company)' != '' ">$(Company)</AssemblyCompany>
+    <AssemblyCopyright Condition=" '$(AssemblyCopyright)' == '' AND '$(Copyright)' != '' ">$(Copyright)</AssemblyCopyright>
+  </PropertyGroup>
+
+  <!-- Package Properties -->
+  <PropertyGroup>
+    <Authors Condition="( '$(Authors)' == '' OR '$(Authors)' == '$(AssemblyName)' ) AND '$(Company)' != '' ">$(Company)</Authors>
+    <Owners Condition=" '$(Owners)' == '' AND '$(Company)' != '' ">$(Company)</Owners>
   </PropertyGroup>
 </Project>
