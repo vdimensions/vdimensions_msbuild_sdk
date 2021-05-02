@@ -4,10 +4,9 @@
     <id>$id$</id>
     <version>$version$</version>
     <description>$description$</description>
-    
-    <authors>Virtual Dimensions</authors>
-    <copyright>Copyright © Virtual Dimensions 2020</copyright>
-    <license type="expression">Apache-2.0</license>
+    <authors>$authors$</authors>
+    <copyright>$copyright$</copyright>
+    <license type="expression">$license$</license>
     
     <developmentDependency>true</developmentDependency>
 

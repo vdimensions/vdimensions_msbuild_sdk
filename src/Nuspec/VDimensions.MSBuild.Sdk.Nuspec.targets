@@ -16,7 +16,7 @@
     <PropertyGroup>
       <NuspecProperties Condition=" '$(PackageVersion)' != '' ">$(NuspecProperties);version=$(PackageVersion)</NuspecProperties>
       <NuspecProperties Condition=" '$(Description)' != '' ">$(NuspecProperties);description=$(Description)</NuspecProperties>
-      <NuspecProperties Condition=" '$(PackageLicense)' != '' ">$(NuspecProperties);license=$(License)</NuspecProperties>
+      <NuspecProperties Condition=" '$(License)' != '' ">$(NuspecProperties);license=$(License)</NuspecProperties>
       <NuspecProperties Condition=" '$(Authors)' != '' ">$(NuspecProperties);authors=$(Authors)</NuspecProperties>
       <NuspecProperties Condition=" '$(Copyright)' != '' ">$(NuspecProperties);copyright=$(Copyright)</NuspecProperties>
       <NuspecProperties Condition=" '$(Configuration)' != '' ">$(NuspecProperties);config=$(Configuration)</NuspecProperties>
