@@ -5,6 +5,7 @@
     <!-- ref https://blogs.msdn.microsoft.com/msbuild/2005/09/26/how-to-ensure-changes-to-a-custom-target-file-prompt-a-rebuild/ -->
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
+  
   <PropertyGroup>
     <CopyrightYearCurrent Condition=" '$(CopyrightYearCurrent)' == '' ">$([System.DateTime]::get_UtcNow().get_Year())</CopyrightYearCurrent>
   </PropertyGroup>
@@ -13,16 +14,16 @@
     <Company Condition=" '$(Company)' == '' ">$(Authors)</Company>
   </PropertyGroup>
 
-  <PropertyGroup Condition=" '$(Company)' != '' AND '$(CopyrightYearSince)' == ''">
-    <Copyright Condition=" '$(Copyright)' == '' ">Copyright © $(Company) $(CopyrightYearCurrent)</Copyright>
+  <PropertyGroup Condition=" '$(CopyrightYearSince)' == '' ">
+    <Copyright Condition=" '$(Authors)' != '' AND '$(Copyright)' == '' ">Copyright © $(Authors) $(CopyrightYearCurrent)</Copyright>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Company)' != '' AND '$(CopyrightYearSince)' != ''">
-    <Copyright Condition=" '$(Copyright)' == '' ">Copyright © $(Company) $(CopyrightYearSince)-$(CopyrightYearCurrent)</Copyright>
+  <PropertyGroup Condition=" '$(CopyrightYearSince)' != '' ">
+    <Copyright Condition=" '$(Authors)' != '' AND  '$(Copyright)' == '' ">Copyright © $(Authors) $(CopyrightYearSince)-$(CopyrightYearCurrent)</Copyright>
   </PropertyGroup>
   
   <!-- Assembly Properties -->
   <PropertyGroup>
-    <AssemblyCompany Condition=" '$(AssemblyCompany)' == '' AND '$(Company)' != '' ">$(Company)</AssemblyCompany>
+    <AssemblyCompany Condition=" '$(AssemblyCompany)' == '' AND '$(Authors)' != '' ">$(Authors)</AssemblyCompany>
     <AssemblyCopyright Condition=" '$(AssemblyCopyright)' == '' AND '$(Copyright)' != '' ">$(Copyright)</AssemblyCopyright>
   </PropertyGroup>
 </Project>
