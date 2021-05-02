@@ -6,21 +6,23 @@
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
 
-  <PropertyGroup Condition=" '$(Company)' != '' AND '$(CopyrightYearSince)' == ''">
-    <Copyright Condition=" '$(Copyright)' == '' ">Copyright © $(Company) $(CopyrightYearCurrent)</Copyright>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Company)' != '' AND '$(CopyrightYearSince)' != ''">
-    <Copyright Condition=" '$(Copyright)' == '' ">Copyright © $(Company) $(CopyrightYearSince)-$(CopyrightYearCurrent)</Copyright>
-  </PropertyGroup>
+  <Target Name="PrepareCopyrightFields" BeforeTargets="GenerateTargetFrameworkMonikerAttribute;GenerateNuspec;CorePack;Pack">
+    <PropertyGroup Condition=" '$(Company)' != '' AND '$(CopyrightYearSince)' == ''">
+      <Copyright Condition=" '$(Copyright)' == '' ">Copyright © $(Company) $(CopyrightYearCurrent)</Copyright>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Company)' != '' AND '$(CopyrightYearSince)' != ''">
+      <Copyright Condition=" '$(Copyright)' == '' ">Copyright © $(Company) $(CopyrightYearSince)-$(CopyrightYearCurrent)</Copyright>
+    </PropertyGroup>
 
-  <!-- Assembly Properties -->
-  <PropertyGroup>
-    <AssemblyCompany Condition=" '$(AssemblyCompany)' != '' ">$(Company)</AssemblyCompany>
-    <AssemblyCopyright Condition=" '$(AssemblyCopyright)' != '' ">$(Copyright)</AssemblyCopyright>  
-  </PropertyGroup>
+    <!-- Assembly Properties -->
+    <PropertyGroup>
+      <AssemblyCompany Condition=" '$(AssemblyCompany)' != '' ">$(Company)</AssemblyCompany>
+      <AssemblyCopyright Condition=" '$(AssemblyCopyright)' != '' ">$(Copyright)</AssemblyCopyright>  
+    </PropertyGroup>
 
-  <!-- Package Properties -->
-  <PropertyGroup Condition=" '$(Company)' != '' AND ('$(Authors)' == '' OR '$(Authors)' == '$(AssemblyName)') ">
-    <Authors>$(Company)</Authors>
-  </PropertyGroup>
+    <!-- Package Properties -->
+    <PropertyGroup Condition=" '$(Company)' != '' AND ('$(Authors)' == '' OR '$(Authors)' == '$(AssemblyName)') ">
+      <Authors>$(Company)</Authors>
+    </PropertyGroup>
+  </Target>
 </Project>
