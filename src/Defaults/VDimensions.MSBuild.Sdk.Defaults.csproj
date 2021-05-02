@@ -4,22 +4,9 @@
     <OutputType>Library</OutputType>
     <AssemblyName>VDimensions.MSBuild.Sdk.Defaults</AssemblyName>
     <TargetFramework>netstandard1.0</TargetFramework>
-    <License>Apache-2.0</License>
-    <Authors>Virtual Dimensions</Authors>
-    <Copyright>Copyright © $(Authors) 2020</Copyright>
     <Description>
       Applies sensible defaults to some common MSBuild properties.
     </Description>
-  </PropertyGroup>
-
-  <PropertyGroup Condition=" '$(AssemblyName)' != '' ">
-    <NuspecFile>$(AssemblyName).nuspec</NuspecFile>
-    <NuspecProperties>$(NuspecProperties);id=$(AssemblyName)</NuspecProperties>
-    <NuspecProperties Condition=" '$(PackageVersion)' != '' ">$(NuspecProperties);version=$(PackageVersion)</NuspecProperties>
-    <NuspecProperties Condition=" '$(Authors)' != '' ">$(NuspecProperties);authors=$(Authors)</NuspecProperties>
-    <NuspecProperties Condition=" '$(Copyright)' != '' ">$(NuspecProperties);copyright=$(Copyright)</NuspecProperties>
-    <NuspecProperties Condition=" '$(Description)' != '' ">$(NuspecProperties);description=$(Description)</NuspecProperties>
-    <NuspecProperties Condition=" '$(License)' != '' ">$(NuspecProperties);license=$(License)</NuspecProperties>
 
     <PackageOutputPath>../../dist</PackageOutputPath>
   </PropertyGroup>

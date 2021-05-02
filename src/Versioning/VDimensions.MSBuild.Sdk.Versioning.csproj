@@ -2,10 +2,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Library</OutputType>
-    <AssemblyName>VDimensions.MSBuild.Sdk.Multitargeting</AssemblyName>
+    <AssemblyName>VDimensions.MSBuild.Sdk.Versioning</AssemblyName>
     <TargetFramework>netstandard1.0</TargetFramework>
     <Description>
-      Adds compilation symbols enabling more effective multi-targeting support for different .NET build platforms.
+      Adds compilation symbols enabling better versioning support.
     </Description>
 
     <PackageOutputPath>../../dist</PackageOutputPath>

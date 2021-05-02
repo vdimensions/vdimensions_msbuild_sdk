@@ -6,21 +6,13 @@
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
 
-  <!-- 
-   | The below properties are being evaluated in a .targets file, because the MSBuild project that imports 
-   | this file could have specified its own overrides for them, and we need to use that value here.
-   -->
-
-  <!-- Defines an 'UNSAFE' preprocessor directive, based on whether the `AllowUnsafeBlocks` setting is enabled. -->
-  <PropertyGroup>
-    <DefineConstants Condition=" '$(AllowUnsafeBlocks)' == 'true' ">$(DefineConstants);UNSAFE</DefineConstants>
+  <PropertyGroup Condition=" '$(VersionPrefix)' != '' ">
+    <AssemblyVersion Condition=" '$(AssemblyVersion)' == '' ">$(VersionPrefix)</AssemblyVersion>
   </PropertyGroup>
 
-  <!-- Version-related fields -->
-  <!-- <PropertyGroup Condition=" '$(Version)' != '' ">
-    <AssemblyVersion Condition=" '$(AssemblyVersion)' == '' ">$(VersionPrefix)</AssemblyVersion>
+  <PropertyGroup Condition=" '$(Version)' != '' ">
     <AssemblyFileVersion Condition=" '$(AssemblyFileVersion)' == '' ">$(Version)</AssemblyFileVersion>
     <AssemblyInformationalVersion Condition=" '$(AssemblyInformationalVersion)' == '' ">$(Version)</AssemblyInformationalVersion>
     <PackageVersion Condition=" '$(PackageVersion)' == '' ">$(Version)</PackageVersion>
-  </PropertyGroup> -->
+  </PropertyGroup>
 </Project>

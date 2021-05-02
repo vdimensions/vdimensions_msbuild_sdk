@@ -1,4 +1,4 @@
-version: 0.4.{build}
+version: 0.5.{build}
 pull_requests:
   do_not_increment_build_number: true
 branches:
@@ -14,6 +14,7 @@ cache:
 - '%LocalAppData%\NuGet\v3-cache'
 build_script:
 - ps: "cd src\\Defaults \ndotnet pack -p:PackageVersion=$env:APPVEYOR_BUILD_VERSION \ncd ..\\..\\"
+- ps: "cd src\\Versioning \ndotnet pack -p:PackageVersion=$env:APPVEYOR_BUILD_VERSION \ncd ..\\..\\"
 - ps: "cd src\\Multitargeting \ndotnet pack -p:PackageVersion=$env:APPVEYOR_BUILD_VERSION \ncd ..\\..\\"
 artifacts:
 - path: dist/*.nupkg
