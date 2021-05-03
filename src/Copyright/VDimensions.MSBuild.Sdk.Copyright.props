@@ -2,25 +2,14 @@
 <Project>
   <PropertyGroup>
     <CopyrightYearCurrent Condition=" '$(CopyrightYearCurrent)' == '' ">$([System.DateTime]::get_UtcNow().get_Year())</CopyrightYearCurrent>
+    <CopyrightYear>$(CopyrightYearCurrent)</CopyrightYear>
+    <CopyrightYear Condition=" '$(Authors)' != '' AND '$(CopyrightYearSince)' != '' ">$(CopyrightYearSince)-$(CopyrightYearCurrent)</CopyrightYear>
   </PropertyGroup>
 
   <PropertyGroup>
     <Company Condition=" '$(Company)' == '' ">$(Authors)</Company>
+    <Copyright Condition=" '$(Authors)' != '' AND '$(Copyright)' == '' ">Copyright © $(Authors) $(CopyrightYear)</Copyright>
   </PropertyGroup>
-
-  <Choose>
-    <When  Condition=" '$(CopyrightYearSince)' != '' ">
-      <PropertyGroup>
-        <Copyright Condition=" '$(Authors)' != '' AND  '$(Copyright)' == '' ">Copyright © $(Authors) $(CopyrightYearSince)-$(CopyrightYearCurrent)</Copyright>
-      </PropertyGroup>
-    </When>
-
-    <Otherwise>
-      <PropertyGroup>
-        <Copyright Condition=" '$(Authors)' != '' AND '$(Copyright)' == '' ">Copyright © $(Authors) $(CopyrightYearCurrent)</Copyright>
-      </PropertyGroup>
-    </Otherwise>
-  </Choose>
 
   <!-- Assembly Properties -->
   <PropertyGroup>
