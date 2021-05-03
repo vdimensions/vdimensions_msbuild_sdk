@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project>
   <PropertyGroup>
-    <VersionPatch Condition=" '$(APPVEYOR_BUILD_NUMBER)' != '' ">$(APPVEYOR_BUILD_NUMBER)</VersionPatch>
+    <VersionPrefix Condition=" '$(APPVEYOR_BUILD_VERSION)' != '' ">$(APPVEYOR_BUILD_VERSION)</VersionPrefix>
     <ReleaseBranchName Condition=" '$(ReleaseBranchName)' == '' ">master</ReleaseBranchName>
     <_Commit></_Commit>
   </PropertyGroup>
@@ -16,7 +16,6 @@
     <When Condition=" '$(APPVEYOR_PULL_REQUEST_HEAD_REPO_BRANCH)' != '' ">
       <PropertyGroup>
         <VersionSuffix Condition=" '$(APPVEYOR_PULL_REQUEST_HEAD_REPO_BRANCH)' != '' ">$(APPVEYOR_PULL_REQUEST_HEAD_REPO_BRANCH)</VersionSuffix>
-        <VersionPatch Condition=" '$(APPVEYOR_PULL_REQUEST_NUMBER)' != '' ">$(APPVEYOR_PULL_REQUEST_NUMBER)</VersionPatch>
         <_Commit Condition=" '$(APPVEYOR_PULL_REQUEST_HEAD_COMMIT)' != '' ">$(APPVEYOR_PULL_REQUEST_HEAD_COMMIT)</_Commit>
       </PropertyGroup>
     </When>
@@ -29,6 +28,6 @@
   </Choose>
 
   <PropertyGroup Condition=" '$(VersionSuffix)' != '' ">
-    <VersionSuffix Condition=" '$(_Commit)' != '' ">$(VersionSuffix)-$(_Commit)</VersionSuffix>
+    <VersionSuffix Condition=" '$(_Commit)' != '' ">$(VersionSuffix)-$(_Commit.Substring(0,7))</VersionSuffix>
   </PropertyGroup>
 </Project>
