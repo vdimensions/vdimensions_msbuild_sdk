@@ -28,7 +28,7 @@ build_script:
   - ps: "cd src\\Defaults \ndotnet pack \ncd ..\\..\\"
   - ps: "cd src\\Copyright \ndotnet pack \ncd ..\\..\\"
   - ps: "cd src\\Versioning \ndotnet pack \ncd ..\\..\\"
-  - ps: "cd src\\Versioning.AppVeyour \ndotnet pack \ncd ..\\..\\"
+  - ps: "cd src\\Versioning.AppVeyor \ndotnet pack \ncd ..\\..\\"
   - ps: "cd src\\Multitargeting \ndotnet pack \ncd ..\\..\\"
   - ps: "cd src\\Nuspec \ndotnet pack \ncd ..\\..\\"
 
