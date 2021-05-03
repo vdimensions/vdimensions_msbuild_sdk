@@ -29,6 +29,6 @@
   </Choose>
 
   <PropertyGroup Condition=" '$(VersionSuffix)' != '' ">
-    <VersionSuffix Condition=" '$(_Commit)' != '' ">$(VersionSuffix)-$(_Commit.Substring(0,7))</VersionSuffix>
+    <VersionSuffix Condition=" '$(_Commit)' != '' ">$(VersionSuffix)-$(_Commit.Substring(0,8))</VersionSuffix>
   </PropertyGroup>
 </Project>
