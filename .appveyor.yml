@@ -38,5 +38,5 @@ for:
         - master
 
   - branches:
-    only:
-      - preview
+      only:
+        - preview
