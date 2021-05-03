@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project> 
+  <PropertyGroup>
+    <VersionPrefix Condition=" '$(VersionPrefix)' == '' ">$(VersionMajor).$(VersionMinor).$(VersionPatch)</VersionPrefix>
+  </PropertyGroup>
+
   <!-- Assembly properties -->
   <PropertyGroup>
     <AssemblyVersion Condition=" '$(AssemblyVersion)' == '' ">$(VersionPrefix)</AssemblyVersion>
