@@ -3,10 +3,10 @@
   <!-- Assembly properties -->
   <PropertyGroup Condition=" '$(VersionPrefix)' != '' ">
     <AssemblyVersion Condition=" '$(AssemblyVersion)' == '' ">$(VersionPrefix)</AssemblyVersion>
+    <AssemblyFileVersion Condition=" '$(AssemblyFileVersion)' == '' ">$(VersionPrefix)</AssemblyFileVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Version)' != '' ">
-    <AssemblyFileVersion Condition=" '$(AssemblyFileVersion)' == '' ">$(Version)</AssemblyFileVersion>
     <AssemblyInformationalVersion Condition=" '$(AssemblyInformationalVersion)' == '' ">$(Version)</AssemblyInformationalVersion>
   </PropertyGroup>
 
