@@ -13,7 +13,7 @@
 
   <!-- Assembly Properties -->
   <PropertyGroup>
-    <AssemblyCompany Condition=" '$(AssemblyCompany)' == '' AND '$(Authors)' != '' ">$(Company)</AssemblyCompany>
+    <AssemblyCompany Condition=" '$(AssemblyCompany)' == '' AND '$(Company)' != '' ">$(Company)</AssemblyCompany>
     <AssemblyCopyright Condition=" '$(AssemblyCopyright)' == '' AND '$(Copyright)' != '' ">$(Copyright)</AssemblyCopyright>
   </PropertyGroup>
 </Project>
