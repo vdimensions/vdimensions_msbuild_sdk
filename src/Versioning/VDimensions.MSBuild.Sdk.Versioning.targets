@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project> 
   <!-- Assembly properties -->
-  <PropertyGroup Condition=" '$(VersionPrefix)' != '' ">
+  <PropertyGroup>
     <AssemblyVersion Condition=" '$(AssemblyVersion)' == '' ">$(VersionPrefix)</AssemblyVersion>
     <AssemblyFileVersion Condition=" '$(AssemblyFileVersion)' == '' ">$(VersionPrefix)</AssemblyFileVersion>
   </PropertyGroup>

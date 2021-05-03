@@ -6,19 +6,4 @@
     <VersionPatch Condition=" '$(VersionPatch)' == '' ">0</VersionPatch>
     <VersionPrefix Condition=" '$(VersionPrefix)' == '' ">$(VersionMajor).$(VersionMinor).$(VersionPatch)</VersionPrefix>
   </PropertyGroup>
-  
-  <!-- Assembly properties -->
-  <PropertyGroup>
-    <AssemblyVersion Condition=" '$(AssemblyVersion)' == '' ">$(VersionPrefix)</AssemblyVersion>
-    <AssemblyFileVersion Condition=" '$(AssemblyFileVersion)' == '' ">$(VersionPrefix)</AssemblyFileVersion>
-  </PropertyGroup>
-
-  <PropertyGroup Condition=" '$(Version)' != '' ">
-    <AssemblyInformationalVersion Condition=" '$(AssemblyInformationalVersion)' == '' ">$(Version)</AssemblyInformationalVersion>
-  </PropertyGroup>
-
-  <!-- Package properties -->
-  <PropertyGroup Condition=" '$(Version)' != '' ">
-    <PackageVersion Condition=" '$(PackageVersion)' == '' ">$(Version)</PackageVersion>
-  </PropertyGroup>
 </Project>
