@@ -10,4 +10,11 @@
     <VersionBuild Condition=" '$(VersionBuild)' == '' ">$(VersionPatch)</VersionBuild>
     <VersionRevision Condition=" '$(VersionRevision)' == '' ">0</VersionRevision>
   </PropertyGroup>
+
+  <PropertyGroup>
+    <!-- Fix non-compliant version numbers -->
+    <VersionPrefix Condition=" '$(VersionPrefix)' == '' AND '$(Version)' != '' ">$(Version.Split('-')[0])</VersionPrefix>
+    <_HasSuffix>$(Version.Contains('-')</_HasSuffix>
+    <VersionSuffix Condition=" '$(VersionSuffix)' == '' AND '$(_HasSuffix)' == 'true' ">$(Version.Split('-')[1])</VersionSuffix>
+  </PropertyGroup>
 </Project>
