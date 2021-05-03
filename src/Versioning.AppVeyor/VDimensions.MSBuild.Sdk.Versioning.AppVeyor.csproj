@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <AssemblyName>VDimensions.MSBuild.Sdk.Versioning.AppVeyor</AssemblyName>
+    <TargetFramework>netstandard1.0</TargetFramework>
+    <Description>
+      Adds compilation symbols enabling versioning support in AppVeyour CI builds.
+    </Description>
+
+    <PackageOutputPath>../../dist</PackageOutputPath>
+  </PropertyGroup>
+</Project>

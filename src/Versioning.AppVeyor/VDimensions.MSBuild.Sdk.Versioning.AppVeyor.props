@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <PropertyGroup>
+    <VersionPrefix Condition=" '$(APPVEYOR_BUILD_VERSION)' != '' ">$(APPVEYOR_BUILD_VERSION)</VersionPrefix>
+    <ReleaseBranchName Condition=" '$(ReleaseBranchName)' == '' ">master</ReleaseBranchName>
+  </PropertyGroup>
+
+  <Choose>
+    <When Condition=" '$(APPVEYOR_REPO_TAG)' == 'true' ">
+      <PropertyGroup>
+        <VersionSuffix Condition=" '$(APPVEYOR_REPO_TAG_NAME)' != '' ">$(APPVEYOR_REPO_TAG_NAME)</VersionSuffix>
+      </PropertyGroup>
+    </When>
+    <Otherwise>
+      <PropertyGroup Condition=" '$(APPVEYOR_REPO_BRANCH)' != '' ">
+        <VersionSuffix Condition=" '$(APPVEYOR_REPO_BRANCH)' != '$(ReleaseBranchName)' ">$(APPVEYOR_REPO_BRANCH)</VersionSuffix>
+      </PropertyGroup>
+    </Otherwise>
+  </Choose>
+
+  <PropertyGroup Condition=" '$(VersionSuffix)' != '' ">
+    <VersionSuffix Condition=" '$(APPVEYOR_REPO_COMMIT)' != '' ">$(VersionSuffix)-$(APPVEYOR_REPO_COMMIT)</VersionSuffix>
+  </PropertyGroup>
+</Project>

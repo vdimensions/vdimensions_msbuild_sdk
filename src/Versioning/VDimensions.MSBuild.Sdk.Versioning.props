@@ -1,3 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project>
+  <PropertyGroup>
+    <VersionMajor Condition=" '$(VersionMajor)' == '' ">1</VersionMajor>
+    <VersionMinor Condition=" '$(VersionMinor)' == '' ">0</VersionMinor>
+    <VersionPatch Condition=" '$(VersionPatch)' == '' ">0</VersionPatch>
+    <VersionPrefix Condition=" '$(VersionPrefix)' == '' ">$(VersionMajor).$(VersionMinor).$(VersionPatch)</VersionPrefix>
+  </PropertyGroup>
+  
+  <!-- Assembly properties -->
+  <PropertyGroup>
+    <AssemblyVersion Condition=" '$(AssemblyVersion)' == '' ">$(VersionPrefix)</AssemblyVersion>
+    <AssemblyFileVersion Condition=" '$(AssemblyFileVersion)' == '' ">$(VersionPrefix)</AssemblyFileVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Version)' != '' ">
+    <AssemblyInformationalVersion Condition=" '$(AssemblyInformationalVersion)' == '' ">$(Version)</AssemblyInformationalVersion>
+  </PropertyGroup>
+
+  <!-- Package properties -->
+  <PropertyGroup Condition=" '$(Version)' != '' ">
+    <PackageVersion Condition=" '$(PackageVersion)' == '' ">$(Version)</PackageVersion>
+  </PropertyGroup>
 </Project>

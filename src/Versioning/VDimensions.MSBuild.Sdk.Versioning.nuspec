@@ -12,6 +12,6 @@
   </metadata>
   <files>
     <file src="$id$.props" target="build\$id$.props" />
-    <file src="$id$.targets" target="build\$id$.targets" />
+    <!-- <file src="$id$.targets" target="build\$id$.targets" /> -->
   </files>
 </package>

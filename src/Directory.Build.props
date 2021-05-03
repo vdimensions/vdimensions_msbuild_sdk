@@ -15,5 +15,6 @@
   <Import Project="Defaults/VDimensions.MSBuild.Sdk.Defaults.props"/>
   <Import Project="Copyright/VDimensions.MSBuild.Sdk.Copyright.props"/>
   <Import Project="Versioning/VDimensions.MSBuild.Sdk.Versioning.props"/>
+  <Import Project="Versioning.AppVeyor/VDimensions.MSBuild.Sdk.Versioning.AppVeyor.props"/>
   <Import Project="Nuspec/VDimensions.MSBuild.Sdk.Nuspec.props"/>
 </Project>
