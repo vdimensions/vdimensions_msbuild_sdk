@@ -36,7 +36,3 @@ for:
   - branches:
       only:
         - master
-
-  - branches:
-      only:
-        - preview
