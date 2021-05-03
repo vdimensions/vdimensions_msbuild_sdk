@@ -10,6 +10,8 @@
     <License>Apache-2.0</License>
     <Authors>Virtual Dimensions</Authors>
     <CopyrightYearSince>2017</CopyrightYearSince>
+    <VersionMajor>0</VersionMajor>
+    <VersionMinor>5</VersionMinor>
   </PropertyGroup>
   
   <Import Project="Defaults/VDimensions.MSBuild.Sdk.Defaults.props"/>
