@@ -2,18 +2,18 @@
 <Project>
   <PropertyGroup>
     <CopyrightYearCurrent Condition=" '$(CopyrightYearCurrent)' == '' ">$([System.DateTime]::get_UtcNow().get_Year())</CopyrightYearCurrent>
-    <CopyrightYear>$(CopyrightYearCurrent)</CopyrightYear>
-    <CopyrightYear Condition=" '$(Authors)' != '' AND '$(CopyrightYearSince)' != '' ">$(CopyrightYearSince)-$(CopyrightYearCurrent)</CopyrightYear>
+    <_CopyrightYear>$(CopyrightYearCurrent)</_CopyrightYear>
+    <_CopyrightYear Condition=" '$(Authors)' != '' AND '$(CopyrightYearSince)' != '' ">$(CopyrightYearSince)-$(CopyrightYearCurrent)</_CopyrightYear>
   </PropertyGroup>
 
   <PropertyGroup>
     <Company Condition=" '$(Company)' == '' ">$(Authors)</Company>
-    <Copyright Condition=" '$(Authors)' != '' AND '$(Copyright)' == '' ">Copyright © $(Authors) $(CopyrightYear)</Copyright>
+    <Copyright Condition=" '$(Company)' != '' AND '$(Copyright)' == '' ">Copyright © $(Company) $(_CopyrightYear)</Copyright>
   </PropertyGroup>
 
   <!-- Assembly Properties -->
   <PropertyGroup>
-    <AssemblyCompany Condition=" '$(AssemblyCompany)' == '' AND '$(Authors)' != '' ">$(Authors)</AssemblyCompany>
+    <AssemblyCompany Condition=" '$(AssemblyCompany)' == '' AND '$(Authors)' != '' ">$(Company)</AssemblyCompany>
     <AssemblyCopyright Condition=" '$(AssemblyCopyright)' == '' AND '$(Copyright)' != '' ">$(Copyright)</AssemblyCopyright>
   </PropertyGroup>
 </Project>

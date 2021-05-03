@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <PropertyGroup>
+    <VersionPrefix Condition=" '$(APPVEYOR_BUILD_VERSION)' != '' ">$(APPVEYOR_BUILD_VERSION)</VersionPrefix>
+    <ReleaseBranchName Condition=" '$(ReleaseBranchName)' == '' ">master</ReleaseBranchName>
+    <_Commit></_Commit>
+  </PropertyGroup>
+
+  <Choose>
+    <When Condition=" '$(APPVEYOR_REPO_TAG)' == 'true' ">
+      <PropertyGroup>
+        <VersionSuffix Condition=" '$(APPVEYOR_REPO_TAG_NAME)' != '' ">$(APPVEYOR_REPO_TAG_NAME)</VersionSuffix>
+        <_Commit Condition=" '$(APPVEYOR_REPO_COMMIT)' != '' ">$(APPVEYOR_REPO_COMMIT)</_Commit>
+      </PropertyGroup>
+    </When>
+    <When Condition=" '$(APPVEYOR_PULL_REQUEST_HEAD_REPO_BRANCH)' != '' ">
+      <PropertyGroup>
+        <VersionPrefix>$(VersionPrefix.Split('-')[0])</VersionPrefix>
+        <VersionSuffix Condition=" '$(APPVEYOR_PULL_REQUEST_HEAD_REPO_BRANCH)' != '' ">$(APPVEYOR_PULL_REQUEST_HEAD_REPO_BRANCH)</VersionSuffix>
+        <_Commit Condition=" '$(APPVEYOR_PULL_REQUEST_HEAD_COMMIT)' != '' ">$(APPVEYOR_PULL_REQUEST_HEAD_COMMIT)</_Commit>
+      </PropertyGroup>
+    </When>
+    <Otherwise>
+      <PropertyGroup Condition=" '$(APPVEYOR_REPO_BRANCH)' != '' ">
+        <VersionSuffix Condition=" '$(APPVEYOR_REPO_BRANCH)' != '$(ReleaseBranchName)' ">$(APPVEYOR_REPO_BRANCH)</VersionSuffix>
+        <_Commit Condition=" '$(APPVEYOR_REPO_COMMIT)' != '' ">$(APPVEYOR_REPO_COMMIT)</_Commit>
+      </PropertyGroup>
+    </Otherwise>
+  </Choose>
+
+  <PropertyGroup Condition=" '$(VersionSuffix)' != '' ">
+    <VersionSuffix Condition=" '$(_Commit)' != '' ">$(VersionSuffix)-$(_Commit.Substring(0,8))</VersionSuffix>
+  </PropertyGroup>
+</Project>

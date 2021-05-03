@@ -1,30 +1,38 @@
 version: 0.5.{build}
+
 pull_requests:
   do_not_increment_build_number: true
-branches:
-  only:
-  - master
-  - preview
 skip_tags: true
 skip_branch_with_pr: true
+
 image: Visual Studio 2019
 platform: Any CPU
+
 cache:
-- '%USERPROFILE%\.nuget\packages'
-- '%LocalAppData%\NuGet\Cache'
-- '%LocalAppData%\NuGet\v3-cache'
-build_script:
-- ps: "cd src\\Defaults \ndotnet pack -p:PackageVersion=$env:APPVEYOR_BUILD_VERSION \ncd ..\\..\\"
-- ps: "cd src\\Copyright \ndotnet pack -p:PackageVersion=$env:APPVEYOR_BUILD_VERSION \ncd ..\\..\\"
-- ps: "cd src\\Versioning \ndotnet pack -p:PackageVersion=$env:APPVEYOR_BUILD_VERSION \ncd ..\\..\\"
-- ps: "cd src\\Multitargeting \ndotnet pack -p:PackageVersion=$env:APPVEYOR_BUILD_VERSION \ncd ..\\..\\"
-- ps: "cd src\\Nuspec \ndotnet pack -p:PackageVersion=$env:APPVEYOR_BUILD_VERSION \ncd ..\\..\\"
-artifacts:
-- path: dist/*.nupkg
-  name: NuGet Package
+  - '%USERPROFILE%\.nuget\packages'
+  - '%LocalAppData%\NuGet\Cache'
+  - '%LocalAppData%\NuGet\v3-cache'
+
 deploy:
-- provider: NuGet
-  api_key:
-    secure: 9tjKpcQ5ppjbneqBIpe4WbyA8RxTtTk/NXjip+RlGvYqepAak1TvmaHtrspbeDon
-  on:
-    branch: master
+  - provider: NuGet
+    api_key:
+      secure: 9tjKpcQ5ppjbneqBIpe4WbyA8RxTtTk/NXjip+RlGvYqepAak1TvmaHtrspbeDon
+    on:
+      branch: master
+
+artifacts:
+  - path: dist/*.nupkg
+    name: NuGet Package
+
+build_script:
+  - ps: "cd src\\Defaults \ndotnet pack \ncd ..\\..\\"
+  - ps: "cd src\\Copyright \ndotnet pack \ncd ..\\..\\"
+  - ps: "cd src\\Versioning \ndotnet pack \ncd ..\\..\\"
+  - ps: "cd src\\Versioning.AppVeyor \ndotnet pack \ncd ..\\..\\"
+  - ps: "cd src\\Multitargeting \ndotnet pack \ncd ..\\..\\"
+  - ps: "cd src\\Nuspec \ndotnet pack \ncd ..\\..\\"
+
+for:
+  - branches:
+      only:
+        - master

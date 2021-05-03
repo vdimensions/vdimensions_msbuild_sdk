@@ -1,3 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project>
+  <PropertyGroup>
+    <VersionMajor Condition=" '$(VersionMajor)' == '' ">1</VersionMajor>
+    <VersionMinor Condition=" '$(VersionMinor)' == '' ">0</VersionMinor>
+    <VersionPatch Condition=" '$(VersionPatch)' == '' ">0</VersionPatch>
+  </PropertyGroup>
+  
+  <PropertyGroup>
+    <VersionBuild Condition=" '$(VersionBuild)' == '' ">$(VersionPatch)</VersionBuild>
+    <VersionRevision Condition=" '$(VersionRevision)' == '' ">0</VersionRevision>
+  </PropertyGroup>
 </Project>

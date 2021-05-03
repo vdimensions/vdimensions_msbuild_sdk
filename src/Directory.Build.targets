@@ -9,5 +9,6 @@
   <Import Project="Defaults/VDimensions.MSBuild.Sdk.Defaults.targets"/>
   <Import Project="Copyright/VDimensions.MSBuild.Sdk.Copyright.targets"/>
   <Import Project="Versioning/VDimensions.MSBuild.Sdk.Versioning.targets"/>
+  <Import Project="Versioning.AppVeyor/VDimensions.MSBuild.Sdk.Versioning.AppVeyor.targets"/>
   <Import Project="Nuspec/VDimensions.MSBuild.Sdk.Nuspec.targets"/>
 </Project>
