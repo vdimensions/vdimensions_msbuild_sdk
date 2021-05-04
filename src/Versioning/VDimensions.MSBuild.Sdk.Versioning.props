@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project>
+
+  <PropertyGroup>
+    <!-- Fix non-compliant version numbers -->
+    <VersionPrefix Condition=" '$(VersionPrefix)' == '' AND '$(Version)' != '' ">$(Version.Split('-')[0])</VersionPrefix>
+    <_HasSuffix>$(Version.Contains('-')</_HasSuffix>
+    <VersionSuffix Condition=" '$(VersionSuffix)' == '' AND '$(_HasSuffix)' == 'true' ">$(Version.Split('-')[1])</VersionSuffix>
+  </PropertyGroup>
+
   <PropertyGroup>
     <VersionMajor Condition=" '$(VersionMajor)' == '' ">1</VersionMajor>
     <VersionMinor Condition=" '$(VersionMinor)' == '' ">0</VersionMinor>
@@ -11,10 +19,8 @@
     <VersionRevision Condition=" '$(VersionRevision)' == '' ">0</VersionRevision>
   </PropertyGroup>
 
-  <PropertyGroup>
-    <!-- Fix non-compliant version numbers -->
-    <VersionPrefix Condition=" '$(VersionPrefix)' == '' AND '$(Version)' != '' ">$(Version.Split('-')[0])</VersionPrefix>
-    <_HasSuffix>$(Version.Contains('-')</_HasSuffix>
-    <VersionSuffix Condition=" '$(VersionSuffix)' == '' AND '$(_HasSuffix)' == 'true' ">$(Version.Split('-')[1])</VersionSuffix>
+  <PropertyGroup Condition=" '$(VersionPrefix)' == '' ">
+    <VersionPrefix Condition=" '$(VersionBuild)' == '' ">$(VersionMajor).$(VersionMinor)</VersionPrefix>
+    <VersionPrefix Condition=" '$(VersionBuild)' != '' ">$(VersionMajor).$(VersionMinor).$(VersionBuild)</VersionPrefix>
   </PropertyGroup>
 </Project>
