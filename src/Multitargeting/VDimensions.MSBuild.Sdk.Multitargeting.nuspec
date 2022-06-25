@@ -9,12 +9,6 @@
     <license type="expression">$license$</license>
     
     <developmentDependency>true</developmentDependency>
-
-    <dependencies>
-      <group targetFramework="net35">
-        <dependency id="jnm2.ReferenceAssemblies.net35" version="[1.0.1,)" />
-      </group>
-    </dependencies>
   </metadata>
   <files>
     <file src="VDimensions.MSBuild.Sdk.Multitargeting.props" target="build\VDimensions.MSBuild.Sdk.Multitargeting.props" />
