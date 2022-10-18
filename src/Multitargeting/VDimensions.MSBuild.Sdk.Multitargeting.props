@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project>
   <Choose>
+    <!-- 
+     | netframework
+     -->
     <When Condition="'$(TargetFramework)' == 'net20'">
       <PropertyGroup>
         <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
@@ -116,6 +119,9 @@
       </PropertyGroup>
     </When>
 
+    <!-- 
+     | netstandard
+    -->
     <When Condition="'$(TargetFramework)'=='netstandard1.0'">
       <PropertyGroup>
         <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
@@ -179,6 +185,9 @@
       </PropertyGroup>
     </When>
 
+    <!-- 
+     | netcoreapp 
+    -->
     <When Condition="'$(TargetFramework)'=='netcoreapp1.0'">
       <PropertyGroup>
         <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
@@ -228,6 +237,9 @@
       </PropertyGroup>
     </When>
 
+    <!-- 
+     | net5.0 
+    -->
     <When Condition="'$(TargetFramework)'=='net5.0'">
       <PropertyGroup>
         <FrameworkShortName>net5.0</FrameworkShortName>
@@ -267,6 +279,51 @@
     <When Condition="'$(TargetFramework)'=='net5.0-windows'">
       <PropertyGroup>
         <FrameworkShortName>net5.0</FrameworkShortName>
+      </PropertyGroup>
+    </When>
+
+    <!-- 
+     | net6.0 
+    -->
+    <When Condition="'$(TargetFramework)'=='net6.0'">
+      <PropertyGroup>
+        <FrameworkShortName>net6.0</FrameworkShortName>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='net6.0-android'">
+      <PropertyGroup>
+        <FrameworkShortName>net6.0</FrameworkShortName>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='net6.0-ios'">
+      <PropertyGroup>
+        <FrameworkShortName>net6.0</FrameworkShortName>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='net6.0-maccatalyst'">
+      <PropertyGroup>
+        <FrameworkShortName>net6.0</FrameworkShortName>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='net6.0-macos'">
+      <PropertyGroup>
+        <FrameworkShortName>net6.0</FrameworkShortName>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='net6.0-tvos'">
+      <PropertyGroup>
+        <FrameworkShortName>net6.0</FrameworkShortName>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='net6.0-windows'">
+      <PropertyGroup>
+        <FrameworkShortName>net6.0</FrameworkShortName>
       </PropertyGroup>
     </When>
   </Choose>
