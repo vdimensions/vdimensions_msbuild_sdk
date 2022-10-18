@@ -326,6 +326,51 @@
         <FrameworkShortName>net6.0</FrameworkShortName>
       </PropertyGroup>
     </When>
+
+    <!-- 
+     | net7.0 
+    -->
+    <When Condition="'$(TargetFramework)'=='net7.0'">
+      <PropertyGroup>
+        <FrameworkShortName>net7.0</FrameworkShortName>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='net7.0-android'">
+      <PropertyGroup>
+        <FrameworkShortName>net7.0</FrameworkShortName>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='net7.0-ios'">
+      <PropertyGroup>
+        <FrameworkShortName>net7.0</FrameworkShortName>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='net7.0-maccatalyst'">
+      <PropertyGroup>
+        <FrameworkShortName>net7.0</FrameworkShortName>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='net7.0-macos'">
+      <PropertyGroup>
+        <FrameworkShortName>net7.0</FrameworkShortName>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='net7.0-tvos'">
+      <PropertyGroup>
+        <FrameworkShortName>net7.0</FrameworkShortName>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='net7.0-windows'">
+      <PropertyGroup>
+        <FrameworkShortName>net7.0</FrameworkShortName>
+      </PropertyGroup>
+    </When>
   </Choose>
 
   <Import Condition="Exists('$(MSBuildThisFileDirectory)\imports\$(FrameworkShortName)\FrameworkSymbols.Expanded.props')" 

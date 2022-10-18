@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <Import Project="../netstandard2.1/FrameworkSymbols.props" />
+  <Import Project="../netcoreapp3.1/FrameworkSymbols.props" />
+  <Import Project="../net5.0/FrameworkSymbols.props" />
+  <Import Project="../net6.0/FrameworkSymbols.props" />
+  <Import Project="FrameworkSymbols.props" />
+</Project>
