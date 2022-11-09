@@ -11,15 +11,7 @@
     <developmentDependency>true</developmentDependency>
 
     <dependencies>
-      <group targetFramework="net35">
-        <dependency id="Microsoft.NETFramework.ReferenceAssemblies.net35" version="[1.0.3,)" />
-      </group>
-      <group targetFramework="net40">
-        <dependency id="Microsoft.NETFramework.ReferenceAssemblies.net40" version="[1.0.2,)" />
-      </group>
-      <group targetFramework="net45">
-        <dependency id="Microsoft.NETFramework.ReferenceAssemblies.net45" version="[1.0.3,)" />
-      </group>
+      <dependency id="Microsoft.NETFramework.ReferenceAssemblies" version="[1.0.3,)" />
     </dependencies>
   </metadata>
   <files>
