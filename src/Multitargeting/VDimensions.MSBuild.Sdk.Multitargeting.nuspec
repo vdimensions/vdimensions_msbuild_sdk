@@ -11,7 +11,54 @@
     <developmentDependency>true</developmentDependency>
 
     <dependencies>
-      <dependency id="Microsoft.NETFramework.ReferenceAssemblies" version="[1.0.2,)" />
+      <group targetFramework="net481">
+        <dependency id="Microsoft.NETFramework.ReferenceAssemblies.net481" version="1.0.3" />
+      </group>
+      <group targetFramework="net48">
+        <dependency id="Microsoft.NETFramework.ReferenceAssemblies.net48" version="1.0.3" />
+      </group>
+      
+      <group targetFramework="net472">
+        <dependency id="Microsoft.NETFramework.ReferenceAssemblies.net472" version="1.0.3" />
+      </group>
+      <group targetFramework="net471">
+        <dependency id="Microsoft.NETFramework.ReferenceAssemblies.net471" version="1.0.3" />
+      </group>
+      <group targetFramework="net47">
+        <dependency id="Microsoft.NETFramework.ReferenceAssemblies.net47" version="1.0.3" />
+      </group>
+
+      <group targetFramework="net462">
+        <dependency id="Microsoft.NETFramework.ReferenceAssemblies.net462" version="1.0.3" />
+      </group>
+      <group targetFramework="net461">
+        <dependency id="Microsoft.NETFramework.ReferenceAssemblies.net461" version="1.0.3" />
+      </group>
+      <group targetFramework="net46">
+        <dependency id="Microsoft.NETFramework.ReferenceAssemblies.net46" version="1.0.3" />
+      </group>
+
+      <group targetFramework="net452">
+        <dependency id="Microsoft.NETFramework.ReferenceAssemblies.net452" version="1.0.3" />
+      </group>
+      <group targetFramework="net451">
+        <dependency id="Microsoft.NETFramework.ReferenceAssemblies.net451" version="1.0.3" />
+      </group>
+      <group targetFramework="net45">
+        <dependency id="Microsoft.NETFramework.ReferenceAssemblies.net45" version="1.0.3" />
+      </group>
+
+      <group targetFramework="net40">
+        <dependency id="Microsoft.NETFramework.ReferenceAssemblies.net40" version="1.0.3" />
+      </group>
+
+      <group targetFramework="net35">
+        <dependency id="Microsoft.NETFramework.ReferenceAssemblies.net35" version="1.0.3" />
+      </group>
+
+      <group targetFramework="net20">
+        <dependency id="Microsoft.NETFramework.ReferenceAssemblies.net20" version="1.0.3" />
+      </group>
     </dependencies>
   </metadata>
   <files>

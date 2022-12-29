@@ -1,290 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project>
   <Choose>
-    <!-- 
-     | netframework
-     -->
-    <When Condition="'$(TargetFramework)' == 'net20'">
-      <PropertyGroup>
-        <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
-        <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
-        <FrameworkShortName>net20</FrameworkShortName>
-        <FrameworkPathOverride>$(MSBuildProgramFiles32)\Reference Assemblies\Microsoft\Framework\.NETFramework\v3.5\Profile\Client</FrameworkPathOverride>
-      </PropertyGroup>
-    </When>
-
-    <When Condition="'$(TargetFramework)' == 'net30'">
-      <PropertyGroup>
-        <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
-        <TargetFrameworkVersion>v3.0</TargetFrameworkVersion>
-        <FrameworkPathOverride>$(MSBuildProgramFiles32)\Reference Assemblies\Microsoft\Framework\.NETFramework\v3.5\Profile\Client</FrameworkPathOverride>
-        <FrameworkShortName>net30</FrameworkShortName>
-      </PropertyGroup>
-    </When>
-
-    <When Condition="'$(TargetFramework)' == 'net35'">
-      <PropertyGroup>
-        <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
-        <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-        <FrameworkShortName>net35</FrameworkShortName>
-        <FrameworkPathOverride>$(MSBuildProgramFiles32)\Reference Assemblies\Microsoft\Framework\.NETFramework\v3.5\Profile\Client</FrameworkPathOverride>
-      </PropertyGroup>
-    </When>
-
-    <When Condition="'$(TargetFramework)'=='net40'">
-      <PropertyGroup>
-        <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
-        <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-        <FrameworkShortName>net40</FrameworkShortName>
-      </PropertyGroup>
-    </When>
-
-    <When Condition="'$(TargetFramework)'=='net45'">
-      <PropertyGroup>
-        <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
-        <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-        <FrameworkShortName>net45</FrameworkShortName>
-      </PropertyGroup>
-    </When>
-
-    <When Condition="'$(TargetFramework)'=='net451'">
-      <PropertyGroup>
-        <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
-        <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
-        <FrameworkShortName>net451</FrameworkShortName>
-      </PropertyGroup>
-    </When>
-
-    <When Condition="'$(TargetFramework)'=='net452'">
-      <PropertyGroup>
-        <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
-        <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
-        <FrameworkShortName>net452</FrameworkShortName>
-      </PropertyGroup>
-    </When>
-
-    <When Condition="'$(TargetFramework)'=='net46'">
-      <PropertyGroup>
-        <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
-        <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
-        <FrameworkShortName>net46</FrameworkShortName>
-      </PropertyGroup>
-    </When>
-
-    <When Condition="'$(TargetFramework)'=='net461'">
-      <PropertyGroup>
-        <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
-        <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
-        <FrameworkShortName>net461</FrameworkShortName>
-      </PropertyGroup>
-    </When>
-
-    <When Condition="'$(TargetFramework)'=='net462'">
-      <PropertyGroup>
-        <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
-        <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
-        <FrameworkShortName>net462</FrameworkShortName>
-      </PropertyGroup>
-    </When>
-
-    <When Condition="'$(TargetFramework)'=='net47'">
-      <PropertyGroup>
-        <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
-        <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
-        <FrameworkShortName>net47</FrameworkShortName>
-      </PropertyGroup>
-    </When>
-
-    <When Condition="'$(TargetFramework)'=='net471'">
-      <PropertyGroup>
-        <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
-        <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
-        <FrameworkShortName>net471</FrameworkShortName>
-      </PropertyGroup>
-    </When>
-
-    <When Condition="'$(TargetFramework)'=='net472'">
-      <PropertyGroup>
-        <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
-        <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-        <FrameworkShortName>net472</FrameworkShortName>
-      </PropertyGroup>
-    </When>
-
-    <When Condition="'$(TargetFramework)'=='net48'">
-      <PropertyGroup>
-        <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
-        <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-        <FrameworkShortName>net48</FrameworkShortName>
-      </PropertyGroup>
-    </When>
 
     <!-- 
-     | netstandard
+     | net7.0 
     -->
-    <When Condition="'$(TargetFramework)'=='netstandard1.0'">
+
+    <When Condition="'$(TargetFramework)'=='net7.0'">
       <PropertyGroup>
-        <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
-        <FrameworkShortName>netstandard1.0</FrameworkShortName>
+        <FrameworkShortName>net7.0</FrameworkShortName>
       </PropertyGroup>
     </When>
 
-    <When Condition="'$(TargetFramework)'=='netstandard1.1'">
+    <When Condition="'$(TargetFramework)'=='net7.0-android'">
       <PropertyGroup>
-        <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
-        <FrameworkShortName>netstandard1.1</FrameworkShortName>
+        <FrameworkShortName>net7.0</FrameworkShortName>
       </PropertyGroup>
     </When>
 
-    <When Condition="'$(TargetFramework)'=='netstandard1.2'">
+    <When Condition="'$(TargetFramework)'=='net7.0-ios'">
       <PropertyGroup>
-        <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
-        <FrameworkShortName>netstandard1.2</FrameworkShortName>
+        <FrameworkShortName>net7.0</FrameworkShortName>
       </PropertyGroup>
     </When>
 
-    <When Condition="'$(TargetFramework)'=='netstandard1.3'">
+    <When Condition="'$(TargetFramework)'=='net7.0-maccatalyst'">
       <PropertyGroup>
-        <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
-        <FrameworkShortName>netstandard1.3</FrameworkShortName>
+        <FrameworkShortName>net7.0</FrameworkShortName>
       </PropertyGroup>
     </When>
 
-    <When Condition="'$(TargetFramework)'=='netstandard1.4'">
+    <When Condition="'$(TargetFramework)'=='net7.0-macos'">
       <PropertyGroup>
-        <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
-        <FrameworkShortName>netstandard1.4</FrameworkShortName>
+        <FrameworkShortName>net7.0</FrameworkShortName>
       </PropertyGroup>
     </When>
 
-    <When Condition="'$(TargetFramework)'=='netstandard1.5'">
+    <When Condition="'$(TargetFramework)'=='net7.0-tvos'">
       <PropertyGroup>
-        <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
-        <FrameworkShortName>netstandard1.5</FrameworkShortName>
+        <FrameworkShortName>net7.0</FrameworkShortName>
       </PropertyGroup>
     </When>
 
-    <When Condition="'$(TargetFramework)'=='netstandard1.6'">
+    <When Condition="'$(TargetFramework)'=='net7.0-windows'">
       <PropertyGroup>
-        <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
-        <FrameworkShortName>netstandard1.6</FrameworkShortName>
-      </PropertyGroup>
-    </When>
-
-    <When Condition="'$(TargetFramework)'=='netstandard2.0'">
-      <PropertyGroup>
-        <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
-        <FrameworkShortName>netstandard2.0</FrameworkShortName>
-      </PropertyGroup>
-    </When>
-
-    <When Condition="'$(TargetFramework)'=='netstandard2.1'">
-      <PropertyGroup>
-        <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
-        <FrameworkShortName>netstandard2.1</FrameworkShortName>
-      </PropertyGroup>
-    </When>
-
-    <!-- 
-     | netcoreapp 
-    -->
-    <When Condition="'$(TargetFramework)'=='netcoreapp1.0'">
-      <PropertyGroup>
-        <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
-        <FrameworkShortName>netcoreapp1.0</FrameworkShortName>
-      </PropertyGroup>
-    </When>
-
-    <When Condition="'$(TargetFramework)'=='netcoreapp1.1'">
-      <PropertyGroup>
-        <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
-        <FrameworkShortName>netcoreapp1.1</FrameworkShortName>
-      </PropertyGroup>
-    </When>
-
-    <When Condition="'$(TargetFramework)'=='netcoreapp2.0'">
-      <PropertyGroup>
-        <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
-        <FrameworkShortName>netcoreapp2.0</FrameworkShortName>
-      </PropertyGroup>
-    </When>
-
-    <When Condition="'$(TargetFramework)'=='netcoreapp2.1'">
-      <PropertyGroup>
-        <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
-        <FrameworkShortName>netcoreapp2.1</FrameworkShortName>
-      </PropertyGroup>
-    </When>
-
-    <When Condition="'$(TargetFramework)'=='netcoreapp2.2'">
-      <PropertyGroup>
-        <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
-        <FrameworkShortName>netcoreapp2.2</FrameworkShortName>
-      </PropertyGroup>
-    </When>
-
-    <When Condition="'$(TargetFramework)'=='netcoreapp3.0'">
-      <PropertyGroup>
-        <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
-        <FrameworkShortName>netcoreapp3.0</FrameworkShortName>
-      </PropertyGroup>
-    </When>
-
-    <When Condition="'$(TargetFramework)'=='netcoreapp3.1'">
-      <PropertyGroup>
-        <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
-        <FrameworkShortName>netcoreapp3.1</FrameworkShortName>
-      </PropertyGroup>
-    </When>
-
-    <!-- 
-     | net5.0 
-    -->
-    <When Condition="'$(TargetFramework)'=='net5.0'">
-      <PropertyGroup>
-        <FrameworkShortName>net5.0</FrameworkShortName>
-      </PropertyGroup>
-    </When>
-
-    <When Condition="'$(TargetFramework)'=='net5.0-android'">
-      <PropertyGroup>
-        <FrameworkShortName>net5.0</FrameworkShortName>
-      </PropertyGroup>
-    </When>
-
-    <When Condition="'$(TargetFramework)'=='net5.0-ios'">
-      <PropertyGroup>
-        <FrameworkShortName>net5.0</FrameworkShortName>
-      </PropertyGroup>
-    </When>
-
-    <When Condition="'$(TargetFramework)'=='net5.0-macos'">
-      <PropertyGroup>
-        <FrameworkShortName>net5.0</FrameworkShortName>
-      </PropertyGroup>
-    </When>
-
-    <When Condition="'$(TargetFramework)'=='net5.0-tvos'">
-      <PropertyGroup>
-        <FrameworkShortName>net5.0</FrameworkShortName>
-      </PropertyGroup>
-    </When>
-
-    <When Condition="'$(TargetFramework)'=='net5.0-watchos'">
-      <PropertyGroup>
-        <FrameworkShortName>net5.0</FrameworkShortName>
-      </PropertyGroup>
-    </When>
-
-    <When Condition="'$(TargetFramework)'=='net5.0-windows'">
-      <PropertyGroup>
-        <FrameworkShortName>net5.0</FrameworkShortName>
+        <FrameworkShortName>net7.0</FrameworkShortName>
       </PropertyGroup>
     </When>
 
     <!-- 
      | net6.0 
     -->
+
     <When Condition="'$(TargetFramework)'=='net6.0'">
       <PropertyGroup>
         <FrameworkShortName>net6.0</FrameworkShortName>
@@ -328,47 +95,295 @@
     </When>
 
     <!-- 
-     | net7.0 
+     | net5.0 
     -->
-    <When Condition="'$(TargetFramework)'=='net7.0'">
+
+    <When Condition="'$(TargetFramework)'=='net5.0'">
       <PropertyGroup>
-        <FrameworkShortName>net7.0</FrameworkShortName>
+        <FrameworkShortName>net5.0</FrameworkShortName>
       </PropertyGroup>
     </When>
 
-    <When Condition="'$(TargetFramework)'=='net7.0-android'">
+    <When Condition="'$(TargetFramework)'=='net5.0-android'">
       <PropertyGroup>
-        <FrameworkShortName>net7.0</FrameworkShortName>
+        <FrameworkShortName>net5.0</FrameworkShortName>
       </PropertyGroup>
     </When>
 
-    <When Condition="'$(TargetFramework)'=='net7.0-ios'">
+    <When Condition="'$(TargetFramework)'=='net5.0-ios'">
       <PropertyGroup>
-        <FrameworkShortName>net7.0</FrameworkShortName>
+        <FrameworkShortName>net5.0</FrameworkShortName>
       </PropertyGroup>
     </When>
 
-    <When Condition="'$(TargetFramework)'=='net7.0-maccatalyst'">
+    <When Condition="'$(TargetFramework)'=='net5.0-macos'">
       <PropertyGroup>
-        <FrameworkShortName>net7.0</FrameworkShortName>
+        <FrameworkShortName>net5.0</FrameworkShortName>
       </PropertyGroup>
     </When>
 
-    <When Condition="'$(TargetFramework)'=='net7.0-macos'">
+    <When Condition="'$(TargetFramework)'=='net5.0-tvos'">
       <PropertyGroup>
-        <FrameworkShortName>net7.0</FrameworkShortName>
+        <FrameworkShortName>net5.0</FrameworkShortName>
       </PropertyGroup>
     </When>
 
-    <When Condition="'$(TargetFramework)'=='net7.0-tvos'">
+    <When Condition="'$(TargetFramework)'=='net5.0-watchos'">
       <PropertyGroup>
-        <FrameworkShortName>net7.0</FrameworkShortName>
+        <FrameworkShortName>net5.0</FrameworkShortName>
       </PropertyGroup>
     </When>
 
-    <When Condition="'$(TargetFramework)'=='net7.0-windows'">
+    <When Condition="'$(TargetFramework)'=='net5.0-windows'">
       <PropertyGroup>
-        <FrameworkShortName>net7.0</FrameworkShortName>
+        <FrameworkShortName>net5.0</FrameworkShortName>
+      </PropertyGroup>
+    </When>
+
+    <!-- 
+     | netcoreapp 
+    -->
+
+    <When Condition="'$(TargetFramework)'=='netcoreapp3.1'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
+        <FrameworkShortName>netcoreapp3.1</FrameworkShortName>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='netcoreapp3.0'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
+        <FrameworkShortName>netcoreapp3.0</FrameworkShortName>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='netcoreapp2.2'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
+        <FrameworkShortName>netcoreapp2.2</FrameworkShortName>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='netcoreapp2.1'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
+        <FrameworkShortName>netcoreapp2.1</FrameworkShortName>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='netcoreapp2.0'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
+        <FrameworkShortName>netcoreapp2.0</FrameworkShortName>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='netcoreapp1.1'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
+        <FrameworkShortName>netcoreapp1.1</FrameworkShortName>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='netcoreapp1.0'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
+        <FrameworkShortName>netcoreapp1.0</FrameworkShortName>
+      </PropertyGroup>
+    </When>
+
+    <!-- 
+     | netstandard
+    -->
+
+    <When Condition="'$(TargetFramework)'=='netstandard2.1'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
+        <FrameworkShortName>netstandard2.1</FrameworkShortName>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='netstandard2.0'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
+        <FrameworkShortName>netstandard2.0</FrameworkShortName>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='netstandard1.6'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
+        <FrameworkShortName>netstandard1.6</FrameworkShortName>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='netstandard1.5'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
+        <FrameworkShortName>netstandard1.5</FrameworkShortName>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='netstandard1.4'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
+        <FrameworkShortName>netstandard1.4</FrameworkShortName>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='netstandard1.3'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
+        <FrameworkShortName>netstandard1.3</FrameworkShortName>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='netstandard1.2'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
+        <FrameworkShortName>netstandard1.2</FrameworkShortName>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='netstandard1.1'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
+        <FrameworkShortName>netstandard1.1</FrameworkShortName>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='netstandard1.0'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
+        <FrameworkShortName>netstandard1.0</FrameworkShortName>
+      </PropertyGroup>
+    </When>
+
+    <!-- 
+     | netframework
+     -->
+
+    <When Condition="'$(TargetFramework)' == 'net481'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+        <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+        <FrameworkShortName>net481</FrameworkShortName>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)' == 'net48'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+        <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+        <FrameworkShortName>net48</FrameworkShortName>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)' == 'net472'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+        <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+        <FrameworkShortName>net472</FrameworkShortName>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)' == 'net471'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+        <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+        <FrameworkShortName>net471</FrameworkShortName>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)' == 'net47'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+        <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+        <FrameworkShortName>net47</FrameworkShortName>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)' == 'net462'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+        <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+        <FrameworkShortName>net462</FrameworkShortName>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)' == 'net461'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+        <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+        <FrameworkShortName>net461</FrameworkShortName>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)' == 'net46'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+        <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+        <FrameworkShortName>net46</FrameworkShortName>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)'=='net452'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+        <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+        <FrameworkShortName>net452</FrameworkShortName>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)' == 'net451'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+        <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+        <FrameworkShortName>net451</FrameworkShortName>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)' == 'net45'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+        <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+        <FrameworkShortName>net45</FrameworkShortName>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)' == 'net40'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+        <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+        <FrameworkShortName>net40</FrameworkShortName>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)' == 'net35'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+        <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+        <FrameworkShortName>net35</FrameworkShortName>
+        <!-- <FrameworkPathOverride>$(MSBuildProgramFiles32)\Reference Assemblies\Microsoft\Framework\.NETFramework\v3.5\Profile\Client</FrameworkPathOverride> -->
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)' == 'net30'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+        <TargetFrameworkVersion>v3.0</TargetFrameworkVersion>
+        <FrameworkShortName>net30</FrameworkShortName>
+        <!-- <FrameworkPathOverride>$(MSBuildProgramFiles32)\Reference Assemblies\Microsoft\Framework\.NETFramework\v3.5\Profile\Client</FrameworkPathOverride> -->
+      </PropertyGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)' == 'net20'">
+      <PropertyGroup>
+        <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+        <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+        <FrameworkShortName>net20</FrameworkShortName>
+        <!-- <FrameworkPathOverride>$(MSBuildProgramFiles32)\Reference Assemblies\Microsoft\Framework\.NETFramework\v3.5\Profile\Client</FrameworkPathOverride> -->
       </PropertyGroup>
     </When>
   </Choose>
