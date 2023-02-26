@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ItemGroup Label="ReSharper External Annotations">
+    <None Remove="ExternalAnnotations.net20.xml" />
+    <Content Condition="Exists('ExternalAnnotations.net20.xml')" Include="ExternalAnnotations.net20.xml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <Pack>true</Pack>
+      <IncludeInPackage>true</IncludeInPackage>
+      <PackagePath>lib\net20\$(AssemblyName).ExternalAnnotations.xml</PackagePath>
+    </Content>
+
+    <None Remove="ExternalAnnotations.net30.xml" />
+    <Content Condition="Exists('ExternalAnnotations.net30.xml')" Include="ExternalAnnotations.net30.xml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <Pack>true</Pack>
+      <IncludeInPackage>true</IncludeInPackage>
+      <PackagePath>lib\net30\$(AssemblyName).ExternalAnnotations.xml</PackagePath>
+    </Content>
+
+    <None Remove="ExternalAnnotations.net35.xml" />
+    <Content Condition="Exists('ExternalAnnotations.net35.xml')" Include="ExternalAnnotations.net35.xml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <Pack>true</Pack>
+      <IncludeInPackage>true</IncludeInPackage>
+      <PackagePath>lib\net35\$(AssemblyName).ExternalAnnotations.xml</PackagePath>
+    </Content>
+
+    <None Remove="ExternalAnnotations.net40.xml" />
+    <Content Condition="Exists('ExternalAnnotations.net40.xml')" Include="ExternalAnnotations.net40.xml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <Pack>true</Pack>
+      <IncludeInPackage>true</IncludeInPackage>
+      <PackagePath>lib\net40\$(AssemblyName).ExternalAnnotations.xml</PackagePath>
+    </Content>
+
+    <None Remove="ExternalAnnotations.net45.xml" />
+    <Content Condition="Exists('ExternalAnnotations.net45.xml')" Include="ExternalAnnotations.net45.xml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <Pack>true</Pack>
+      <IncludeInPackage>true</IncludeInPackage>
+      <PackagePath>lib\net45\$(AssemblyName).ExternalAnnotations.xml</PackagePath>
+    </Content>
+
+    <None Remove="ExternalAnnotations.net451.xml" />
+    <Content Condition="Exists('ExternalAnnotations.net451.xml')" Include="ExternalAnnotations.net451.xml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <Pack>true</Pack>
+      <IncludeInPackage>true</IncludeInPackage>
+      <PackagePath>lib\net451\$(AssemblyName).ExternalAnnotations.xml</PackagePath>
+    </Content>
+
+    <None Remove="ExternalAnnotations.net452.xml" />
+    <Content Condition="Exists('ExternalAnnotations.net452.xml')" Include="ExternalAnnotations.net452.xml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <Pack>true</Pack>
+      <IncludeInPackage>true</IncludeInPackage>
+      <PackagePath>lib\net452\$(AssemblyName).ExternalAnnotations.xml</PackagePath>
+    </Content>
+
+    <None Remove="ExternalAnnotations.net46.xml" />
+    <Content Condition="Exists('ExternalAnnotations.net46.xml')" Include="ExternalAnnotations.net46.xml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <Pack>true</Pack>
+      <IncludeInPackage>true</IncludeInPackage>
+      <PackagePath>lib\net46\$(AssemblyName).ExternalAnnotations.xml</PackagePath>
+    </Content>
+
+    <None Remove="ExternalAnnotations.net461.xml" />
+    <Content Condition="Exists('ExternalAnnotations.net461.xml')" Include="ExternalAnnotations.net461.xml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <Pack>true</Pack>
+      <IncludeInPackage>true</IncludeInPackage>
+      <PackagePath>lib\net461\$(AssemblyName).ExternalAnnotations.xml</PackagePath>
+    </Content>
+
+    <None Remove="ExternalAnnotations.net462.xml" />
+    <Content Condition="Exists('ExternalAnnotations.net462.xml')" Include="ExternalAnnotations.net462.xml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <Pack>true</Pack>
+      <IncludeInPackage>true</IncludeInPackage>
+      <PackagePath>lib\net462\$(AssemblyName).ExternalAnnotations.xml</PackagePath>
+    </Content>
+
+    <None Remove="ExternalAnnotations.net47.xml" />
+    <Content Condition="Exists('ExternalAnnotations.net47.xml')" Include="ExternalAnnotations.net47.xml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <Pack>true</Pack>
+      <IncludeInPackage>true</IncludeInPackage>
+      <PackagePath>lib\net47\$(AssemblyName).ExternalAnnotations.xml</PackagePath>
+    </Content>
+
+    <None Remove="ExternalAnnotations.net471.xml" />
+    <Content Condition="Exists('ExternalAnnotations.net471.xml')" Include="ExternalAnnotations.net471.xml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <Pack>true</Pack>
+      <IncludeInPackage>true</IncludeInPackage>
+      <PackagePath>lib\net471\$(AssemblyName).ExternalAnnotations.xml</PackagePath>
+    </Content>
+
+    <None Remove="ExternalAnnotations.net472.xml" />
+    <Content Condition="Exists('ExternalAnnotations.net472.xml')" Include="ExternalAnnotations.net472.xml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <Pack>true</Pack>
+      <IncludeInPackage>true</IncludeInPackage>
+      <PackagePath>lib\net472\$(AssemblyName).ExternalAnnotations.xml</PackagePath>
+    </Content>
+
+    <None Remove="ExternalAnnotations.net48.xml" />
+    <Content Condition="Exists('ExternalAnnotations.net48.xml')" Include="ExternalAnnotations.net48.xml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <Pack>true</Pack>
+      <IncludeInPackage>true</IncludeInPackage>
+      <PackagePath>lib\net48\$(AssemblyName).ExternalAnnotations.xml</PackagePath>
+    </Content>
+
+    <None Remove="ExternalAnnotations.net481.xml" />
+    <Content Condition="Exists('ExternalAnnotations.net481.xml')" Include="ExternalAnnotations.net481.xml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <Pack>true</Pack>
+      <IncludeInPackage>true</IncludeInPackage>
+      <PackagePath>lib\net481\$(AssemblyName).ExternalAnnotations.xml</PackagePath>
+    </Content>
+
+    <None Remove="ExternalAnnotations.netstandard1.0.xml" />
+    <Content Condition="Exists('ExternalAnnotations.netstandard1.0.xml')" Include="ExternalAnnotations.netstandard1.0.xml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <Pack>true</Pack>
+      <IncludeInPackage>true</IncludeInPackage>
+      <PackagePath>lib\netstandard1.0\$(AssemblyName).ExternalAnnotations.xml</PackagePath>
+    </Content>
+
+    <None Remove="ExternalAnnotations.netstandard1.1.xml" />
+    <Content Condition="Exists('ExternalAnnotations.netstandard1.1.xml')" Include="ExternalAnnotations.netstandard1.1.xml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <Pack>true</Pack>
+      <IncludeInPackage>true</IncludeInPackage>
+      <PackagePath>lib\netstandard1.1\$(AssemblyName).ExternalAnnotations.xml</PackagePath>
+    </Content>
+
+    <None Remove="ExternalAnnotations.netstandard1.2.xml" />
+    <Content Condition="Exists('ExternalAnnotations.netstandard1.2.xml')" Include="ExternalAnnotations.netstandard1.2.xml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <Pack>true</Pack>
+      <IncludeInPackage>true</IncludeInPackage>
+      <PackagePath>lib\netstandard1.2\$(AssemblyName).ExternalAnnotations.xml</PackagePath>
+    </Content>
+
+    <None Remove="ExternalAnnotations.netstandard1.3.xml" />
+    <Content Condition="Exists('ExternalAnnotations.netstandard1.3.xml')" Include="ExternalAnnotations.netstandard1.3.xml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <Pack>true</Pack>
+      <IncludeInPackage>true</IncludeInPackage>
+      <PackagePath>lib\netstandard1.3\$(AssemblyName).ExternalAnnotations.xml</PackagePath>
+    </Content>
+
+    <None Remove="ExternalAnnotations.netstandard1.4.xml" />
+    <Content Condition="Exists('ExternalAnnotations.netstandard1.4.xml')" Include="ExternalAnnotations.netstandard1.4.xml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <Pack>true</Pack>
+      <IncludeInPackage>true</IncludeInPackage>
+      <PackagePath>lib\netstandard1.4\$(AssemblyName).ExternalAnnotations.xml</PackagePath>
+    </Content>
+
+    <None Remove="ExternalAnnotations.netstandard1.5.xml" />
+    <Content Condition="Exists('ExternalAnnotations.netstandard1.5.xml')" Include="ExternalAnnotations.netstandard1.5.xml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <Pack>true</Pack>
+      <IncludeInPackage>true</IncludeInPackage>
+      <PackagePath>lib\netstandard1.5\$(AssemblyName).ExternalAnnotations.xml</PackagePath>
+    </Content>
+
+    <None Remove="ExternalAnnotations.netstandard1.6.xml" />
+    <Content Condition="Exists('ExternalAnnotations.netstandard1.6.xml')" Include="ExternalAnnotations.netstandard1.6.xml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <Pack>true</Pack>
+      <IncludeInPackage>true</IncludeInPackage>
+      <PackagePath>lib\netstandard1.6\$(AssemblyName).ExternalAnnotations.xml</PackagePath>
+    </Content>
+
+    <None Remove="ExternalAnnotations.netstandard2.0.xml" />
+    <Content Condition="Exists('ExternalAnnotations.netstandard2.0.xml')" Include="ExternalAnnotations.netstandard2.0.xml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <Pack>true</Pack>
+      <IncludeInPackage>true</IncludeInPackage>
+      <PackagePath>lib\netstandard2.0\$(AssemblyName).ExternalAnnotations.xml</PackagePath>
+    </Content>
+
+    <None Remove="ExternalAnnotations.netstandard2.1.xml" />
+    <Content Condition="Exists('ExternalAnnotations.netstandard2.1.xml')" Include="ExternalAnnotations.netstandard2.1.xml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <Pack>true</Pack>
+      <IncludeInPackage>true</IncludeInPackage>
+      <PackagePath>lib\netstandard2.1\$(AssemblyName).ExternalAnnotations.xml</PackagePath>
+    </Content>
+  </ItemGroup>
+</Project>

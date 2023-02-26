@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <AssemblyName>VDimensions.MSBuild.Sdk.ExternalAnnotations</AssemblyName>
+    <TargetFramework>netstandard1.0</TargetFramework>
+    <Description>
+      Adds support for embedding extarnal annotations in produced nuget package.
+    </Description>
+
+    <PackageOutputPath>../../dist</PackageOutputPath>
+  </PropertyGroup>
+</Project>

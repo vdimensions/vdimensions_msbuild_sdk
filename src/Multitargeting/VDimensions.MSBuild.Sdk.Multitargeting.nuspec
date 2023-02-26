@@ -62,8 +62,8 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="VDimensions.MSBuild.Sdk.Multitargeting.props" target="build\VDimensions.MSBuild.Sdk.Multitargeting.props" />
-    <file src="VDimensions.MSBuild.Sdk.Multitargeting.targets" target="build\VDimensions.MSBuild.Sdk.Multitargeting.targets" />
+    <file src="$id$.props" target="build\$id$.props" />
+    <file src="$id$.targets" target="build\$id$.targets" />
     <file src="imports\**\*.props" target="build\imports\" />
   </files>
 </package>

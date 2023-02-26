@@ -31,6 +31,7 @@ build_script:
   - ps: "cd src\\Versioning.AppVeyor \ndotnet pack \ncd ..\\..\\"
   - ps: "cd src\\Multitargeting \ndotnet pack \ncd ..\\..\\"
   - ps: "cd src\\Nuspec \ndotnet pack \ncd ..\\..\\"
+  - ps: "cd src\\ExternalAnnotations \ndotnet pack \ncd ..\\..\\"
 
 for:
   - branches:

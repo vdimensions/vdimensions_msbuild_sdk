@@ -12,6 +12,6 @@
     <developmentDependency>true</developmentDependency>
   </metadata>
   <files>
-    <file src="VDimensions.MSBuild.Sdk.Packaging.targets" target="build\VDimensions.MSBuild.Sdk.Packaging.targets" />
+    <file src="$id$.targets" target="build\$id$.targets" />
   </files>
 </package>
