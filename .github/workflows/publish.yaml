@@ -2,7 +2,7 @@ name: Publish NuGet Packages
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
 
 env:
   VERSION_PREFIX: 0.7
@@ -10,9 +10,6 @@ env:
 jobs:
   publish:
     runs-on: ubuntu-latest
-
-    env:
-      PACKAGE_VERSION: ${{ env.VERSION_PREFIX }}.${{ github.run_number }}
 
     steps:
       - name: Checkout
@@ -23,15 +20,19 @@ jobs:
         with:
           dotnet-version: '8.0.x'
 
+      - name: Compute Version
+        run: 'echo "PACKAGE_VERSION=$VERSION_PREFIX.${{ github.run_number }}" >> $GITHUB_ENV'
+
       - name: Print Version
-        run: 'echo "Package version: $PACKAGE_VERSION"'
+        run: |
+          echo "Package version: $PACKAGE_VERSION"
 
       - name: Build Packages
         run: ./build.sh "$PACKAGE_VERSION"
 
-      - name: Push Packages to NuGet.org
-        run: |
-          dotnet nuget push "dist/*.nupkg" \
-            --api-key ${{ secrets.NUGET_API_KEY }} \
-            --source https://api.nuget.org/v3/index.json \
-            --skip-duplicate
+      # - name: Push Packages to NuGet.org
+      #   run: |
+      #     dotnet nuget push "dist/*.nupkg" \
+      #       --api-key ${{ secrets.NUGET_API_KEY }} \
+      #       --source https://api.nuget.org/v3/index.json \
+      #       --skip-duplicate
