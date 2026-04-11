@@ -14,6 +14,7 @@
     </dependencies>
   </metadata>
   <files>
+    <file src="README.md" target="docs\" />
     <!-- <file src="$id$.props" target="build\$id$.props" /> -->
     <!-- <file src="$id$.props" target="buildCrossTargeting\$id$.props" /> -->
     <file src="$id$.targets" target="build\$id$.targets" />

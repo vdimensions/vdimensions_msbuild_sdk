@@ -2,7 +2,9 @@ name: Publish NuGet Packages
 
 on:
   push:
-    branches: [ master ]
+    branches: 
+      - master
+      - preview
 
 env:
   VERSION_PREFIX: 0.7
@@ -20,14 +22,24 @@ jobs:
         with:
           dotnet-version: '8.0.x'
 
-      - name: Print Version
+      - name: Compute Version
         run: |
-          echo "Package version: $VERSION_PREFIX.${{ github.run_number }}"
+          if [[ "${GITHUB_REF_NAME}" == "master" ]]; then
+            echo "VERSION_SUFFIX=" >> $GITHUB_ENV
+          else
+            SAFE_BRANCH_NAME=$(echo "${GITHUB_REF_NAME}" | tr '/' '.')
+            DATE=$(date +%Y-%m-%d)
+            echo "VERSION_SUFFIX=${SAFE_BRANCH_NAME}.${DATE}" >> $GITHUB_ENV
+          fi
+
+      - name: Print Version Info
+        run: |
+          echo "Final version: $VERSION_PREFIX.${{ github.run_number }}${VERSION_SUFFIX:+-$VERSION_SUFFIX}"
 
       - name: Build Packages
         run: |
           chmod +x ./build.sh
-          ./build.sh "$VERSION_PREFIX.${{ github.run_number }}"
+          ./build.sh "$VERSION_PREFIX.${{ github.run_number }}" "$VERSION_SUFFIX"
 
       - name: Push Packages to NuGet.org
         run: |
