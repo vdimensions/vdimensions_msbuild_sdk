@@ -4,6 +4,8 @@
     <!-- make MSBuild track this file for incremental builds. -->
     <!-- ref https://blogs.msdn.microsoft.com/msbuild/2005/09/26/how-to-ensure-changes-to-a-custom-target-file-prompt-a-rebuild/ -->
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageOutputPath>$(MSBuildThisFileDirectory)../dist</PackageOutputPath>
   </PropertyGroup>
     
   <PropertyGroup>
@@ -11,7 +13,7 @@
     <Authors>Virtual Dimensions</Authors>
     <CopyrightYearSince>2017</CopyrightYearSince>
   </PropertyGroup>
-  
+
   <Import Project="Defaults/VDimensions.MSBuild.Sdk.Defaults.props"/>
   <Import Project="Copyright/VDimensions.MSBuild.Sdk.Copyright.props"/>
   <Import Project="Versioning/VDimensions.MSBuild.Sdk.Versioning.props"/>

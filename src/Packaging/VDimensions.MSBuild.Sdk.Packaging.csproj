@@ -1,20 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <OutputType>Library</OutputType>
-    <RootNamespace>VDimensions.MSBuild.Sdk.Packaging</RootNamespace>
+
     <AssemblyName>VDimensions.MSBuild.Sdk.Packaging</AssemblyName>
-    <TargetFramework>netstandard1.0</TargetFramework>
-    <License>Apache-2.0</License>
 
-    <NuspecFile>VDimensions.MSBuild.Sdk.Packaging.nuspec</NuspecFile>
-    <NuspecProperties Condition=" '$(AssemblyName)' != '' ">$(NuspecProperties);id=$(AssemblyName)</NuspecProperties>
-    <NuspecProperties Condition=" '$(PackageVersion)' != '' ">$(NuspecProperties);version=$(PackageVersion)</NuspecProperties>
-
-
-    <PackageOutputPath>../../dist</PackageOutputPath>
-    
+    <Description>
+      Applies sensible defaults to nuspec-related msbuild properties.
+    </Description>
   </PropertyGroup>
 </Project>

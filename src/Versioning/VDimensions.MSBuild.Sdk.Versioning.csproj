@@ -2,12 +2,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Library</OutputType>
-    <AssemblyName>VDimensions.MSBuild.Sdk.Versioning</AssemblyName>
-    <TargetFramework>netstandard1.0</TargetFramework>
-    <Description>
-      Adds compilation symbols enabling better versioning support.
-    </Description>
 
-    <PackageOutputPath>../../dist</PackageOutputPath>
+    <AssemblyName>VDimensions.MSBuild.Sdk.Versioning</AssemblyName>
+
+    <Description>
+      Adds msbuild properties that improve project versioning.
+    </Description>
   </PropertyGroup>
 </Project>
