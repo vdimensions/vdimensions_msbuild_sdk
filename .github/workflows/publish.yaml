@@ -25,10 +25,13 @@ jobs:
 
       - name: Print Version
         run: |
-          echo "Package version: $PACKAGE_VERSION"
+          echo "Package version1: $PACKAGE_VERSION"
+          echo "Package version2: $VERSION_PREFIX.${{ github.run_number }}"
 
       - name: Build Packages
-        run: ./build.sh "$PACKAGE_VERSION"
+        run: |
+          chmod +x ./build.sh
+          ./build.sh "$PACKAGE_VERSION"
 
       # - name: Push Packages to NuGet.org
       #   run: |
