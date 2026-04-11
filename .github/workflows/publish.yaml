@@ -20,22 +20,18 @@ jobs:
         with:
           dotnet-version: '8.0.x'
 
-      - name: Compute Version
-        run: 'echo "PACKAGE_VERSION=$VERSION_PREFIX.${{ github.run_number }}" >> $GITHUB_ENV'
-
       - name: Print Version
         run: |
-          echo "Package version1: $PACKAGE_VERSION"
-          echo "Package version2: $VERSION_PREFIX.${{ github.run_number }}"
+          echo "Package version: $VERSION_PREFIX.${{ github.run_number }}"
 
       - name: Build Packages
         run: |
           chmod +x ./build.sh
-          ./build.sh "$PACKAGE_VERSION"
+          ./build.sh "$VERSION_PREFIX.${{ github.run_number }}"
 
-      # - name: Push Packages to NuGet.org
-      #   run: |
-      #     dotnet nuget push "dist/*.nupkg" \
-      #       --api-key ${{ secrets.NUGET_API_KEY }} \
-      #       --source https://api.nuget.org/v3/index.json \
-      #       --skip-duplicate
+      - name: Push Packages to NuGet.org
+        run: |
+          dotnet nuget push "dist/*.nupkg" \
+            --api-key ${{ secrets.NUGET_API_KEY }} \
+            --source https://api.nuget.org/v3/index.json \
+            --skip-duplicate
